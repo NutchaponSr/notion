@@ -1,9 +1,71 @@
 {
-  "id": "921a90ee-c12f-413a-b60e-cd0c8885361a",
+  "id": "af2b9065-eec7-4f69-9b86-c15b7101dec7",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.request": {
+      "name": "request",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "firstName": {
+          "name": "firstName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lastName": {
+          "name": "lastName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "department": {
+          "name": "department",
+          "type": "departments",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "position": {
+          "name": "position",
+          "type": "positions",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requestedAt": {
+          "name": "requestedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
     "public.user": {
       "name": "user",
       "schema": "",
@@ -55,6 +117,26 @@
     }
   },
   "enums": {
+    "public.departments": {
+      "name": "departments",
+      "schema": "public",
+      "values": [
+        "Marketing",
+        "Human resources",
+        "Finance",
+        "Product development",
+        "Customer support"
+      ]
+    },
+    "public.positions": {
+      "name": "positions",
+      "schema": "public",
+      "values": [
+        "Worker",
+        "Chief",
+        "Manager"
+      ]
+    },
     "public.roles": {
       "name": "roles",
       "schema": "public",

@@ -7,6 +7,7 @@ import { QueryProvider } from "@/components/providers/query-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
 
 import "./globals.css";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default async function RootLayout({
       <html lang="en">
         <body className={`${geistSans.className} antialiased`}>
           <QueryProvider>
+            <ModalProvider />
             <ToastProvider />
             {children}
           </QueryProvider>

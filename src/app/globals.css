@@ -102,3 +102,7 @@ body,
 .image.active {
   opacity: 1;
 }
+
+::selection {
+  @apply bg-[#C9D5ED];
+}

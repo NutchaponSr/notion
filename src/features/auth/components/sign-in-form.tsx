@@ -3,14 +3,12 @@
 import Link from "next/link";
 
 import { z } from "zod";
-import { useEffect, useState } from "react";
 import { Loader } from "lucide-react";
 import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { generateCode } from "@/lib/utils";
 
 import {
   Form,
@@ -40,7 +38,7 @@ export const SignInForm = () => {
     resolver: zodResolver(SignInSchema),
     defaultValues: {
       email: "",
-      password: generateCode(6),
+      password: "",
     }
   });
 

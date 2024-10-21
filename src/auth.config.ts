@@ -53,17 +53,35 @@ export default {
     error: "/sign-in",
   },
   callbacks: {
-    session({ session, token }) {
-      if (token.id) {
-        session.user.id = token.id;
+    async session({ session, token }) {
+      if (token.sub && session.user) {
+        const [user] = await db
+          .select()
+          .from(users)
+          .where(eq(users.id, token.sub));
+        
+        if (user) {
+          session.user.id = user.id;
+          session.user.name = user.name;
+          session.user.email = user.email;
+          session.user.image = user.image;
+          session.user.role = user.role;
+        }
       }
-
       return session;
     },
-    jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-      }
+    async jwt({ token }) {
+      if (!token.sub) return token;
+      
+      const [existingUser] = await db
+        .select()
+        .from(users)
+        .where(eq(users.id, token.sub));
+
+      if (!existingUser) return token;
+
+      token.role = existingUser.role;
+      token.id = existingUser.id;
 
       return token;
     },

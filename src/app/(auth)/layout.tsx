@@ -10,7 +10,7 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
       <Header />
       <main className="pt-[80px] w-full h-full">
         <div className="flex flex-row w-full">
-          { children }
+          {children}
         </div>
       </main>
     </div>
