@@ -1,31 +1,63 @@
 "use client";
 
-import { ChevronsUpDownIcon, Loader, LogOutIcon, MoreHorizontalIcon, SettingsIcon } from "lucide-react";
-import { signOut, useSession } from "next-auth/react";
+import {useSession } from "next-auth/react";
+import { ChevronDownIcon, ChevronsUpDownIcon, Loader } from "lucide-react";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { UserAvatar } from "./user-avatar";
 import { Button } from "@/components/ui/button";
 
-export const UserButton = () => {
+import { UserAvatar } from "@/features/auth/components/user-avatar";
+import { UserWrapper } from "@/features/auth/components/user-wrapper";
+
+interface UserButtonProps {
+  side: "left" | "right";
+}
+
+export const UserButton = ({ 
+  side,
+}: UserButtonProps) => {
   const { data, status } = useSession();
 
-  if (status === "loading") return <Loader className="size-4 animate-spin text-muted-foreground" />
-  
   const name = data?.user.name ?? "";
-  const role = data?.user.role ?? "";
-  const email = data?.user.email ?? "";
   const imageUrl = data?.user.image ?? "";
 
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+  
+  if (status === "loading") return <Loader className="size-4 animate-spin text-muted-foreground" />
+
+  if (side === "left") {
+    return (
+      <div className="block shrink-0 grow-0">
+        <UserWrapper align="center" alignOffset={16}>
+          <button className="flex items-center h-8 w-full hover:bg-[#00000008] focus-visible:ring-0 focus-visible:outline-none p-1">
+            <div className="flex items-center w-auto min-h-[27px] h-8 overflow-hidden space-x-2">
+              <UserAvatar
+                name={name}
+                imageUrl={imageUrl}
+                className="rounded-md size-7 justify-center items-center"
+                fallbackClassName="rounded-md size-7 bg-[#008AF2] text-accent font-medium"
+              />
+              <div className="flex-1 whitespace-nowrap min-w-0 overflow-hidden text-ellipsis">
+                <div className="flex items-center justify-start">
+                  <div className="flex items-center whitespace-nowrap overflow-hidden text-ellipsis">
+                    <div className="text-[#37352f] text-sm font-medium whitespace-nowrap overflow-hidden text-ellipsis mr-1">
+                      {name}&apos;s Notion
+                    </div>
+                    <div className="flex justify-center items-center grow-0 shrink-0 size-4 ml-0.5 text-[#A4A4A2] ">
+                      <ChevronDownIcon className="size-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+        </UserWrapper>
+        <div className="h-1.5" />
+      </div>
+    );
+  }
+  
+  if (side === "right") {
+    return (
+      <UserWrapper align="end" sideOffset={16}>
         <Button variant="ghost" className="flex justify-center items-center gap-x-2 hover:bg-accent max-h-8 pl-2 pr-1 h-8 rounded-md">
           <div className="flex items-center gap-x-1">
             <ChevronsUpDownIcon className="size-4 text-[#999]" />
@@ -42,41 +74,7 @@ export const UserButton = () => {
             />
           </div>
         </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-60" side="bottom" align="end" sideOffset={16}>
-      <div className="flex flex-col">
-          <div className="flex items-center justify-between px-1 pt-1.5">
-            <p className="text-xs text-muted-foreground overflow-hidden">{ email }</p>
-            <button className="h-5 w-5 hover:bg-muted flex justify-center items-center rounded-sm">
-              <MoreHorizontalIcon className="size-4 text-muted-foreground" />
-            </button>
-          </div>
-          <div className="flex items-center justify-start py-1.5 px-1.5 space-x-2">
-            <UserAvatar 
-              name={name}
-              imageUrl={imageUrl}
-              className="rounded-md size-8 justify-center items-center"
-              fallbackClassName="rounded-md size-8 bg-[#008AF2] text-accent font-medium"
-            />
-            <div className="flex flex-col">
-              <p className="text-sm line-clamp-1">{ name }&apos;s Notion</p>
-              <p className="text-xs text-muted-foreground">
-                Role · <span className="font-medium underline">{ role }</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <DropdownMenuSeparator />
-        {/* TODO: Settings modal */}
-        <DropdownMenuItem onClick={() => {}}>
-          <SettingsIcon className="size-4" />
-          Settings
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => signOut()}>
-          <LogOutIcon className="size-4" />
-          Sign out
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
+      </UserWrapper>
+    );
+  }
 }

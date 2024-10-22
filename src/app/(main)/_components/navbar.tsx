@@ -1,11 +1,11 @@
 import Link from "next/link";
 
+import { useSession } from "next-auth/react";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { UserButton } from "@/features/auth/components/user-button";
-import { useSession } from "next-auth/react";
+import { UserButton } from "@/features/auth/components/user-button"
 
 export const Navbar = () => {
   const session = useSession();
@@ -22,7 +22,7 @@ export const Navbar = () => {
         )}
       </div>
       {session.status === "authenticated" ? (
-        <UserButton />
+        <UserButton side="right" />
       ) : (
         <div className="flex items-center gap-3">
           <Button variant="ghost" asChild>

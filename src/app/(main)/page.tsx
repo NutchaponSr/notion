@@ -4,7 +4,7 @@ import { auth } from "@/auth";
 import { Hero } from "./_components/hero";
 import { FeaturesCarousel } from "./_components/features-carousel";
 
-const HomePage = async () => {
+const MainPage = async () => {
   const session = await auth();
 
   if (session) {
@@ -51,4 +51,4 @@ const HomePage = async () => {
   );
 }
 
-export default HomePage;
+export default MainPage;
