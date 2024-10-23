@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import { NavigationItem } from "@/components/navigation-items";
+import { NavigationItem } from "@/components/navigation-item";
 
 export const Navigation = () => {
   const router = useRouter();

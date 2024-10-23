@@ -93,7 +93,7 @@ export const Sidebar = () => {
       <aside 
         ref={sidebarRef} 
         className={cn(
-          "h-full bg-secondary overflow-hidden relative flex w-60 flex-col z-[100] bg-[#f7f7f5] transition group [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)]",
+          "h-full bg-secondary overflow-hidden select-none relative flex w-60 flex-col z-[100] bg-[#f7f7f5] transition group [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)]",
           isDragging ? 
             "shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)]" : 
             "shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)]",

@@ -30,8 +30,6 @@ const app = new Hono()
         return c.json({ error: "Email already in use" }, 400);
       }
 
-      console.log({ name, email, password });
-
       await db
         .insert(users)
         .values({
