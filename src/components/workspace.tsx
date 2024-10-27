@@ -2,7 +2,6 @@ import {
   HiMiniBuildingLibrary, 
   HiMiniCircleStack,
 } from "react-icons/hi2";
-import { PlusIcon } from "lucide-react";
 
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -75,7 +74,6 @@ export const Workspace = () => {
               <GroupYearItem 
                 key={index}
                 year={year}
-                icon={PlusIcon}
                 isChild={isChild}
                 onClick={() => createGroup({
                   json: {

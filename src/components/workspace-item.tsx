@@ -1,22 +1,16 @@
-import { LucideIcon } from "lucide-react";
-import { Badge } from "./ui/badge";
-
+import { Badge } from "@/components/ui/badge";
 interface WorkspaceItemProps {
   children: React.ReactNode;
   label: string;
-  onClick?: () => void;
-  showSideMenu?: boolean;
   showBadge?: boolean;
-  icon?: LucideIcon;
+  sideButton?: React.ReactNode;
 }
 
 export const WorkspaceItem = ({
   children,
   label,
-  onClick,
   showBadge,
-  showSideMenu = false,
-  icon: Icon
+  sideButton,
 }: WorkspaceItemProps) => {
   return (
     <div className="flex items-center h-[30px] w-full hover:bg-[#00000008] p-1 group/workspace cursor-pointer">
@@ -31,17 +25,13 @@ export const WorkspaceItem = ({
           </Badge>
         )}
       </div>
-      {showSideMenu && Icon && (
-        <div className="flex items-center justify-center grow-0 shrink-0 h-full">
-          <div className="group-hover/workspace:opacity-100 opacity-0 transition-opacity">
-            <div className="flex pl-1">
-              <button onClick={onClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
-                <Icon className="size-[18px]" />
-              </button>
-            </div>
+      <div className="flex items-center justify-center grow-0 shrink-0 h-full">
+        <div className="group-hover/workspace:opacity-100 opacity-0 transition-opacity">
+          <div className="flex pl-1">
+            {sideButton}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

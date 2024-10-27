@@ -1,40 +1,46 @@
 import React from "react";
 
-import { HashIcon, LucideIcon, MoreHorizontalIcon } from "lucide-react";
-import { InferResponseType } from "hono";
+import { PlusIcon } from "lucide-react";
 import { HiMiniCalendarDays } from "react-icons/hi2";
 
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem } from "@/components/workspace-item";
-import { client } from "@/lib/rpc";
 
-type ResponseType = InferResponseType<typeof client.api.groups["instant"]["$get"], 200>["data"][0];
+import { GroupItem } from "@/features/groups/components/group-item";
+
+import { GroupSidebarType } from "@/features/groups/types";
+import { useGroupItemChild } from "@/features/groups/stores/use-group-item-child";
 
 interface GroupYearItemProps {
   year: string;
-  icon: LucideIcon;
   isChild: boolean;
   onClick: () => void;
   onChild: () => void;
-  data: ResponseType;
+  data: GroupSidebarType;
 }
 
 export const GroupYearItem = ({
   year,
-  icon,
   isChild,
   onClick,
   onChild,
   data
 }: GroupYearItemProps) => {
+  const {
+    isOpen: openGroupItemChild,
+    onToggle: toggleGroupItemChild,
+  } = useGroupItemChild();
+
   return (
     <React.Fragment>
       <WorkspaceItem 
         label={year}
-        onClick={onClick}
-        icon={icon}
-        showSideMenu
         showBadge={year === new Date().getFullYear().toString()}
+        sideButton={
+          <button onClick={onClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
+            <PlusIcon className="size-[18px]" />
+          </button> 
+        }
       >
         <IconWrapper 
           isOpen={isChild}
@@ -47,24 +53,18 @@ export const GroupYearItem = ({
       </WorkspaceItem>
       {isChild && (
         data ? (
-          data.map((group) => (
-            <WorkspaceItem 
-              label={group.name}
-              key={group.id} 
-              onClick={() => {}}
-              icon={MoreHorizontalIcon}
-              showSideMenu
-            >
-              <IconWrapper 
-                isOpen={false}
-                onClick={() => {}}
-                indent="ml-5"
-                className="text-[#91918e]"
-              >
-                <HashIcon className="size-[18px]" />
-              </IconWrapper>
-            </WorkspaceItem>
-          ))
+          data.map((group) => {
+            const isChild = openGroupItemChild[group.id];
+
+            return (
+              <GroupItem 
+                key={group.id}
+                data={group}
+                isChild={isChild}
+                onChlid={() => toggleGroupItemChild(group.id)}
+              />
+            );
+          })
         ) : (
           <div className="h-[30px]">
             No Data
