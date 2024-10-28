@@ -18,7 +18,6 @@ export const IconWrapper = ({
   indent,
 }: IconWrapperProps) => {
   const handleOnClick = (e: React.MouseEvent) => {
-    e.preventDefault();
     e.stopPropagation();
 
     if (onClick) onClick();

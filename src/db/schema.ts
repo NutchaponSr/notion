@@ -7,6 +7,7 @@ import {
   timestamp,
   varchar
 } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
 
 export const roles = pgEnum("roles", ["ADMIN", "USER"]);
 
@@ -61,3 +62,25 @@ export const favorites = pgTable("favorite", {
   userId: text("userId").references(() => users.id, { onDelete: "cascade" }).notNull(),
   groupId: text("groupId").references(() => groups.id, { onDelete: "cascade" }).notNull(),
 });
+
+export const typesCompetency = pgEnum("typesCompetency", ["CC", "FC", "TC"]);
+
+export const competencies = pgTable("competency", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  name: text("name").notNull(),
+  icon: varchar("icon", { length: 1 }),
+  definition: text("definition"),
+  pl1: text("pl1"),
+  pl2: text("pl2"),
+  pl3: text("pl3"),
+  pl4: text("pl4"),
+  pl5: text("pl5"),
+  type: typesCompetency("type").notNull(),
+  inTrash: boolean("inTrash").$default(() => false).notNull(),
+  createdAt: timestamp("createdAt", { mode: "string" }).notNull().defaultNow(),
+  createdBy: text("createdBy").notNull(),
+  updatedAt: timestamp("updatedAt", { mode: "string" }).notNull().$onUpdateFn(() => new Date().toISOString()),
+  updatedBy: text("updatedBy").notNull(),
+});
+
+export const insertCompetencySchema = createInsertSchema(competencies);

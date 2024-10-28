@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { useMedia } from "react-use";
 import { ChevronsLeft } from "lucide-react";
-import { ElementRef, useEffect, useRef, useState } from "react";
+import { ElementRef, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
@@ -12,6 +12,7 @@ import { Navigation } from "@/components/navigation";
 
 import { UserButton } from "@/features/auth/components/user-button";
 import { Workspace } from "@/components/workspace";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export const Sidebar = () => {
   const isMobile = useMedia("(max-width: 768px)");
@@ -114,7 +115,7 @@ export const Sidebar = () => {
                 <UserButton side="left" />
                 <Navigation />
                 <div className="contents">
-                  <div className="z-[1] pt-1.5 grow overflow-x-hidden overflow-y-auto">
+                  <ScrollArea className="z-[1] pt-1.5 grow overflow-x-hidden overflow-y-auto">
                     <div className="flex flex-col min-h-full">
                       <div className="flex flex-col gap-3 pb-5">
                         {/* Workspaces & Favorite */}
@@ -126,7 +127,7 @@ export const Sidebar = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </ScrollArea>
                 </div>
               </div>
             </div>

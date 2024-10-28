@@ -1,10 +1,10 @@
 import React from "react";
 
 import { useEffect, useRef, useState } from "react";
-import { HashIcon, MoreHorizontalIcon } from "lucide-react";
+import { DotIcon, HashIcon, MoreHorizontalIcon } from "lucide-react";
 
 import { IconWrapper } from "@/components/icon-wrapper";
-import { WorkspaceItem } from "@/components/workspace-item";
+import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
 import { GroupActions } from "@/features/groups/components/group-actions";
 import { GroupRenamePopover } from "@/features/groups/components/group-rename-popover";
@@ -19,6 +19,8 @@ interface GroupItemProps {
     year: string;
   }
 }
+
+const BASEURL = process.env.NEXT_PUBLIC_APP_URL!;
 
 export const GroupItem = ({
   data,
@@ -43,13 +45,6 @@ export const GroupItem = ({
     }, 200);
   };
 
-  const handleOnClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    onChlid();
-  }
-
   return (
     <React.Fragment>
       <div ref={itemRef}>
@@ -66,15 +61,36 @@ export const GroupItem = ({
         >
           <IconWrapper 
             isOpen={isChild}
-            onClick={() => handleOnClick}
+            onClick={onChlid}
             indent="ml-5"
             className="text-[#91918e]"
           >
-            <HashIcon className="size-[18px]" />
+            {data.icon ? (
+              data.icon
+            ) : (
+              <HashIcon className="size-[18px]" />
+            )}
           </IconWrapper>
         </WorkspaceItem>
       </div>
-      {/* TODO: Group navigates */}
+      {isChild && (
+        <>
+          <WorkspaceSubItem 
+            indent="ml-7" 
+            href={`${BASEURL}/groups/${data.id}/competencies`}
+          >
+            <DotIcon className="size-4 mr-2" />
+            Competency
+          </WorkspaceSubItem>
+          <WorkspaceSubItem 
+            indent="ml-7" 
+            href={`${BASEURL}/groups/${data.id}/employees`}
+          >
+            <DotIcon className="size-4 mr-2" />
+            Employee
+          </WorkspaceSubItem>
+        </>
+      )}
       <GroupRenamePopover 
         data={data}
         isOpen={isRename}

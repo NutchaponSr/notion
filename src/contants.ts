@@ -87,3 +87,30 @@ export const buttons = [
     icon: GlobeIcon,
   },
 ];
+
+export const categories = [
+  { 
+    label: "Core", 
+    query: "CC",
+    className: [
+      "bg-[#F7E3DE] dark:bg-[#4A302B]",
+      "text-[#F7E3DE] fill-[#BC554D] dark:text-[#4A302B] dark:fill-[#B6524B]",
+    ],
+  },
+  { 
+    label: "Functional", 
+    query: "FC",
+    className: [
+      "bg-[#D8E5EE]",
+      "text-[#D8E5EE] fill-[#527DA5] dark:text-[#23394C] dark:fill-[#527CCA]",
+    ],
+  },
+  { 
+    label: "Technical", 
+    query: "TC",
+    className: [
+      "bg-[#DFECDD] dark:bg-[#2C3C31]", 
+      "text-[#DFECDD] fill-[#598164] dark:text-[#2C3C31] dark:fill-[#589669]"
+    ],
+  },
+]

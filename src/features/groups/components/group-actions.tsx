@@ -36,10 +36,10 @@ export const GroupActions = ({
   const { mutate: trash } = useTrashGroup();
   const { mutate: duplicate } = useDuplicateGroup();
   
+  const baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}/groups/${data.id}`;
+
   const handleClipboard = (e: React.MouseEvent) => {
     e.stopPropagation();
-
-    const baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}/groups/${data.id}`;
 
     navigator.clipboard.writeText(baseUrl)
       .then(() => toast.success("Copied link to clipboard"));
@@ -61,6 +61,14 @@ export const GroupActions = ({
     e.stopPropagation();
 
     duplicate({ param: { id: data.id } });
+  }
+
+  const handleNewTab = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
+    if (typeof window !== "undefined") {
+      window.open(baseUrl, "_blank");
+    }
   }
 
   return (
@@ -98,7 +106,7 @@ export const GroupActions = ({
           Move to trash
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => {}}>
+        <DropdownMenuItem onClick={handleNewTab}>
           <MoveUpRightIcon className="size-4" />
           Open in new tab
         </DropdownMenuItem>

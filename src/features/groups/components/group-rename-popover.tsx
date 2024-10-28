@@ -9,6 +9,7 @@ import { EmojiPicker } from "@/components/emoji-picker";
 
 import { GroupSidebarType } from "@/features/groups/types";
 import { Button } from "@/components/ui/button";
+import { useRenameGroup } from "../api/use-rename-group";
 
 interface GroupRenamePopoverProps {
   data: GroupSidebarType[0];
@@ -18,13 +19,15 @@ interface GroupRenamePopoverProps {
 }
 
 export const GroupRenamePopover = ({ 
-  data: group,
+  data,
   isOpen,
   onClose,
   height
 }: GroupRenamePopoverProps) => {
-  const [emoji, setEmoji] = useState(group.icon);
-  const [name, setName] = useState(group.name);
+  const { mutate: rename } = useRenameGroup();
+
+  const [emoji, setEmoji] = useState(data.icon);
+  const [name, setName] = useState(data.name);
   const [isBottom, setIsBottom] = useState(true);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -48,12 +51,28 @@ export const GroupRenamePopover = ({
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log({ emoji, name })
+    rename({
+      param: { id: data.id },
+      json: {
+        icon: emoji,
+        name: name,
+      },
+    }, {
+      onSuccess: () => {
+        onClose();
+      }
+    });
+  }
+  
+  const handleClose = () => {
+    setEmoji(data.icon);
+    setName(data.name);
+
+    onClose()
   }
 
-
   return (
-    <Popover open={isOpen} onOpenChange={onClose}>
+    <Popover open={isOpen} onOpenChange={handleClose}>
       <PopoverContent 
         ref={setRef}
         className="fixed left-5 p-1.5 w-[380px]"

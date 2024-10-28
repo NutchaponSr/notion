@@ -1,11 +1,21 @@
-import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
+
+import { Badge } from "@/components/ui/badge";
+
+import { cn } from "@/lib/utils";
+
 interface WorkspaceItemProps {
   children: React.ReactNode;
   label: string;
   showBadge?: boolean;
   sideButton?: React.ReactNode;
   href: string;
+}
+
+interface WorkspaceSubItemProps {
+  href?: string;
+  children: React.ReactNode;
+  indent: string;
 }
 
 export const WorkspaceItem = ({
@@ -39,6 +49,25 @@ export const WorkspaceItem = ({
             {sideButton}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export const WorkspaceSubItem = ({
+  href,
+  children,
+  indent
+}: WorkspaceSubItemProps) => {
+  const router = useRouter();
+
+  return (
+    <div 
+      onClick={() => href ? router.push(href) : null} 
+      className="flex items-center h-[30px] w-full hover:bg-[#00000008] cursor-pointer space-x-2"
+    >
+      <div className={cn("text-sm text-[#91918e] flex items-center", indent)}>
+        {children}
       </div>
     </div>
   );

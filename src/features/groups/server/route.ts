@@ -130,7 +130,7 @@ const app = new Hono()
       await db
         .insert(groups)
         .values({
-          name: query.name,
+          name: query.name + " (Copy)",
           icon: query.icon,
           year: query.year,
           inTrash: false,
@@ -177,7 +177,7 @@ const app = new Hono()
       "json",
       z.object({
         name: z.string(),
-        icon: z.string(),
+        icon: z.string().nullable(),
       }),
     ),
     async (c) => {

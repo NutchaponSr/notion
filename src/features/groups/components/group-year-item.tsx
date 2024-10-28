@@ -4,7 +4,7 @@ import { PlusIcon } from "lucide-react";
 import { HiMiniCalendarDays } from "react-icons/hi2";
 
 import { IconWrapper } from "@/components/icon-wrapper";
-import { WorkspaceItem } from "@/components/workspace-item";
+import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
 import { GroupItem } from "@/features/groups/components/group-item";
 
@@ -73,9 +73,9 @@ export const GroupYearItem = ({
             );
           })
         ) : (
-          <div className="h-[30px]">
-            No Data
-          </div>
+          <WorkspaceSubItem indent="ml-7">
+            No group
+          </WorkspaceSubItem>
         )
       )}
     </React.Fragment>
