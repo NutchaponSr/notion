@@ -31,13 +31,20 @@ export const GroupYearItem = ({
     onToggle: toggleGroupItemChild,
   } = useGroupItemChild();
 
+  const handleOnClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
+    if (onClick) onClick();
+  }
+
   return (
     <React.Fragment>
       <WorkspaceItem 
+        href={`/groups?year=${year}`}
         label={year}
         showBadge={year === new Date().getFullYear().toString()}
         sideButton={
-          <button onClick={onClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
+          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
             <PlusIcon className="size-[18px]" />
           </button> 
         }

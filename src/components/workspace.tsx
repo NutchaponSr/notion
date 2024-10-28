@@ -55,11 +55,11 @@ export const Workspace = () => {
         Workspace
       </div>
       <div className="flex flex-col">
-        <WorkspaceItem label="Group">
+        <WorkspaceItem href="/groups" label="Group">
           <IconWrapper 
+            indent="ml-1"
             isOpen={openGroupChild}
             onClick={toggleGroupChild}
-            indent="ml-1"
             className="bg-[#f5e0e9] text-[#ac5488]"
           >
             <HiMiniCircleStack className="size-[18px]" />
@@ -93,11 +93,11 @@ export const Workspace = () => {
             </div>
           </div>
         )}
-        <WorkspaceItem label="Competency">
+        <WorkspaceItem label="Competency" href="/competencies">
           <IconWrapper
+            indent="ml-1"
             isOpen={openCompetencyChild}
             onClick={toggleCompetencyChild}
-            indent="ml-1"
             className="bg-[#fadec9] text-[#C47830]"
           >
             <HiMiniBuildingLibrary className="size-[18px]" />

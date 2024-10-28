@@ -1,3 +1,14 @@
+import toast from "react-hot-toast";
+
+import { 
+  CopyIcon, 
+  LinkIcon, 
+  MoveUpRightIcon, 
+  SquarePenIcon, 
+  StarIcon, 
+  Trash2Icon 
+} from "lucide-react";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -5,8 +16,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { GroupSidebarType } from "../types";
-import { CopyIcon, LinkIcon, MoveUpRightIcon, SquarePenIcon, StarIcon, Trash2Icon } from "lucide-react";
+
+import { GroupSidebarType } from "@/features/groups/types";
+
+import { useTrashGroup } from "@/features/groups/api/use-trash-group";
+import { useDuplicateGroup } from "@/features/groups/api/use-duplicate-group";
 
 interface GroupActionsProps {
   children: React.ReactNode;
@@ -19,6 +33,35 @@ export const GroupActions = ({
   data,
   onRename,
 }: GroupActionsProps) => {
+  const { mutate: trash } = useTrashGroup();
+  const { mutate: duplicate } = useDuplicateGroup();
+  
+  const handleClipboard = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
+    const baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}/groups/${data.id}`;
+
+    navigator.clipboard.writeText(baseUrl)
+      .then(() => toast.success("Copied link to clipboard"));
+  }
+
+  const handleRename = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
+    onRename();
+  }
+
+  const handleTrash = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
+    trash({ param: { id: data.id } });
+  }
+
+  const handleDuplicate = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
+    duplicate({ param: { id: data.id } });
+  }
 
   return (
     <DropdownMenu>
@@ -31,31 +74,31 @@ export const GroupActions = ({
         sideOffset={8} 
         className="w-[265px]"
       >
-        <DropdownMenuItem onClick={onRename}>
+        <DropdownMenuItem onClick={() => {}}>
           <StarIcon className="size-4" />
           Add to Favorite
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={onRename}>
+        <DropdownMenuItem onClick={handleClipboard}>
           <LinkIcon className="size-4" />
           Copy link
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={onRename}>
+        <DropdownMenuItem onClick={handleDuplicate}>
           <CopyIcon className="size-4" />
           <span className="flex-auto">Duplicate</span>
           <span className="text-xs text-[#37352f80]">Ctrl+D</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={onRename}>
+        <DropdownMenuItem onClick={handleRename}>
           <SquarePenIcon className="size-4" />
           <span className="flex-auto">Rename</span>
           <span className="text-xs text-[#37352f80]">Ctrl+Shift+R</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={onRename} className="focus:text-[#eb5757]">
+        <DropdownMenuItem onClick={handleTrash} className="focus:text-[#eb5757]">
           <Trash2Icon className="size-4" />
           Move to trash
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={onRename}>
+        <DropdownMenuItem onClick={() => {}}>
           <MoveUpRightIcon className="size-4" />
           Open in new tab
         </DropdownMenuItem>

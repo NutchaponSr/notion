@@ -15,6 +15,13 @@
       "when": 1729677830050,
       "tag": "0001_short_bromley",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1730117490165,
+      "tag": "0002_strange_nocturne",
+      "breakpoints": true
     }
   ]
 }

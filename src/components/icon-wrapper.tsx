@@ -15,11 +15,21 @@ export const IconWrapper = ({
   className,
   onClick,
   isOpen,
-  indent
+  indent,
 }: IconWrapperProps) => {
+  const handleOnClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (onClick) onClick();
+  }
 
   return (
-    <div className={cn("shrink-0 grow-0 rounded-sm flex justify-center items-center mr-2", indent)}>
+    <div 
+      className={cn(
+        "shrink-0 grow-0 rounded-sm flex justify-center items-center mr-2", indent
+      )}
+    >
       <div className="flex items-center justify-center shrink-0 grow-0 size-[22px] relative">
         <div className="grid">
           <div className="row-start-1 col-start-1 row-auto col-auto">
@@ -34,7 +44,7 @@ export const IconWrapper = ({
             </div>
             <div 
               role="button"
-              onClick={onClick}
+              onClick={handleOnClick}
               className="transition relative hidden items-center justify-center size-6 rounded-sm group-hover/workspace:flex text-[#91918e] bg-[#37352f0f]"
             >
               <ChevronRightIcon className={cn(

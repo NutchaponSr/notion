@@ -55,3 +55,9 @@ export const groups = pgTable("group", {
   updatedAt: timestamp("updatedAt", { mode: "string" }).notNull().$onUpdateFn(() => new Date().toISOString()),
   updatedBy: text("updatedBy").notNull(),
 });
+
+export const favorites = pgTable("favorite", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  userId: text("userId").references(() => users.id, { onDelete: "cascade" }).notNull(),
+  groupId: text("groupId").references(() => groups.id, { onDelete: "cascade" }).notNull(),
+});

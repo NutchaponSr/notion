@@ -43,10 +43,18 @@ export const GroupItem = ({
     }, 200);
   };
 
+  const handleOnClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    onChlid();
+  }
+
   return (
     <React.Fragment>
       <div ref={itemRef}>
         <WorkspaceItem 
+          href={`/groups/${data.id}`}
           label={data.name}
           sideButton={
             <GroupActions data={data} onRename={onRename}>
@@ -58,7 +66,7 @@ export const GroupItem = ({
         >
           <IconWrapper 
             isOpen={isChild}
-            onClick={onChlid}
+            onClick={() => handleOnClick}
             indent="ml-5"
             className="text-[#91918e]"
           >

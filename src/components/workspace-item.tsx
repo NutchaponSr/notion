@@ -1,9 +1,11 @@
 import { Badge } from "@/components/ui/badge";
+import { useRouter } from "next/navigation";
 interface WorkspaceItemProps {
   children: React.ReactNode;
   label: string;
   showBadge?: boolean;
   sideButton?: React.ReactNode;
+  href: string;
 }
 
 export const WorkspaceItem = ({
@@ -11,9 +13,15 @@ export const WorkspaceItem = ({
   label,
   showBadge,
   sideButton,
+  href
 }: WorkspaceItemProps) => {
+  const router = useRouter();
+
   return (
-    <div className="flex items-center h-[30px] w-full hover:bg-[#00000008] p-1 group/workspace cursor-pointer">
+    <div 
+      onClick={() => router.push(href)}
+      className="flex items-center h-[30px] w-full hover:bg-[#00000008] p-1 group/workspace cursor-pointer"
+    >
       {children}
       <div className="flex-auto whitespace-nowrap overflow-hidden text-clip flex items-center space-x-2">
         <div className="whitespace-nowrap overflow-hidden text-ellipsis text-sm">

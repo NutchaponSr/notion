@@ -8,7 +8,7 @@ import {
 import { EmojiPicker } from "@/components/emoji-picker";
 
 import { GroupSidebarType } from "@/features/groups/types";
-import { useEmoji } from "../stores/use-emoji";
+import { Button } from "@/components/ui/button";
 
 interface GroupRenamePopoverProps {
   data: GroupSidebarType[0];
@@ -23,9 +23,8 @@ export const GroupRenamePopover = ({
   onClose,
   height
 }: GroupRenamePopoverProps) => {
-  const { onOpen } = useEmoji();
-
   const [emoji, setEmoji] = useState(group.icon);
+  const [name, setName] = useState(group.name);
   const [isBottom, setIsBottom] = useState(true);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -46,6 +45,12 @@ export const GroupRenamePopover = ({
     }
   }, []);
 
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log({ emoji, name })
+  }
+
 
   return (
     <Popover open={isOpen} onOpenChange={onClose}>
@@ -54,17 +59,26 @@ export const GroupRenamePopover = ({
         className="fixed left-5 p-1.5 w-[380px]"
         style={{ top: `${height + 35}px` }}
       >
-        <EmojiPicker isBottom={isBottom} onSelectEmoji={handleEmoji}>
-          <button
-            type="button"
-            onClick={onOpen}
-            className="notion-record-icon notranslate flex items-center justify-center h-7 w-7 rounded-[0.25em] cursor-pointer flex-shrink-0 flex-grow-0 transition-colors ease-in outline-none duration-75 hover:bg-[#F7F7F5] shadow-[inset_0_0_0_1px_rgba(55,53,47,0.16)]"
-          >
-            <div className="flex items-center justify-center h-4.5 w-4.5">
-              {emoji}
-            </div>
-          </button>
-        </EmojiPicker>
+        <form onSubmit={onSubmit} className="flex items-center space-x-1.5">
+          <EmojiPicker isBottom={isBottom} onSelectEmoji={handleEmoji}>
+            <button
+              type="button"
+              className="notion-record-icon notranslate flex items-center justify-center h-7 w-7 rounded-[0.25em] cursor-pointer flex-shrink-0 flex-grow-0 transition-colors ease-in outline-none duration-75 hover:bg-[#F7F7F5] shadow-[inset_0_0_0_1px_rgba(55,53,47,0.16)]"
+            >
+              <div className="flex items-center justify-center h-4.5 w-4.5">
+                {emoji}
+              </div>
+            </button>
+          </EmojiPicker>
+          <input 
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="max-w-full w-full whitespace-pre-wrap break-words grow text-sm py-1 px-2.5 rounded-sm shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] bg-[#f2f1ee99] focus-visible:outline-none text-[#37352f]"
+          />
+          <Button variant="primary" size="sm">
+            Save
+          </Button>
+        </form>
       </PopoverContent>
     </Popover>
   );

@@ -35,6 +35,7 @@ export const EmojiPicker = ({
           onEmojiSelect={onSelectEmoji}
           theme="light"
           previewPosition="none"
+          searchPosition="none"
         />
       </PopoverContent>
     </Popover>
