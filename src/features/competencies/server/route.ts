@@ -56,6 +56,29 @@ const app = new Hono()
       return c.json({ data: populatedCompetency });
     }
   )
+  .get(
+    "/trash",
+    async (c) => {
+      const session = await auth();
+
+      if (!session) {
+        return c.text("Unauthorized", 401);
+      }
+
+      const data = await db
+        .select({
+          id: competencies.id,
+          name: competencies.name,
+          icon: competencies.icon,
+          updatedBy: competencies.updatedBy,
+        })
+        .from(competencies)
+        .where(eq(competencies.inTrash, true))
+        .orderBy(desc(competencies.updatedAt));
+
+      return c.json({ data });
+    }
+  )
   .post(
     "/instant",
     zValidator(

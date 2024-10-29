@@ -1,5 +1,5 @@
-import { HiUser } from "react-icons/hi2";
-import { CircleHelpIcon, FileIcon, Trash2Icon } from "lucide-react";
+import { HiOutlineTrash, HiUser } from "react-icons/hi2";
+import { CircleHelpIcon, CornerUpLeftIcon, FileIcon, HashIcon, Trash2Icon } from "lucide-react";
 
 import {
   Popover,
@@ -9,8 +9,34 @@ import {
 
 import { FilterButton } from "@/components/filter-button";
 import { ScrollArea } from "./ui/scroll-area";
+import { useGetTrashGroups } from "@/features/groups/api/use-get-trash-groups";
+import { useGetTrashCompetencies } from "@/features/competencies/api/use-get-trash-competencies";
+import { Category } from "@/types";
+import { Button } from "./ui/button";
 
 export const Trash = () => {
+  const { 
+    data: groups,
+    isLoading: loadingGroups,
+  } = useGetTrashGroups();
+  const { 
+    data: competencies,
+    isLoading: loadingCompetencies,
+  } = useGetTrashCompetencies();
+  
+  const isLoading = loadingGroups || loadingCompetencies;
+
+  const populatedData = [
+    ...(groups?.map(group => ({
+      ...group,
+      type: Category.GROUP
+    })) || []),
+    ...(competencies?.map(comp => ({
+      ...comp,
+      type: Category.COMPETENCY
+    })) || [])
+  ]
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -46,12 +72,54 @@ export const Trash = () => {
               <FilterButton icon={FileIcon} label="In" />
             </div>
           </div>
-          <div className="grow overflow-x-hidden overflow-y-auto">
-            <div className="py-1.5">
-              {/* Item */}
-              dgd
+          <ScrollArea className="grow overflow-x-hidden overflow-y-auto">
+            <div className="py-1.5 h-full">
+              {isLoading ? (
+                <div className="flex flex-col items-center justify-center h-full space-y-2">
+                  <HiOutlineTrash className="text-[#D3D1CB] size-12" />
+                  <div className="text-sm font-semibold text-[#91918e]">
+                    Trashed stuff appear here 
+                  </div>
+                </div>
+              ) : (
+                populatedData
+                  .filter((f) => f.type === Category.GROUP)
+                  .map((item) => (
+                    <div 
+                      key={item.id}
+                      className="mx-1 rounded-md hover:bg-[#37352f0f] transition"
+                    >
+                      <div className="flex items-center w-full min-h-7 h-7 text-sm py-1">
+                        <div className="flex items-center justify-center ml-2.5 mr-1">
+                          <div className="flex items-center justify-center size-5 shrink-0 text-base">
+                          {item.icon ? (
+                            item.icon
+                          ) : (
+                            <HashIcon className="size-[18px] text-[#91918e]" />
+                          )}
+                          </div>
+                        </div>
+                        <div className="flex-auto mx-1.5">
+                          <h2 className="whitespace-nowrap overflow-hidden text-ellipsis text-[#37352f] text-sm">
+                            {item.name}
+                          </h2>
+                        </div>
+                        <div className="ml-auto mr-2.5">
+                          <div className="flex gap-1">
+                            <Button variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] hover:text-[#a4a4a2]">
+                              <CornerUpLeftIcon />
+                            </Button>
+                            <Button variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] hover:text-[#a4a4a2]">
+                              <Trash2Icon />
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+              )}
             </div>
-          </div>
+          </ScrollArea>
           <footer className="shrink-0">
             <div className="py-2 bg-[#2383e212]">
               <div className="px-2 text-xs text-[#37352fa6] dark:text-[#ffffff71] flex items-center justify-between">

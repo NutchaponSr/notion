@@ -88,6 +88,29 @@ const app = new Hono()
       return c.json({ data }, 200);
     }
   )
+  .get(
+    "/trash",
+    async (c) => {
+      const session = await auth();
+
+      if (!session) {
+        return c.text("Unauthorized", 401);
+      }
+
+      const data = await db
+        .select({
+          id: groups.id,
+          name: groups.name,
+          icon: groups.icon,
+          updatedBy: groups.updatedBy,
+        })
+        .from(groups)
+        .where(eq(groups.inTrash, true))
+        .orderBy(desc(groups.updatedAt));
+
+      return c.json({ data });
+    }
+  )
   .post(
     "/instant",
     zValidator(
