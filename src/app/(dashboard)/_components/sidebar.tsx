@@ -7,12 +7,13 @@ import { ChevronsLeft } from "lucide-react";
 import { ElementRef, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
+import { Favorite } from "@/components/favorite";
+import { Workspace } from "@/components/workspace";
 import { Navigation } from "@/components/navigation";
 
 import { UserButton } from "@/features/auth/components/user-button";
-import { Workspace } from "@/components/workspace";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 export const Sidebar = () => {
   const isMobile = useMedia("(max-width: 768px)");
@@ -120,6 +121,7 @@ export const Sidebar = () => {
                       <div className="flex flex-col gap-3 pb-5">
                         {/* Workspaces & Favorite */}
                         <div className="flex flex-col gap-1">
+                          <Favorite />
                           <Workspace />
                         </div>
                         <div className="shrink-0 grow-0 pb-2 flex flex-col">

@@ -26,7 +26,14 @@ export const useRenameGroup = () => {
     },
     onSuccess: () => {
       toast.success("Group renamed");
-      queryClient.invalidateQueries({ queryKey: ["instantGroups"] });
+      // queryClient.invalidateQueries({ queryKey: ["instantGroups"] });
+
+      queryClient.invalidateQueries({
+        predicate: (query) => {
+          const [firstKey] = query.queryKey as [string];
+          return ["instantGroups", "favorites"].includes(firstKey);
+        }
+      });
     },
     onError: () => {
       toast.error("Failed to rename group");

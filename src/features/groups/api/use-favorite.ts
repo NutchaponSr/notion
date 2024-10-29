@@ -25,7 +25,13 @@ export const useFavorite = () => {
     },
     onSuccess: () => {
       toast.success("Favorited");
-      queryClient.invalidateQueries({ queryKey: ["favorites"] });
+      
+      queryClient.invalidateQueries({
+        predicate: (query) => {
+          const [firstKey] = query.queryKey as [string];
+          return ["instantGroups", "favorites"].includes(firstKey);
+        }
+      });
     },
     onError: () => {
       toast.error("Failed to favorite");

@@ -8,6 +8,7 @@ export type GroupInstant = {
   year: string,
   updatedAt: string,
   updatedBy: string,
+  isFavorite: boolean;
 }
 
 export type GroupSidebarType = InferResponseType<typeof client.api.groups["instant"]["$get"], 200>["data"][0];

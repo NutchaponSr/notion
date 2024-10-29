@@ -25,7 +25,13 @@ export const useUnfavorite = () => {
     },
     onSuccess: () => {
       toast.success("unfavorited");
-      queryClient.invalidateQueries({ queryKey: ["instantGroups"] });
+      
+      queryClient.invalidateQueries({
+        predicate: (query) => {
+          const [firstKey] = query.queryKey as [string];
+          return ["instantGroups", "favorites"].includes(firstKey);
+        }
+      });
     },
     onError: () => {
       toast.error("Failed to unfavorite");

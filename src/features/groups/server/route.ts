@@ -4,7 +4,7 @@ import { auth } from "@/auth";
 import { zValidator } from "@hono/zod-validator";
 
 import { db } from "@/db/drizzle";
-import { favorites, groups, users } from "@/db/schema";
+import { favorites, groups } from "@/db/schema";
 import { and, desc, eq, gte, lte } from "drizzle-orm";
 
 import { GroupInstant } from "@/features/groups/types";
@@ -20,15 +20,9 @@ const app = new Hono()
       }
 
       const group = await db
-        .select({
-          id: groups.id,
-          name: groups.name,
-          icon: groups.icon,
-          year: groups.year,
-          updatedAt: groups.updatedAt,
-          updatedBy: groups.updatedBy
-        })
+        .select()
         .from(groups)
+        .leftJoin(favorites, eq(favorites.groupId, groups.id))
         .where(
           and(
             eq(groups.inTrash, false),
@@ -40,23 +34,27 @@ const app = new Hono()
           desc(groups.createdAt),
         );
 
-        const populatedGroup: Record<string, GroupInstant[]> = {};
+      const populatedGroup: Record<string, GroupInstant[]> = {};
 
-        group.forEach((item) => {
-          if (!populatedGroup[item.year]) {
-            populatedGroup[item.year] = [];  
-          }
-          populatedGroup[item.year].push({
-            id: item.id,
-            name: item.name,
-            icon: item.icon,
-            year: item.year,
-            updatedAt: item.updatedAt,
-            updatedBy: item.updatedBy
-          });
+      group.forEach((item) => {
+        if (!populatedGroup[item.group.year]) {
+          populatedGroup[item.group.year] = [];  
+        }
+
+        const isFavorite = item.favorite?.groupId === item.group.id;
+
+        populatedGroup[item.group.year].push({
+          id: item.group.id,
+          name: item.group.name,
+          icon: item.group.icon,
+          year: item.group.year,
+          updatedAt: item.group.updatedAt,
+          updatedBy: item.group.updatedBy,
+          isFavorite: isFavorite
         });
+      });
 
-      return c.json({ data: populatedGroup });
+      return c.json({ data: populatedGroup, group });
     }
   )
   .get(
@@ -69,11 +67,22 @@ const app = new Hono()
       }
 
       const data = await db
-        .select()
+        .select({
+          groupId: favorites.groupId,
+          name: groups.name,
+          icon: groups.icon,
+          year: groups.year,
+          updatedAt: groups.updatedAt,
+          updatedBy: groups.updatedBy
+        })
         .from(favorites)
         .leftJoin(groups, eq(groups.id, favorites.groupId))
-        .leftJoin(users, eq(users.id, favorites.userId))
-        .where(eq(favorites.userId, session.user.id))
+        .where(
+          and(
+            eq(favorites.userId, session.user.id),
+            eq(groups.inTrash, false),
+          )
+        )
         .orderBy(desc(groups.createdAt))
 
       return c.json({ data }, 200);
@@ -319,7 +328,7 @@ const app = new Hono()
 
       const [data] = await db
         .delete(favorites)
-        .where(eq(favorites.id, id))
+        .where(eq(favorites.groupId, id))
         .returning()
 
       if (!data) {

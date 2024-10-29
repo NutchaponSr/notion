@@ -6,6 +6,7 @@ import {
   MoveUpRightIcon, 
   SquarePenIcon, 
   StarIcon, 
+  StarOffIcon, 
   Trash2Icon 
 } from "lucide-react";
 import { format } from "date-fns";
@@ -20,6 +21,8 @@ import {
 
 import { GroupSidebarType } from "@/features/groups/types";
 
+import { useFavorite } from "@/features/groups/api/use-favorite";
+import { useUnfavorite } from "@/features/groups/api/use-unfavorite";
 import { useTrashGroup } from "@/features/groups/api/use-trash-group";
 import { useDuplicateGroup } from "@/features/groups/api/use-duplicate-group";
 
@@ -35,8 +38,9 @@ export const GroupActions = ({
   onRename,
 }: GroupActionsProps) => {
   const { mutate: trash } = useTrashGroup();
+  const { mutate: favorite } = useFavorite();
+  const { mutate: unfavorite } = useUnfavorite();
   const { mutate: duplicate } = useDuplicateGroup();
-
   
   const baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}/groups/${data.id}`;
 
@@ -67,10 +71,17 @@ export const GroupActions = ({
         className="w-[265px]"
         onClick={handleContentClick}
       >
-        <DropdownMenuItem onClick={() => {}}>
-          <StarIcon className="size-4" />
-          Add to Favorite
-        </DropdownMenuItem>
+        {data.isFavorite ? (
+          <DropdownMenuItem onClick={() => unfavorite({ param: { id: data.id } })}>
+            <StarOffIcon className="size-4" />
+            Remove from Favorite
+          </DropdownMenuItem>
+        ) : (
+          <DropdownMenuItem onClick={() => favorite({ param: { id: data.id } })}>
+            <StarIcon className="size-4" />
+            Add to Favorite
+          </DropdownMenuItem>
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleClipboard}>
           <LinkIcon className="size-4" />
