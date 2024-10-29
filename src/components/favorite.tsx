@@ -53,6 +53,8 @@ export const Favorite = () => {
       </div>
     );
   }
+
+  if (favorites.length <= 0) return null;
   
   return (
     <div className="flex flex-col w-full mb-3">

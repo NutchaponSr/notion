@@ -9,6 +9,7 @@ import { ElementRef, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+import { Trash } from "@/components/trash";
 import { Favorite } from "@/components/favorite";
 import { Workspace } from "@/components/workspace";
 import { Navigation } from "@/components/navigation";
@@ -119,13 +120,12 @@ export const Sidebar = () => {
                   <ScrollArea className="z-[1] pt-1.5 grow overflow-x-hidden overflow-y-auto">
                     <div className="flex flex-col min-h-full">
                       <div className="flex flex-col gap-3 pb-5">
-                        {/* Workspaces & Favorite */}
                         <div className="flex flex-col gap-1">
                           <Favorite />
                           <Workspace />
                         </div>
                         <div className="shrink-0 grow-0 pb-2 flex flex-col">
-                          
+                          <Trash />
                         </div>
                       </div>
                     </div>
