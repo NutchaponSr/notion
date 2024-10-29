@@ -5,7 +5,6 @@ import {
   LinkIcon, 
   MoveUpRightIcon, 
   SquarePenIcon, 
-  StarIcon, 
   Trash2Icon 
 } from "lucide-react";
 import { format } from "date-fns";
@@ -18,27 +17,25 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { GroupSidebarType } from "@/features/groups/types";
+import { CompetencyInstant } from "@/features/competencies/types";
+import { useTrashCompetency } from "@/features/competencies/api/use-trash-competency";
+import { useDuplicateCompetency } from "@/features/competencies/api/use-duplicate-competency";
 
-import { useTrashGroup } from "@/features/groups/api/use-trash-group";
-import { useDuplicateGroup } from "@/features/groups/api/use-duplicate-group";
-
-interface GroupActionsProps {
+interface CompetencyActionsProps {
   children: React.ReactNode;
-  data: GroupSidebarType[0];
+  data: CompetencyInstant;
   onRename: () => void;
 }
 
-export const GroupActions = ({ 
-  children, 
+export const CompetencyActions = ({
+  children,
   data,
   onRename,
-}: GroupActionsProps) => {
-  const { mutate: trash } = useTrashGroup();
-  const { mutate: duplicate } = useDuplicateGroup();
+}: CompetencyActionsProps) => {
+  const { mutate: trash } = useTrashCompetency();
+  const { mutate: duplicate } = useDuplicateCompetency();
 
-  
-  const baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}/groups/${data.id}`;
+  const baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}/competencies/${data.id}`;
 
   const handleClipboard = () => {
     navigator.clipboard.writeText(baseUrl)
@@ -60,31 +57,24 @@ export const GroupActions = ({
       <DropdownMenuTrigger asChild>
         {children}
       </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        side="right" 
-        align="start" 
-        sideOffset={8} 
+      <DropdownMenuContent
+        align="start"
+        side="right"
+        sideOffset={8}
         className="w-[265px]"
         onClick={handleContentClick}
       >
-        <DropdownMenuItem onClick={() => {}}>
-          <StarIcon className="size-4" />
-          Add to Favorite
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleClipboard}>
           <LinkIcon className="size-4" />
           Copy link
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => duplicate({ param: { id: data.id } })}>
           <CopyIcon className="size-4" />
-          <span className="flex-auto">Duplicate</span>
-          <span className="text-xs text-[#37352f80]">Ctrl+D</span>
+          duplicate
         </DropdownMenuItem>
         <DropdownMenuItem onClick={onRename}>
           <SquarePenIcon className="size-4" />
-          <span className="flex-auto">Rename</span>
-          <span className="text-xs text-[#37352f80]">Ctrl+Shift+R</span>
+          Rename
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => trash({ param: { id: data.id } })} 
@@ -98,7 +88,6 @@ export const GroupActions = ({
           <MoveUpRightIcon className="size-4" />
           Open in new tab
         </DropdownMenuItem>
-        <DropdownMenuSeparator />
         <div className="py-1 flex items-center w-full">
           <div className="mx-2 flex-auto">
             <div className="text-xs text-[#37352f80]">

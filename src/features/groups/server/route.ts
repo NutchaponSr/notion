@@ -25,6 +25,8 @@ const app = new Hono()
           name: groups.name,
           icon: groups.icon,
           year: groups.year,
+          updatedAt: groups.updatedAt,
+          updatedBy: groups.updatedBy
         })
         .from(groups)
         .where(
@@ -48,7 +50,9 @@ const app = new Hono()
             id: item.id,
             name: item.name,
             icon: item.icon,
-            year: item.year
+            year: item.year,
+            updatedAt: item.updatedAt,
+            updatedBy: item.updatedBy
           });
         });
 

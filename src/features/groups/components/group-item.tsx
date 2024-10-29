@@ -8,19 +8,13 @@ import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
 import { GroupActions } from "@/features/groups/components/group-actions";
 import { GroupRenamePopover } from "@/features/groups/components/group-rename-popover";
+import { GroupInstant } from "../types";
 
 interface GroupItemProps {
   isChild: boolean;
   onChlid: () => void;
-  data: {
-    id: string;
-    name: string;
-    icon: string | null;
-    year: string;
-  }
+  data: GroupInstant;
 }
-
-const BASEURL = process.env.NEXT_PUBLIC_APP_URL!;
 
 export const GroupItem = ({
   data,
@@ -77,14 +71,14 @@ export const GroupItem = ({
         <>
           <WorkspaceSubItem 
             indent="ml-7" 
-            href={`${BASEURL}/groups/${data.id}/competencies`}
+            href={`/groups/${data.id}/competencies`}
           >
             <DotIcon className="size-4 mr-2" />
             Competency
           </WorkspaceSubItem>
           <WorkspaceSubItem 
             indent="ml-7" 
-            href={`${BASEURL}/groups/${data.id}/employees`}
+            href={`/groups/${data.id}/employees`}
           >
             <DotIcon className="size-4 mr-2" />
             Employee

@@ -23,4 +23,19 @@ export const categories = [
       "text-[#598164] dark:text-[#589669]"
     ],
   },
-]
+];
+
+export enum Types {
+  CC = "CC",
+  FC = "FC",
+  TC = "TC",
+}
+
+export type CompetencyInstant = {
+  id: string, 
+  name: string, 
+  icon: string | null,
+  type: Types,
+  updatedAt: string,
+  updatedBy: string,
+} 

@@ -8,6 +8,7 @@ interface IconWrapperProps {
   onClick?: () => void;
   isOpen?: boolean;
   indent: string;
+  notChild?: boolean;
 }
 
 export const IconWrapper = ({ 
@@ -16,6 +17,7 @@ export const IconWrapper = ({
   onClick,
   isOpen,
   indent,
+  notChild = false
 }: IconWrapperProps) => {
   const handleOnClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -35,22 +37,25 @@ export const IconWrapper = ({
             <div 
               role="button"
               className={cn(
-                "transition relative flex items-center justify-center size-6 rounded-sm group-hover/workspace:hidden visible",
+                "transition relative flex items-center justify-center size-6 rounded-sm visible",
+                !notChild && "group-hover/workspace:hidden",
                 className,
               )}
             >
               {children}
             </div>
-            <div 
-              role="button"
-              onClick={handleOnClick}
-              className="transition relative hidden items-center justify-center size-6 rounded-sm group-hover/workspace:flex text-[#91918e] bg-[#37352f0f]"
-            >
-              <ChevronRightIcon className={cn(
-                "size-[18px] transition",
-                isOpen ? "rotate-90" : "rotate-0",
-              )} />
-            </div>
+            {!notChild && (
+              <div 
+                role="button"
+                onClick={handleOnClick}
+                className="transition relative hidden items-center justify-center size-6 rounded-sm group-hover/workspace:flex text-[#91918e] bg-[#37352f0f]"
+              >
+                <ChevronRightIcon className={cn(
+                  "size-[18px] transition",
+                  isOpen ? "rotate-90" : "rotate-0",
+                )} />
+              </div>
+            )} 
           </div>
         </div>
       </div>

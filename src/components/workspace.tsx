@@ -4,6 +4,8 @@ import {
   HiMiniUsers
 } from "react-icons/hi2";
 
+import { typesCompetency } from "@/db/schema";
+
 import { Skeleton } from "@/components/ui/skeleton";
 
 import { IconWrapper } from "@/components/icon-wrapper";
@@ -19,6 +21,8 @@ import { useGroupYearChild } from "@/features/groups/stores/use-group-year-child
 import { useGetInstantGroup } from "@/features/groups/api/use-get-instant-groups";
 import { useCreateInstantGroup } from "@/features/groups/api/use-create-instant-group";
 import { useCompetencyChild } from "@/features/competencies/stores/use-competency-child";
+import { useCreateInstantCompetency } from "@/features/competencies/api/use-create-instant-group";
+import { useGetInstantCompetencies } from "@/features/competencies/api/use-get-instant-competencies";
 
 export const Workspace = () => {
   const {
@@ -35,24 +39,27 @@ export const Workspace = () => {
   } = useCategory();
 
   const { mutate: createGroup } = useCreateInstantGroup();
+  const { mutate: createCompetency } = useCreateInstantCompetency();
   const { data: groups, isLoading: loadingGroups } = useGetInstantGroup();
+  const { data: competencies, isLoading: loadingCompetencies } = useGetInstantCompetencies();
 
-  const isLoading = loadingGroups;
+  const isLoading = loadingGroups || loadingCompetencies;
 
   const { 
     isOpen: openGroupYearChild,
     onToggle: toggleGroupYearChild,
   } = useGroupYearChild();
 
-  if (isLoading || !groups) {
+  if (isLoading || !groups || !competencies) {
     return (
       <div className="flex flex-col w-full mb-3 px-1">
         <div className="flex items-center px-3 py-1.5 text-xs text-[#91918e]">
           Workspace
         </div>
-        <div className="flex flex-col gap-[1px]">
-          <Skeleton className="h-[30px] w-full rounded-sm" />
-          <Skeleton className="h-[30px] w-full rounded-sm" />
+        <div className="flex flex-col gap-1">
+          <Skeleton className="h-[26px] w-full rounded-sm" />
+          <Skeleton className="h-[26px] w-full rounded-sm" />
+          <Skeleton className="h-[26px] w-full rounded-sm" />
         </div>
       </div>
     );
@@ -123,7 +130,13 @@ export const Workspace = () => {
                 query={category.query}
                 className={category.className}
                 isChild={isChild}
+                data={competencies[category.query as typeof typesCompetency.enumValues[number]]}
                 onChild={() => toggleCategoryChild(category.label)}
+                onClick={() => createCompetency({
+                  json: {
+                    type: category.query as typeof typesCompetency.enumValues[number]
+                  }
+                })}
               />
             );
           })

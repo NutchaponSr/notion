@@ -5,30 +5,30 @@ import { InferRequestType, InferResponseType } from "hono";
 
 import { client } from "@/lib/rpc";
 
-type RequestType = InferRequestType<typeof client.api.groups["duplicate"][":id"]["$post"]>;
-type ResponseType = InferResponseType<typeof client.api.groups["duplicate"][":id"]["$post"]>;
+type RequestType = InferRequestType<typeof client.api.competencies[":id"]["$delete"]>;
+type ResponseType = InferResponseType<typeof client.api.competencies[":id"]["$delete"]>;
 
-export const useDuplicateGroup = () => {
+export const useDeleteCompetency = () => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation<ResponseType, Error, RequestType>({
     mutationFn: async ({ param }) => {
-      const response = await client.api.groups["duplicate"][":id"]["$post"]({
+      const response = await client.api.competencies[":id"]["$delete"]({
         param
       });
 
       if (!response.ok) {
-        throw new Error("Failed to duplicate group");
+        throw new Error("Failed to delete competency");
       }
       
       return await response.json();
     },
     onSuccess: () => {
-      toast.success("Group duplicated");
-      queryClient.invalidateQueries({ queryKey: ["instantGroups"] });
+      toast.success("Competency deleted");
+      queryClient.invalidateQueries({ queryKey: ["instantCompetencies"] });
     },
     onError: () => {
-      toast.error("Failed to duplicate group");
+      toast.error("Failed to delete competency");
     }
   });
 
