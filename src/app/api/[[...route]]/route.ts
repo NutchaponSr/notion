@@ -3,6 +3,7 @@ import { handle } from "hono/vercel";
 
 import users from "@/features/auth/server/route";
 import groups from "@/features/groups/server/route";
+import trashs from "@/features/trashs/server/route";
 import requests from "@/features/contact-admins/server/route";
 import competencies from "@/features/competencies/server/route";
 
@@ -14,6 +15,7 @@ const app = new Hono().basePath("/api")
 const routes = app
   .route("/users", users)
   .route("/groups", groups)
+  .route("/trashs", trashs)
   .route("/requests", requests)
   .route("/competencies", competencies)
 
