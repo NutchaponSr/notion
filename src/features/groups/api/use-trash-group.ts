@@ -29,7 +29,7 @@ export const useTrashGroup = () => {
       queryClient.invalidateQueries({
         predicate: (query) => {
           const [firstKey] = query.queryKey as [string];
-          return ["instantGroups", "favorites"].includes(firstKey);
+          return ["instantGroups", "favorites", "trashs"].includes(firstKey);
         }
       });
     },

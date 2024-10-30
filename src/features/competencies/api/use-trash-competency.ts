@@ -26,7 +26,12 @@ export const useTrashCompetency = () => {
     onSuccess: async () => {
       toast.success("Competency trashed");
 
-      queryClient.invalidateQueries({ queryKey: ["instantCompetencies"] });
+      queryClient.invalidateQueries({
+        predicate: (query) => {
+          const [firstKey] = query.queryKey as [string];
+          return ["instantCompetencies", "trashs"].includes(firstKey);
+        }
+      });
     },
     onError: () => {
       toast.error("Failed to trash competency");

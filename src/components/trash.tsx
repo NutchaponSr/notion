@@ -88,7 +88,7 @@ export const Trash = () => {
         <div className="flex flex-col h-full">
           <div className="shrink-0 my-2.5 space-y-2.5">
             <div className="flex items-center w-full min-h-7">
-              <div className="mx-3 flex-auto">
+              <div className="mx-2 flex-auto">
                 <input 
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
@@ -97,7 +97,7 @@ export const Trash = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-row mx-3 space-x-1.5">
+            <div className="flex flex-row mx-2 space-x-1.5">
               <FilterCommand
                 icon={HiUser}
                 isSelected={isPeopleSelected}
@@ -140,7 +140,7 @@ export const Trash = () => {
                   filteredTrashs?.map((item) => (
                     <div 
                       key={item.id}
-                      className="mx-3 rounded-md hover:bg-[#37352f0f] transition"
+                      className="mx-2 rounded-md hover:bg-[#37352f0f] transition"
                     >
                       <div className="flex items-center w-full min-h-7 h-7 text-sm py-1">
                         <div className="flex items-center justify-center ml-2.5 mr-1">

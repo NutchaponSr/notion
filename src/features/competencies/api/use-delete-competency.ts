@@ -25,7 +25,7 @@ export const useDeleteCompetency = () => {
     },
     onSuccess: () => {
       toast.success("Competency deleted");
-      queryClient.invalidateQueries({ queryKey: ["instantCompetencies"] });
+      queryClient.invalidateQueries({ queryKey: ["trashs"] });
     },
     onError: () => {
       toast.error("Failed to delete competency");

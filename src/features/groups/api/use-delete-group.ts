@@ -25,7 +25,7 @@ export const useDeleteGroup = () => {
     },
     onSuccess: () => {
       toast.success("Group deleted");
-      queryClient.invalidateQueries({ queryKey: ["instantGroups"] });
+      queryClient.invalidateQueries({ queryKey: ["trashs"] });
     },
     onError: () => {
       toast.error("Failed to delete group");

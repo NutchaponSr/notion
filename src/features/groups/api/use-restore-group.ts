@@ -25,7 +25,12 @@ export const useReStoreGroup = () => {
     },
     onSuccess: () => {
       toast.success("Group restored");
-      queryClient.invalidateQueries({ queryKey: ["instantGroups"] });
+      queryClient.invalidateQueries({
+        predicate: (query) => {
+          const [firstKey] = query.queryKey as [string];
+          return ["instantGroups", "trashs"].includes(firstKey);
+        }
+      });
     },
     onError: () => {
       toast.error("Failed to restore group");
