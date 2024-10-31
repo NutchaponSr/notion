@@ -81,7 +81,7 @@ export const FilterCommand = ({
                 >
                   {item.icon ? (
                     <div className="flex items-center justify-center size-5 shrink-0 text-base">
-                      <item.icon />
+                      <item.icon className="text-[#91918e]" />
                     </div>
                   ) : (
                     <UserAvatar

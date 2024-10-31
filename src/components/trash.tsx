@@ -1,8 +1,6 @@
 import { 
   CircleHelpIcon, 
-  CornerUpLeftIcon, 
   FileIcon, 
-  HashIcon, 
   Trash2Icon 
 } from "lucide-react";
 import { useState } from "react";
@@ -19,10 +17,9 @@ import {
   PopoverContent,
   PopoverTrigger
 } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+import { TrashItem } from "@/components/trash-item";
 import { FilterCommand } from "@/components/filter-command";
 
 import { useGetTrashs } from "@/features/trashs/api/use-get-trashs";
@@ -138,50 +135,21 @@ export const Trash = () => {
                   </div>
                 ) : (
                   filteredTrashs?.map((item) => (
-                    <div 
+                    <TrashItem 
                       key={item.id}
-                      className="mx-2 rounded-md hover:bg-[#37352f0f] transition"
-                    >
-                      <div className="flex items-center w-full min-h-7 h-7 text-sm py-1">
-                        <div className="flex items-center justify-center ml-2.5 mr-1">
-                          <div className="flex items-center justify-center size-5 shrink-0 text-base">
-                          {item.icon ? (
-                            item.icon
-                          ) : (
-                            <HashIcon className="size-[18px] text-[#91918e]" />
-                          )}
-                          </div>
-                        </div>
-                        <div className="flex-auto mx-1.5">
-                          <div className="flex flex-row space-x-1 items-center">
-                            <h2 className="whitespace-nowrap overflow-hidden text-ellipsis text-[#37352f] text-sm">
-                              {item.name}
-                            </h2>
-                            <Separator className="w-3 h-[1px] bg-[#37352f80]" />
-                            <p className="whitespace-nowrap overflow-hidden text-ellipsis text-[#37352f80] text-xs">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                        <div className="ml-auto mr-2.5">
-                          <div className="flex gap-1">
-                            <Button onClick={item.onRestore} variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] hover:text-[#a4a4a2] rounded-sm">
-                              <CornerUpLeftIcon />
-                            </Button>
-                            <Button onClick={item.onDelete} variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] hover:text-[#a4a4a2] rounded-sm">
-                              <Trash2Icon />
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      name={item.name}
+                      icon={item.icon}
+                      description={item.description}
+                      onDelete={item.onDelete}
+                      onRestore={item.onRestore}
+                    />
                   ))
                 )
               )}
             </div>
           </ScrollArea>
           <footer className="shrink-0">
-            <div className="py-2 bg-[#2383e212]">
+            <div className="py-2 bg-[#2383e212] shadow-[0_-1px_0_rgba(55,53,47,0.09)]">
               <div className="px-2 text-xs text-[#37352fa6] dark:text-[#ffffff71] flex items-center justify-between">
                 <p> Pages in Trash for over 30 days will be automatically deleted</p>
                 <button className="size-6 hover:bg-[#37352f0f] rounded-sm flex justify-center items-center flex-shrink-0">

@@ -113,4 +113,12 @@ export const categories = [
       "text-[#DFECDD] fill-[#598164] dark:text-[#2C3C31] dark:fill-[#589669]"
     ],
   },
-]
+];
+
+export const comfirmDeleteTrash = {
+  title: "Are you sure you want to delete this stuff from Trash?",
+  description: "",
+  className: "w-[300px]",
+  confirmLabel: "Yes. Delete this stuff",
+  cancelLabel: "Cancel",
+}
