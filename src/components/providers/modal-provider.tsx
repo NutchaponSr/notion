@@ -1,7 +1,10 @@
 "use client";
 
-import { SuccessModal } from "@/features/contact-admins/components/success-modal";
 import { useEffect, useState } from "react"; 
+
+import { SearchCommand } from "@/components/search-command";
+
+import { SuccessModal } from "@/features/contact-admins/components/success-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -15,6 +18,7 @@ export const ModalProvider = () => {
   return (
     <>
       <SuccessModal />
+      <SearchCommand />
     </>
   );
 } 

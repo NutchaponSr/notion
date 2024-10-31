@@ -22,7 +22,7 @@ export const Favorite = () => {
   } = useFavoriteItemChild();
   
   const [height, setHeight] = useState(0);
-  const [isRename, setIsRename] = useState(false);
+  const [isRename, setIsRename] = useState<Record<string, boolean>>({});
 
   const itemRef = useRef<HTMLDivElement>(null);
 
@@ -33,10 +33,20 @@ export const Favorite = () => {
     }
   }, [isRename]);
 
-  const onRename = () => {
+  const onRename = (groupId: string) => {
     setTimeout(() => {
-      setIsRename(true);
+      setIsRename((prevState) => ({
+        ...prevState,
+        [groupId]: true,
+      }));
     }, 200);
+  };
+
+  const closeRenamePopover = (groupId: string) => {
+    setIsRename((prevState) => ({
+      ...prevState,
+      [groupId]: false,
+    }));
   };
 
   if (loadingFavorites || !favorites) {
@@ -72,9 +82,9 @@ export const Favorite = () => {
             updatedBy: favorite.updatedBy!,
             isFavorite: true
           }
-
+          
           const isChild = openFavoriteItemChild[favorite.groupId];
-
+          
           return (
             <React.Fragment key={favorite.groupId}>
               <div ref={itemRef}>
@@ -82,7 +92,7 @@ export const Favorite = () => {
                   label={favorite.name!}
                   href={`/groups/${favorite.groupId}`}
                   sideButton={
-                    <GroupActions data={initialData} onRename={onRename}>
+                    <GroupActions data={initialData} onRename={() => onRename(favorite.groupId)}>
                       <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
                         <MoreHorizontalIcon className="size-[18px]" />
                       </button> 
@@ -122,9 +132,9 @@ export const Favorite = () => {
               )}
               <GroupRenamePopover 
                 height={height}
-                isOpen={isRename}
-                onClose={() => setIsRename(false)}
+                isOpen={isRename[favorite.groupId]}
                 data={initialData}
+                onClose={() => closeRenamePopover(favorite.groupId)}
               />
             </React.Fragment>
           );

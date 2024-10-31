@@ -9,8 +9,8 @@ import {
   HiMiniBuildingLibrary, 
   HiMiniCircleStack, 
   HiOutlineTrash, 
-  HiUser 
 } from "react-icons/hi2";
+import { FaUser } from "react-icons/fa6";
 
 import {
   Popover,
@@ -19,20 +19,22 @@ import {
 } from "@/components/ui/popover";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+import { Filter } from "@/components/filter";
 import { TrashItem } from "@/components/trash-item";
-import { FilterCommand } from "@/components/filter-command";
 
 import { useGetTrashs } from "@/features/trashs/api/use-get-trashs";
 import { useDeleteGroup } from "@/features/groups/api/use-delete-group";
 import { useReStoreGroup } from "@/features/groups/api/use-restore-group";
 import { useDeleteCompetency } from "@/features/competencies/api/use-delete-competency";
 import { useReStoreCompetency } from "@/features/competencies/api/use-restore-competency";
+import { useTrashs } from "@/features/trashs/stores/use-trashs";
 
 export const Trash = () => {
   const { 
     data: trashs, 
     isLoading: loadingTrashs 
   } = useGetTrashs();
+  const { onOpen } = useTrashs();
   const { mutate: deleteGroup } = useDeleteGroup();
   const { mutate: restoreGroup } = useReStoreGroup();
   const { mutate: deleteCompetency } = useDeleteCompetency();
@@ -67,7 +69,7 @@ export const Trash = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <button className="flex items-center h-[30px] w-full hover:bg-[#00000008] focus-visible:ring-0 focus-visible:outline-none p-1">
+        <button onClick={onOpen} className="flex items-center h-[30px] w-full hover:bg-[#00000008] focus-visible:ring-0 focus-visible:outline-none p-1">
           <div className="shrink-0 grow-0 rounded-sm size-[22px] flex justify-center items-center ml-1 mr-2">
             <Trash2Icon className="size-[18px] text-[#91918e]" />
           </div>
@@ -95,16 +97,18 @@ export const Trash = () => {
               </div>
             </div>
             <div className="flex flex-row mx-2 space-x-1.5">
-              <FilterCommand
-                icon={HiUser}
+              <Filter
+                icon={FaUser}
+                variant="command"
                 isSelected={isPeopleSelected}
                 label="Last edited by"
                 placeholder="Search people"
                 data={trashs?.updatedPeoples}
                 onSelect={(value: string[]) => setPeoples(value)}
               />
-              <FilterCommand
+              <Filter
                 icon={FileIcon}
+                variant="command"
                 isSelected={isCategorySelected}
                 label="In"
                 placeholder="Search in"

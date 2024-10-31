@@ -68,7 +68,7 @@ export const GroupRenamePopover = ({
     setEmoji(data.icon);
     setName(data.name);
 
-    onClose()
+    onClose();
   }
 
   return (

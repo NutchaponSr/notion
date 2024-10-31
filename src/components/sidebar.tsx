@@ -106,7 +106,7 @@ export const Sidebar = () => {
           size="icon"
           variant="ghost"
           onClick={collapse}
-          className="hover:bg-[#00000008] text-[#91918e] hover:text-[#37352f] group-hover:opacity-100 opacity-0 ml-2.5 absolute top-0.5 right-1 z-[100]"
+          className="hover:bg-[#00000008] text-[#91918e] hover:text-[#37352f] group-hover:opacity-100 transition opacity-0 ml-2.5 absolute top-0.5 right-1 z-[100]"
         >
           <ChevronsLeft className="h-6 w-6"/>
         </Button>

@@ -2,19 +2,19 @@ import { useQuery } from "@tanstack/react-query"
 
 import { client } from "@/lib/rpc";
 
-import { useTrashs } from "../stores/use-trashs";
+import { useSearchCommand } from "@/stores/use-search-command";
 
-export const useGetTrashs = () => {
-  const { isOpen } = useTrashs();
+export const useGetSearchs = () => {
+  const { isOpen } = useSearchCommand();
 
   const query = useQuery({
     enabled: isOpen,
-    queryKey: ["trashs"],
+    queryKey: ["searchs"],
     queryFn: async () => {
-      const response = await client.api.trashs.$get();
+      const response = await client.api.searchs.$get();
 
       if (!response) {
-        throw new Error("Failed to fetch trashs");
+        throw new Error("Failed to fetch searchs");
       }
 
       const { data } = await response.json();

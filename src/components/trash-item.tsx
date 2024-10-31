@@ -63,12 +63,12 @@ export const TrashItem = ({
           <div className="flex gap-1">
             <Hint label="Restore" side="bottom" sideOffset={8}>
               <Button onClick={onRestore} variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] hover:text-[#a4a4a2] rounded-sm">
-                <CornerUpLeftIcon />
+                <CornerUpLeftIcon className="size-4" />
               </Button>
             </Hint>
             <Hint label="Delete from Trash" side="bottom" sideOffset={8}>
               <Button onClick={handleDelete} variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] hover:text-[#a4a4a2] rounded-sm">
-                <Trash2Icon />
+                <Trash2Icon className="size-4" />
               </Button>
             </Hint>
           </div>
