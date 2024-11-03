@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import { SessionProvider } from "next-auth/react";
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { QueryProvider } from "@/components/providers/query-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
 
@@ -31,11 +32,13 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en">
         <body className={`${geistSans.className} antialiased`}>
-          <QueryProvider>
-            <ModalProvider />
-            <ToastProvider />
-            {children}
-          </QueryProvider>
+          <NuqsAdapter>
+            <QueryProvider>
+              <ModalProvider />
+              <ToastProvider />
+              {children}
+            </QueryProvider>
+          </NuqsAdapter>
         </body>
       </html>
     </SessionProvider>

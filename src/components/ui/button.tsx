@@ -12,13 +12,15 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "border border-[#eb575780] hover:bg-[#eb57571a] text-[#eb5757]",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-[#37352f0f] hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         primary: "bg-[#008AF2] hover:bg-[#005ccb] text-accent shadow-[0px_0px_0px_1px_rgba(15,15,15,0.1)_inset,0px_1px_2px_rgba(15,15,15,0.1)]",
         tritrary: "bg-[#ebf5fe] text-[#087fe7] hover:bg-[#d6e1f5]",
         outline: "text-[#7c7c78] hover:bg-[#37352f0f] border border-[#37352f29]",
         active: "bg-[#2383e208] text-[#2383e2] hover:bg-[#2383e212] border border-[#2383e259]",
-        gray: "border text-[#37352f] border-[#37352f29] hover:bg-[#37352f0f]"
+        gray: "border text-[#37352f] border-[#37352f29] hover:bg-[#37352f0f]",
+        day: "hover:bg-[#2383e226] hover:border-[2px] hover:border-[#2383e2] rounded-[3px]",
+        cube: "h-6 w-6 rounded-[3px] text-[#55534e] hover:text-[#55534e] hover:bg-[#efefef]"
       },
       size: {
         default: "h-[30px] px-2 py-2",
@@ -27,6 +29,7 @@ const buttonVariants = cva(
         xl: "h-[45px] rounded-lg px-5 py-2.5",
         filter: "h-6 px-2 rounded-full",
         icon: "h-7 w-7 rounded-sm",
+        xs: "h-5 px-1 rounded-sm text-xs text-[#37352fa6] hover:text-[#37352fa6] font-semibold gap-0.5",
       },
     },
     defaultVariants: {

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { IconType } from "react-icons/lib";
+import { DateRange } from "react-day-picker";
 import { GiCheckMark } from "react-icons/gi";
+import { HiMiniCalendarDays } from "react-icons/hi2";
 import { ChevronDownIcon, LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -25,8 +27,11 @@ import {
   PopoverTrigger 
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 
 import { UserAvatar } from "@/features/auth/components/user-avatar";
+import { useQueryState } from "nuqs";
+
 
 interface FilterProps {
   icon: IconType | LucideIcon;
@@ -35,10 +40,22 @@ interface FilterProps {
     name: string;
     image?: string | null;
     icon?: LucideIcon | IconType;
+    onClick?: () => void;
   }[] | undefined;
-  onSelect: (value: string[]) => void;
+  onSelect?: (value: string[]) => void;
+  onDate?: (date: DateRange | undefined) => void;
+  onClear?: () => void;
+  date?: DateRange | undefined;
   isSelected: boolean;
   placeholder?: string;
+  presets?: {
+    label: string;
+    range: {
+      from: Date;
+      to: Date | undefined;
+    };
+    onRange: (range: { from: Date; to: Date | undefined; }) => void;
+  }[];
   variant: "command" | "dropdown" | "calendar";
 }
 
@@ -47,11 +64,16 @@ export const Filter = ({
   label,
   data,
   onSelect,
+  onDate,
+  onClear,
+  date,
   isSelected,
   placeholder,
+  presets,
   variant,
 }: FilterProps) => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
+  const [type, setType] = useQueryState("type", { defaultValue: "create" });
 
   const handleSelect = (itemName: string) => {
     const newSelection = selectedItems.includes(itemName)
@@ -59,8 +81,13 @@ export const Filter = ({
       : [...selectedItems, itemName]; 
 
     setSelectedItems(newSelection); 
-    onSelect(newSelection); 
+    if (onSelect) onSelect(newSelection); 
   };
+
+  const handleClear = () => {
+    if (onClear) onClear();
+    setType("Create")
+  }
 
   const triggerButton = (
     <Button 
@@ -69,13 +96,13 @@ export const Filter = ({
       className="gap-1 text-xs"
     >
       <Icon className="size-[14px]" />
-      <span>{label}</span>
+      <span className="max-w-[150px] whitespace-nowrap overflow-hidden text-ellipsis">{label}</span>
       <ChevronDownIcon className={cn(
         "size-3",
         isSelected ? "text-[#2383e2]" : "text-[#b9b9b7]",
       )} />
     </Button>
-  )
+  );
 
   switch (variant) {
     case "command":
@@ -130,7 +157,7 @@ export const Filter = ({
             {data?.map((item, index) => (
               <DropdownMenuItem
                 key={index}
-                onClick={() => {}}
+                onClick={item.onClick}
               >
                 {item.name}
               </DropdownMenuItem>
@@ -144,8 +171,56 @@ export const Filter = ({
           <PopoverTrigger asChild>
             {triggerButton}
           </PopoverTrigger>
-          <PopoverContent className="w-[250px] p-0" align="start">
-            Calendar
+          <PopoverContent className="w-[256px] p-0 py-2 overflow-hidden" align="start">
+            <div className="flex justify-between items-center mx-3">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button size="xs" variant="ghost">
+                    {type === "create" ? "Create" : "Last edited"}
+                    <ChevronDownIcon className="size-3" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => setType("create")}>
+                    Created
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setType("edit")}>
+                    Last edited
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <Button size="xs" variant="ghost" onClick={handleClear}>
+                Clear
+              </Button>
+            </div>
+            <div className="my-3 pb-4 shadow-[0_1px_0_rgba(55,53,47,0.09)]">
+              {presets?.map((preset) => (
+                <button 
+                  key={preset.label}
+                  onClick={() => preset.onRange(preset.range)}
+                  className="rounded-[6px] transition w-[calc(100%-8px)] mx-1 hover:bg-[#37352f0f] text-[#37352f]"
+                >
+                  <div className="flex items-center w-full min-h-7 text-sm">
+                    <div className="flex items-center justify-center ml-2.5">
+                      <HiMiniCalendarDays className="size-[18px]" />
+                    </div>
+                    <div className="mx-1.5 flex-auto text-start">
+                      <div className="whitespace-nowrap overflow-hidden text-ellipsis">
+                        {preset.label}
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
+            <Calendar 
+              initialFocus
+              mode="range"
+              defaultMonth={date?.from}
+              selected={date}
+              onSelect={onDate}
+              numberOfMonths={1}
+            />
           </PopoverContent>
         </Popover>
       );

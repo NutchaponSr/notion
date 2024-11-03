@@ -108,7 +108,7 @@ export const Sidebar = () => {
           onClick={collapse}
           className="hover:bg-[#00000008] text-[#91918e] hover:text-[#37352f] group-hover:opacity-100 transition opacity-0 ml-2.5 absolute top-0.5 right-1 z-[100]"
         >
-          <ChevronsLeft className="h-6 w-6"/>
+          <ChevronsLeft className="size-4"/>
         </Button>
         <div className="text-[#5f5e5b] font-medium h-full">
           <div className="flex flex-col h-full relative w-full">
