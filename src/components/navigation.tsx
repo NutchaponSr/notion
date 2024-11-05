@@ -12,10 +12,12 @@ import { useSearchCommand } from "@/hooks/use-search-command";
 
 import { NavigationItem } from "@/components/navigation-item";
 import { useKeyboard } from "@/hooks/use-keyboard";
+import { useInboxSidebar } from "@/hooks/use-inbox-sidebar";
 
 export const Navigation = () => {
   const router = useRouter();
 
+  const { toggle } = useInboxSidebar();
   const { onOpen: openSearchCommand } = useSearchCommand();
 
   useKeyboard([
@@ -27,7 +29,7 @@ export const Navigation = () => {
       <NavigationItem icon={SearchIcon} label="Search" onClick={openSearchCommand} showBadge />
       <NavigationItem icon={SmileIcon} label="Notion AI" onClick={() => {}} />
       <NavigationItem icon={HomeIcon} label="Home" onClick={() => router.push("/home")} />
-      <NavigationItem icon={InboxIcon} label="Inbox" onClick={() => {}} />
+      <NavigationItem icon={InboxIcon} label="Inbox" onClick={toggle} />
       <NavigationItem icon={SettingsIcon} label="Settings" onClick={() => {}} />
     </div>
   );

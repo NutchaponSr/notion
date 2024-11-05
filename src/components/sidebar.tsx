@@ -13,6 +13,7 @@ import { Trash } from "@/components/trash";
 import { Favorite } from "@/components/favorite";
 import { Workspace } from "@/components/workspace";
 import { Navigation } from "@/components/navigation";
+import { InboxSidebar } from "@/components/inbox-sidebar";
 
 import { UserButton } from "@/features/auth/components/user-button";
 
@@ -23,9 +24,10 @@ export const Sidebar = () => {
   const sidebarRef = useRef<ElementRef<"aside">>(null);
   const navbarRef = useRef<ElementRef<"div">>(null);
 
-  const [isResetting, setIsResetting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [sidebarWidth, setSidebarWidth] = useState(240);
 
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.preventDefault();
@@ -43,6 +45,8 @@ export const Sidebar = () => {
 
     if (newWidth < 240) newWidth = 240;
     if (newWidth > 480) newWidth = 480;
+
+    setSidebarWidth(newWidth);
 
     if (sidebarRef.current && navbarRef.current) {
       sidebarRef.current.style.width = `${newWidth}px`;
@@ -62,6 +66,9 @@ export const Sidebar = () => {
     if (sidebarRef.current && navbarRef.current) {
       setIsCollapsed(false);
       setIsResetting(true);
+
+      const defaultWidth = isMobile ? window.innerWidth : 240;
+      setSidebarWidth(defaultWidth);
 
       sidebarRef.current.style.width = isMobile ? "100%" : "240px";
       navbarRef.current.style.setProperty(
@@ -116,21 +123,19 @@ export const Sidebar = () => {
               <div className="flex flex-col h-full max-h-full">
                 <UserButton side="left" />
                 <Navigation />
-                <div className="contents">
-                  <ScrollArea className="z-[1] pt-1.5 grow overflow-x-hidden overflow-y-auto">
-                    <div className="flex flex-col min-h-full">
-                      <div className="flex flex-col gap-3 pb-5">
-                        <div className="flex flex-col gap-1">
-                          <Favorite />
-                          <Workspace />
-                        </div>
-                        <div className="shrink-0 grow-0 pb-2 flex flex-col">
-                          <Trash />
-                        </div>
+                <ScrollArea className="z-[1] pt-1.5 grow overflow-x-hidden overflow-y-auto">
+                  <div className="flex flex-col min-h-full">
+                    <div className="flex flex-col gap-3 pb-5">
+                      <div className="flex flex-col gap-1">
+                        <Favorite />
+                        <Workspace />
+                      </div>
+                      <div className="shrink-0 grow-0 pb-2 flex flex-col">
+                        <Trash />
                       </div>
                     </div>
-                  </ScrollArea>
-                </div>
+                  </div>
+                </ScrollArea>
               </div>
             </div>
           </div>
@@ -145,6 +150,7 @@ export const Sidebar = () => {
           />
         </div>
       </aside>
+      <InboxSidebar sidebarWidth={sidebarWidth} isDragging={isDragging} />
       <div
         ref={navbarRef}
         className={cn(
