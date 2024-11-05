@@ -30,7 +30,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 
 import { UserAvatar } from "@/features/auth/components/user-avatar";
-import { useQueryState } from "nuqs";
+
+import { useDate } from "@/features/search/hooks/use-date";
 
 
 interface FilterProps {
@@ -72,8 +73,9 @@ export const Filter = ({
   presets,
   variant,
 }: FilterProps) => {
+  const { type, onReset, onCreate, onEdit } = useDate();
+
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
-  const [type, setType] = useQueryState("type", { defaultValue: "create" });
 
   const handleSelect = (itemName: string) => {
     const newSelection = selectedItems.includes(itemName)
@@ -86,7 +88,7 @@ export const Filter = ({
 
   const handleClear = () => {
     if (onClear) onClear();
-    setType("Create")
+    onReset();
   }
 
   const triggerButton = (
@@ -181,10 +183,10 @@ export const Filter = ({
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem onClick={() => setType("create")}>
+                  <DropdownMenuItem onClick={onCreate}>
                     Created
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setType("edit")}>
+                  <DropdownMenuItem onClick={onEdit}>
                     Last edited
                   </DropdownMenuItem>
                 </DropdownMenuContent>

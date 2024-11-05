@@ -1,8 +1,10 @@
-import { useQuery } from "@tanstack/react-query"
+import { InferResponseType } from "hono";
+import { useQuery } from "@tanstack/react-query";
+import { useSearchCommand } from "@/hooks/use-search-command";
 
 import { client } from "@/lib/rpc";
 
-import { useSearchCommand } from "@/hooks/use-search-command";
+export type ResponseType = InferResponseType<typeof client.api.searchs.$get, 200>["data"]["data"];
 
 export const useGetSearchs = (
   sort: string | null,
