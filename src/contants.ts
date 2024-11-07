@@ -5,15 +5,18 @@ import DocsImage from "../public/Docs-V2.png";
 import CalendarImage from "../public/calendar.png";
 import ProjectImage from "../public/Projects-V2.png";
 
-
 import { 
   BookOpenTextIcon, 
   SparklesIcon, 
   GlobeIcon, 
   CalendarDaysIcon, 
   TargetIcon, 
-  FileTextIcon 
+  FileTextIcon, 
 } from "lucide-react";
+import { VscSettings } from "react-icons/vsc";
+import { HiOutlineGlobeAlt, HiUserCircle } from "react-icons/hi2";
+
+import { SettingSidebarItem } from "@/types";
 
 export const images = [
   {
@@ -122,3 +125,23 @@ export const comfirmDeleteTrash = {
   confirmLabel: "Yes. Delete this stuff",
   cancelLabel: "Cancel",
 }
+
+
+
+export const settingsSidebars: SettingSidebarItem[] = [
+  {
+    label: "Account",
+    icon: HiUserCircle,
+    child: "account",
+  },
+  {
+    label: "Settings",
+    icon: VscSettings,
+    child: "setting",
+  },
+  {
+    label: "Language & Region",
+    icon: HiOutlineGlobeAlt,
+    child: "language",
+  },
+]

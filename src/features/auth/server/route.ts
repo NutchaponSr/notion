@@ -7,7 +7,9 @@ import { db } from "@/db/drizzle";
 import { eq } from "drizzle-orm";
 import { users } from "@/db/schema";
 
-import { SignUpSchema } from "@/features/auth/schemas";
+import { ChangePasswordSchema, SignUpSchema } from "@/features/auth/schemas";
+import { z } from "zod";
+import { auth } from "@/auth";
 
 const app = new Hono()
   .post(
@@ -41,6 +43,82 @@ const app = new Hono()
         });
 
       return c.json(null, 200);
+    }
+  )
+  .patch(
+    "/:id",
+    zValidator(
+      "json",
+      z.object({
+        name: z.string(),
+        image: z.string(),
+      }),
+    ),
+    async (c) => {
+      const session = await auth();
+
+      const { id } = c.req.param();
+      const { name, image } = c.req.valid("json");
+
+      if (!session) {
+        return c.text("Unauthorized", 401);
+      }
+
+      if (!id) {
+        return c.json({ error: "Missing id" }, 400);
+      }
+
+      const [data] = await db
+        .update(users)
+        .set({
+          name,
+          image,
+        })
+        .where(eq(users.id, id))
+        .returning();
+
+      if (!data) {
+        return c.json({ error: "Data not found" }, 404);
+      }
+
+      return c.json({ data });
+    }
+  )
+  .patch(
+    "change-password/:id",
+    zValidator(
+      "json",
+      ChangePasswordSchema.pick({ password: true }),
+    ),
+    async (c) => {
+      const session = await auth();
+
+      const { id } = c.req.param();
+      const { password } = c.req.valid("json");
+
+      if (!session) {
+        return c.text("Unauthorized", 401);
+      }
+
+      if (!id) {
+        return c.json({ error: "Missing id" }, 400);
+      }
+
+      const hashedPassword = await bcrypt.hash(password, 12);
+
+      const [data] = await db  
+        .update(users)
+        .set({
+          password: hashedPassword
+        })
+        .where(eq(users.id, id))
+        .returning();
+
+      if (!data) {
+        return c.json({ error: "Data not found" }, 404);
+      }
+
+      return c.json({ data });
     }
   )
 

@@ -1,6 +1,6 @@
 import { InferResponseType } from "hono";
 import { useQuery } from "@tanstack/react-query";
-import { useSearchCommand } from "@/hooks/use-search-command";
+import { useSearchCommand } from "@/stores/use-search-command";
 
 import { client } from "@/lib/rpc";
 

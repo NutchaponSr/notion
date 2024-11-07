@@ -8,16 +8,19 @@ import {
   SmileIcon, 
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useSearchCommand } from "@/hooks/use-search-command";
-
-import { NavigationItem } from "@/components/navigation-item";
 import { useKeyboard } from "@/hooks/use-keyboard";
 import { useInboxSidebar } from "@/hooks/use-inbox-sidebar";
+import { useSearchCommand } from "@/stores/use-search-command";
+
+import { useSettings } from "@/stores/use-settings";
+
+import { NavigationItem } from "@/components/navigation-item";
 
 export const Navigation = () => {
   const router = useRouter();
 
   const { toggle } = useInboxSidebar();
+  const { onOpen: openSettingsModal } = useSettings();
   const { onOpen: openSearchCommand } = useSearchCommand();
 
   useKeyboard([
@@ -30,7 +33,7 @@ export const Navigation = () => {
       <NavigationItem icon={SmileIcon} label="Notion AI" onClick={() => {}} />
       <NavigationItem icon={HomeIcon} label="Home" onClick={() => router.push("/home")} />
       <NavigationItem icon={InboxIcon} label="Inbox" onClick={toggle} />
-      <NavigationItem icon={SettingsIcon} label="Settings" onClick={() => {}} />
+      <NavigationItem icon={SettingsIcon} label="Settings" onClick={openSettingsModal} />
     </div>
   );
 }

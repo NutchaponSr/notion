@@ -9,6 +9,7 @@ import { ToastProvider } from "@/components/providers/toast-provider";
 
 import "./globals.css";
 import { ModalProvider } from "@/components/providers/modal-provider";
+import { EdgeStoreProvider } from "@/lib/edgestore";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,9 +35,11 @@ export default async function RootLayout({
         <body className={`${geistSans.className} antialiased`}>
           <NuqsAdapter>
             <QueryProvider>
-              <ModalProvider />
-              <ToastProvider />
-              {children}
+              <EdgeStoreProvider>
+                <ModalProvider />
+                <ToastProvider />
+                {children}
+              </EdgeStoreProvider>
             </QueryProvider>
           </NuqsAdapter>
         </body>

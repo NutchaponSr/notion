@@ -37,8 +37,8 @@ const app = new Hono()
       const toDate = to ? parse(to, "yyyy-MM-dd", new Date()) : null;
 
       const dateField = {
-        group: type !== "update" ? groups.createdAt : groups.updatedAt,
-        competency: type !== "update" ? competencies.createdAt : competencies.updatedAt
+        group: type !== "edit" ? groups.createdAt : groups.updatedAt,
+        competency: type !== "edit" ? competencies.createdAt : competencies.updatedAt
       };
 
       const [orderByGroup, orderByCompetency] = sortOrder(sort);

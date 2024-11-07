@@ -14,7 +14,7 @@ import { IoFilterCircleOutline } from "react-icons/io5";
 
 import { cn } from "@/lib/utils";
 import { useDebounce } from "@/hooks/use-debounce";
-import { useSearchCommand } from "@/hooks/use-search-command";
+import { useSearchCommand } from "@/stores/use-search-command";
 
 import {
   Dialog,
@@ -96,8 +96,6 @@ export const SearchCommand = () => {
       refetch();
     }
   }, [debouncedSort, refetch]);
-
-  console.log(flatedData);
   
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>

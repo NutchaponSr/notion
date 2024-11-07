@@ -235,7 +235,7 @@ const app = new Hono()
         .set({
           name,
           icon,
-          updatedBy: session.user.name
+          updatedBy: session.user.name,
         })
         .where(eq(groups.id, id))
         .returning()

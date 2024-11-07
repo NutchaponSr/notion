@@ -15,3 +15,14 @@ export const SignUpSchema = z.object({
   email: z.string().email(),
   password: z.string().min(6, "Minimum of 6 characters required"),
 });
+
+export const ChangePasswordSchema = z.object({
+  password: z
+    .string()
+    .min(6, "Must be at least 6 characters long")
+    .max(15, "Must not exceed 15 characters"),
+  confirmPassword: z
+    .string()
+    .min(6, "Must be at least 6 characters long")
+    .max(15, "Must not exceed 15 characters"),
+});

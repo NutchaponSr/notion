@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react"; 
 
+import { SettingsModal } from "@/components/settings-modal";
+
 import { SearchCommand } from "@/features/search/components/search-command";
 import { SuccessModal } from "@/features/contact-admins/components/success-modal";
+import { ChangePasswordModal } from "@/features/auth/components/change-password-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -17,7 +20,9 @@ export const ModalProvider = () => {
   return (
     <>
       <SuccessModal />
+      <SettingsModal />
       <SearchCommand />
+      <ChangePasswordModal />
     </>
   );
 } 
