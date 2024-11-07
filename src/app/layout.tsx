@@ -1,15 +1,20 @@
-import { auth } from "@/auth";
 import type { Metadata } from "next";
+
+import { auth } from "@/auth";
 import localFont from "next/font/local";
 
+import { cn } from "@/lib/utils";
+import { EdgeStoreProvider } from "@/lib/edgestore";
+
 import { SessionProvider } from "next-auth/react";
-import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 import { QueryProvider } from "@/components/providers/query-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
+import { ModalProvider } from "@/components/providers/modal-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 import "./globals.css";
-import { ModalProvider } from "@/components/providers/modal-provider";
-import { EdgeStoreProvider } from "@/lib/edgestore";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,17 +36,24 @@ export default async function RootLayout({
 
   return (
     <SessionProvider session={session}>
-      <html lang="en">
-        <body className={`${geistSans.className} antialiased`}>
-          <NuqsAdapter>
-            <QueryProvider>
-              <EdgeStoreProvider>
-                <ModalProvider />
-                <ToastProvider />
-                {children}
-              </EdgeStoreProvider>
-            </QueryProvider>
-          </NuqsAdapter>
+      <html lang="en" suppressHydrationWarning>
+        <body className={cn(geistSans.className)}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NuqsAdapter>
+              <QueryProvider>
+                <EdgeStoreProvider>
+                  <ModalProvider />
+                  <ToastProvider />
+                  {children}
+                </EdgeStoreProvider>
+              </QueryProvider>
+            </NuqsAdapter>
+          </ThemeProvider>
         </body>
       </html>
     </SessionProvider>
