@@ -10,10 +10,10 @@ export const Hero = () => {
   return (
     <section className="grid grid-cols-12 gap-7 w-full items-center mt-[30px] mx-auto auto-rows-min">
       <div className="flex flex-col gap-4 xl:col-span-5 md:col-span-8 md:col-start-3 col-span-12">
-        <h1 className="md:text-7xl text-5xl font-semibold tracking-tight text-balance xl:text-left sm:text-center text-left">
+        <h1 className="md:text-7xl text-5xl font-semibold tracking-tight text-balance xl:text-left sm:text-center text-left text-[#1a1a1a]">
           Drive Success with Precision.
         </h1>
-        <h2 className="text-2xl font-medium xl:text-left sm:text-center text-left">
+        <h2 className="text-2xl font-medium xl:text-left sm:text-center text-left text-[#1a1a1a]">
           Empower your organization with tailored strategies and actionable insights.
         </h2>
         <div className="flex xl:flex-row md:flex-row flex-col gap-2 w-full xl:justify-start justify-center sm:items-center">

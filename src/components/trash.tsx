@@ -69,7 +69,7 @@ export const Trash = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <button onClick={onOpen} className="flex items-center h-[30px] w-full hover:bg-[#00000008] focus-visible:ring-0 focus-visible:outline-none p-1">
+        <button onClick={onOpen} className="flex items-center h-[30px] w-full hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] focus-visible:ring-0 focus-visible:outline-none p-1">
           <div className="shrink-0 grow-0 rounded-sm size-[22px] flex justify-center items-center ml-1 mr-2">
             <Trash2Icon className="size-[18px] text-[#91918e]" />
           </div>
@@ -92,7 +92,7 @@ export const Trash = () => {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search in Trash"
-                  className="max-w-full w-full whitespace-pre-wrap break-words grow text-sm py-1 px-2.5 rounded-sm shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] bg-[#f2f1ee99] focus-visible:outline-none text-[#37352f] placeholder:text-[#91918e] font-light"
+                  className="max-w-full w-full whitespace-pre-wrap break-words grow text-sm py-1 px-2.5 rounded-sm shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] bg-[#f2f1ee99] focus-visible:outline-none text-[#37352f] placeholder:text-[#91918e] font-light dark:bg-[#ffffff0e] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.075)] dark:text-[#ffffffcf]"
                 />
               </div>
             </div>
@@ -132,8 +132,8 @@ export const Trash = () => {
               ) : (
                 filteredTrashs.length <= 0 ? (
                   <div className="flex flex-col items-center justify-center h-full space-y-2">
-                    <HiOutlineTrash className="text-[#c7c6c4] size-9" />
-                    <div className="text-sm font-semibold text-[#787774]">
+                    <HiOutlineTrash className="text-[#c7c6c4] dark:text-[#7f7f7f] size-9" />
+                    <div className="text-sm font-semibold text-[#787774] dark:text-[#7f7f7f]">
                       No results
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export const Trash = () => {
             </div>
           </ScrollArea>
           <footer className="shrink-0">
-            <div className="py-2 bg-[#2383e212] shadow-[0_-1px_0_rgba(55,53,47,0.09)]">
+            <div className="py-2 bg-[#2383e212] shadow-[0_-1px_0_rgba(55,53,47,0.09)] rounded-b-md">
               <div className="px-2 text-xs text-[#37352fa6] dark:text-[#ffffff71] flex items-center justify-between">
                 <p> Pages in Trash for over 30 days will be automatically deleted</p>
                 <button className="size-6 hover:bg-[#37352f0f] rounded-sm flex justify-center items-center flex-shrink-0">

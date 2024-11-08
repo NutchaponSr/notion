@@ -21,8 +21,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-import { SignInSchema } from "@/features/auth/schemas";
 import { FormError } from "@/components/form-error";
+
+import { SignInSchema } from "@/features/auth/schemas";
+
+import { DEFAULT_SIGNIN_REDIRECT } from "../../../../routes";
 
 type SignIn = z.infer<typeof SignInSchema>;
 
@@ -30,6 +33,7 @@ export const SignInForm = () => {
   const searchParams = useSearchParams();
 
   const errorParam = searchParams?.get("error");
+  const callbackUrl = searchParams?.get("callbackUrl");
   
   const [isPending, setisPending] = useState(false);
   const [error, setError] = useState<string | undefined>("");
@@ -50,7 +54,7 @@ export const SignInForm = () => {
       await signIn("credentials", {
         email: value.email,
         password: value.password,
-        callbackUrl: "/",
+        callbackUrl: callbackUrl || DEFAULT_SIGNIN_REDIRECT,
       });
     } catch {
       form.reset();
@@ -83,7 +87,7 @@ export const SignInForm = () => {
                   {...field}
                   type="email"
                   placeholder="john.doe@example.com"
-                  className="h-9 text-sm"
+                  className="h-9 text-sm text-[#1a1a1a]"
                   disabled={isPending}
                   autoFocus
                 />
@@ -103,7 +107,7 @@ export const SignInForm = () => {
                   {...field}
                   type="password"
                   placeholder="******"
-                  className="h-9 text-sm"
+                  className="h-9 text-sm text-[#1a1a1a]"
                   disabled={isPending}
                 />
               </FormControl>
@@ -117,7 +121,7 @@ export const SignInForm = () => {
           Continue
         </Button>
         <FormError message={error} />
-        <Button size="lg" variant="link" type="button" className="w-full font-semibold" asChild>
+        <Button size="lg" variant="link" type="button" className="w-full font-semibold text-[#1a1a1a]" asChild>
           <Link href="/contact-admins">
             Don&apos;t have an account?
           </Link>

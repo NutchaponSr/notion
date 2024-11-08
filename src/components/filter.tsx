@@ -195,12 +195,12 @@ export const Filter = ({
                 Clear
               </Button>
             </div>
-            <div className="my-3 pb-4 shadow-[0_1px_0_rgba(55,53,47,0.09)]">
+            <div className="my-3 pb-4 shadow-[0_1px_0_rgba(55,53,47,0.09)] dark:shadow-[0_1px_0_rgba(255,255,255,0.094)]">
               {presets?.map((preset) => (
                 <button 
                   key={preset.label}
                   onClick={() => preset.onRange(preset.range)}
-                  className="rounded-[6px] transition w-[calc(100%-8px)] mx-1 hover:bg-[#37352f0f] text-[#37352f]"
+                  className="rounded-[6px] transition w-[calc(100%-8px)] mx-1 hover:bg-[#37352f0f] text-[#37352f] dark:text-[#ffffffcf] dark:hover:bg-[#ffffff0e]"
                 >
                   <div className="flex items-center w-full min-h-7 text-sm">
                     <div className="flex items-center justify-center ml-2.5">

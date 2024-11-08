@@ -22,16 +22,16 @@ function Calendar({
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
         month: "space-y-4",
         caption: "flex justify-center pt-1 relative items-center",
-        caption_label: "text-sm font-medium text-[#37352f]",
+        caption_label: "text-sm font-medium text-[#37352f] dark:text-[#ffffffcf]",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
-          "h-6 w-6 rounded-[3px] hover:bg-[#efefef] p-1 flex justify-center items-center"
+          "h-6 w-6 rounded-[3px] hover:bg-[#efefef] dark:hover:bg-[#ffffff0e] p-1 flex justify-center items-center"
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
         table: "w-full border-collapse space-y-1",
         head_row: "flex",
-        head_cell: "text-muted-foreground rounded-md w-8 font-normal text-[0.8rem]",
+        head_cell: "text-[#37352f] dark:text-[#ffffffcf] rounded-md w-8 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
         cell: cn(
           "relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected].day-range-end)]:rounded-r-[3px]",
@@ -41,21 +41,21 @@ function Calendar({
         ),
         day: cn(
           buttonVariants({ variant: "day" }),
-          "h-8 w-8 p-0 font-normal aria-selected:opacity-100 z-[11111] text-[#37352f]"
+          "h-8 w-8 p-0 font-normal aria-selected:opacity-100 z-[11111] text-[#37352f] dark:text-[#ffffffcf]"
         ),        
         day_range_start: "day-range-start",
         day_range_end: "day-range-end border-none",
         day_selected: "bg-[#2383e2] text-primary-foreground hover:bg-[#2383e2] hover:text-[#37352f] focus:text-primary-foreground focus:bg-[#2383e2]",
         day_today: "relative text-white after:absolute after:bg-[#eb5757] after:rounded-full after:h-[26px] after:block after:left-1/2 after:top-1/2 after:w-[26px] after:-translate-x-1/2 after:-translate-y-1/2 after:-z-[11111] aria-selected:text-white",
-        day_outside: "day-outside text-muted-foreground opacity-50  aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
+        day_outside: "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
         day_disabled: "text-muted-foreground opacity-50",
         day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
         day_hidden: "invisible",
         ...classNames,
       }}
       components={{
-        IconLeft: () => <ChevronLeftIcon className="size-4 text-[#37352f]" />,
-        IconRight: () => <ChevronRightIcon className="size-4 text-[#37352f]" />,
+        IconLeft: () => <ChevronLeftIcon className="size-4 text-[#37352f] dark:text-[#ffffff71]" />,
+        IconRight: () => <ChevronRightIcon className="size-4 text-[#37352f] dark:text-[#ffffff71]" />,
       }}
       {...props}
     />

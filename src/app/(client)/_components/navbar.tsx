@@ -14,11 +14,11 @@ export const Navbar = () => {
     <nav className="flex items-center justify-between w-full h-full">
       <div className="flex items-center gap-1">
         {session && session.data?.user.role === "ADMIN" && (
-            <Button variant="ghost" asChild>
-              <Link href="/home">
-                Overview
-              </Link>
-            </Button>
+          <Button variant="ghost" className="dark:text-white" asChild>
+            <Link href="/home">
+              Overview
+            </Link>
+          </Button>
         )}
       </div>
       {session.status === "authenticated" ? (

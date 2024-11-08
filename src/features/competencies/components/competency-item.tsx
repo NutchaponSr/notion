@@ -41,7 +41,7 @@ export const CompetencyItem = ({
           href={`/compotencies/${data.id}`}
           sideButton={
             <CompetencyActions data={data} onRename={onRename}>
-              <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
+              <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
                 <MoreHorizontalIcon className="size-[18px]" />
               </button> 
             </CompetencyActions>

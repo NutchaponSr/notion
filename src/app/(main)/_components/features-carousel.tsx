@@ -33,7 +33,7 @@ export const FeaturesCarousel = () => {
           <div className="col-span-12 mb-6">
             <div
               className={cn(
-                "rounded-xl border overflow-hidden shadow-[0px_4px_18px_#0000000a,0px_2.025px_7.84688px_rgba(0,0,0,0.027),0px_0.8px_2.925px_#00000005,0px_0.175px_1.04062px_rgba(0,0,0,0.013)] w-full h-full block mx-auto transition-all",
+                "rounded-xl border border-[#37352f29] overflow-hidden shadow-[0px_4px_18px_#0000000a,0px_2.025px_7.84688px_rgba(0,0,0,0.027),0px_0.8px_2.925px_#00000005,0px_0.175px_1.04062px_rgba(0,0,0,0.013)] w-full h-full block mx-auto transition-all",
               )}
             >
               <Image
@@ -52,7 +52,11 @@ export const FeaturesCarousel = () => {
                   key={label}
                   size="lg"
                   onClick={() => goToSlide(index)}
-                  variant={currentIndex === index ? "primary" : "outline"}
+                  variant={currentIndex === index ? "primary" : "ghost"}
+                  className={cn(
+                    "dark:hover:bg-[#37352f0f] dark:text-[#1a1a1a]",
+                    currentIndex === index ? "dark:text-white" : "dark:text-[#1a1a1a]",
+                  )}
                 >
                   <Icon className="size-4" />
                   {label}

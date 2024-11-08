@@ -48,7 +48,7 @@ export const IconWrapper = ({
               <div 
                 role="button"
                 onClick={handleOnClick}
-                className="transition relative hidden items-center justify-center size-6 rounded-sm group-hover/workspace:flex text-[#91918e] bg-[#37352f0f]"
+                className="transition relative hidden items-center justify-center size-6 rounded-sm group-hover/workspace:flex text-[#91918e] bg-[#37352f0f] dark:bg-[#ffffff0e]"
               >
                 <ChevronRightIcon className={cn(
                   "size-[18px] transition",

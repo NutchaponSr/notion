@@ -47,7 +47,7 @@ export const GroupItem = ({
           label={data.name}
           sideButton={
             <GroupActions data={data} onRename={onRename}>
-              <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
+              <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
                 <MoreHorizontalIcon className="size-[18px]" />
               </button> 
             </GroupActions>

@@ -37,7 +37,7 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(geistSans.className)}>
+        <body className={cn(geistSans.className, "bg-white dark:bg-white")}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

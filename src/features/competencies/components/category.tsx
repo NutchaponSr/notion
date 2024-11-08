@@ -42,7 +42,7 @@ export const Category = ({
         label={label} 
         href={`/competencies?type=${query}`}
         sideButton={
-          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f]">
+          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
             <PlusIcon className="size-[18px]" />
           </button> 
         }

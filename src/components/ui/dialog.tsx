@@ -25,7 +25,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "fixed inset-0 z-[9999] bg-black/50  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-[9999] bg-black/50 dark:bg-[#0f0f0fcc] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -42,15 +42,15 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed left-[50%] top-[50%] z-[9999] grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg focus-visible:outline-none",
+        "fixed left-[50%] top-[50%] z-[9999] grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background dark:bg-[#252525] p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg focus-visible:outline-none",
         className
       )}
       {...props}
     >
       {children}
       {showClose && (
-        <DialogPrimitive.Close className="absolute flex items-center justify-center right-4 top-4 size-[18px] opacity-70 ring-offset-background rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground bg-[#e3e2e080] hover:bg-[#e3e2e0]">
-          <XIcon className="size-3 text-[#a4a4a2] stroke-[2.5]" />
+        <DialogPrimitive.Close className="absolute flex items-center justify-center right-4 top-4 size-[18px] opacity-70 ring-offset-background rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground bg-[#e3e2e080] hover:bg-[#e3e2e0] dark:bg-[#373737] dark:hover:bg-[#5a5a5a]">
+          <XIcon className="size-3 text-[#a4a4a2] dark:text-[#868686] stroke-[2.5]" />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       )}

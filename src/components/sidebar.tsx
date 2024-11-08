@@ -103,21 +103,21 @@ export const Sidebar = () => {
       <aside 
         ref={sidebarRef} 
         className={cn(
-          "h-full bg-secondary overflow-hidden select-none relative flex w-60 flex-col z-[100] bg-[#f7f7f5] transition group [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)]",
+          "h-full bg-secondary overflow-hidden select-none relative flex w-60 flex-col z-[100] bg-[#f7f7f5] dark:bg-[#202020] transition group [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)] dark:[&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(255,255,255,0.1)]",
           isDragging ? 
-            "shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)]" : 
-            "shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)]",
+            "shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)] dark:shadow-[inset_-2px_0_0_0_rgba(255,255,255,0.1)]" : 
+            "shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)] dark:shadow-[inset_-1px_0_0_0_rgba(255,255,255,0.05)]",
         )}
       >
         <Button
           size="icon"
           variant="ghost"
           onClick={collapse}
-          className="hover:bg-[#00000008] text-[#91918e] hover:text-[#37352f] group-hover:opacity-100 transition opacity-0 ml-2.5 absolute top-0.5 right-1 z-[100]"
+          className="hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] text-[#91918e] dark:text-[#9b9b9b] group-hover:opacity-100 transition opacity-0 ml-2.5 absolute top-0.5 right-1 z-[100]"
         >
-          <ChevronsLeft className="size-4"/>
+          <ChevronsLeft className="size-5"/>
         </Button>
-        <div className="text-[#5f5e5b] font-medium h-full">
+        <div className="text-[#5f5e5b] dark:text-[#9b9b9b] font-medium h-full">
           <div className="flex flex-col h-full relative w-full">
             <div className="flex flex-col h-full max-h-full justify-between overflow-hidden relative">
               <div className="flex flex-col h-full max-h-full">

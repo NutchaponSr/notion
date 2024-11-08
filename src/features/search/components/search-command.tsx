@@ -20,7 +20,6 @@ import {
   Dialog,
   DialogContent
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { SearchList } from "@/features/search/components/search-list";
@@ -103,7 +102,7 @@ export const SearchCommand = () => {
         <div className="flex-1 overflow-hidden flex flex-col"> 
           {/* Header */}
           <div className="flex items flex-1">
-            <div className="flex items-center px-4 w-full grow-0 shrink-0 text-lg h-12 space-x-2 shadow-[0_1px_0_rgba(55,53,47,0.09)]">
+            <div className="flex items-center px-4 w-full grow-0 shrink-0 text-lg h-12 space-x-2 shadow-[0_1px_0_rgba(55,53,47,0.09)] dark:shadow-[0_1px_0_rgba(255,255,255,0.094)]">
               <div className="size-6 flex items-center justify-center">
                 <SearchIcon className="size-5 text-[#a4a4a2]" />
               </div>
@@ -112,21 +111,22 @@ export const SearchCommand = () => {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder={`Search or ask a question in ${name}'s Notion...`}
-                  className="w-full whitespace-nowrap text-ellipsis focus-visible:outline-none placeholder:text-[#a4a4a2] text-[#37352f]"
+                  className="w-full whitespace-nowrap text-ellipsis focus-visible:outline-none placeholder:text-[#a4a4a2] text-[#37352f] bg-inherit dark:placeholder:text-[#ffffff71] dark:text-[#ffffffcf]"
                 />
               </div>
               <div className="ml-auto flex items-center justify-center">
-                <Button 
-                  size="icon" 
-                  className="size-7"
+                <button 
                   onClick={toggleFilter} 
-                  variant={isFilter ? "tritrary" : "ghost" } 
+                  className={cn(
+                    "transition flex items-center justify-center rounded-sm h-fit w-fit p-1",
+                    isFilter ? "hover:bg-[#ebf5fe] dark:hover:bg-[#2383e212]" : "dark:hover:bg-[#ffffff0e]"
+                  )}
                 >
                   <IoFilterCircleOutline className={cn(
                     "size-5",
-                    isFilter ? "text-[#2383e2]" : "text-[#acaba9]",
+                    isFilter ? "text-[#2383e2]" : "text-[#acaba9] dark:text-[#5a5a5a]",
                   )} />
-                </Button>
+                </button>
               </div>
             </div>
           </div>
@@ -144,10 +144,10 @@ export const SearchCommand = () => {
                   <SearchList data={filteredData ?? []} />
                 ) : (
                   <div className="flex flex-col items-center justify-center h-full">
-                    <div className="text-sm font-semibold text-[#787774]">
+                    <div className="text-sm font-semibold text-[#787774] dark:text-[#ffffff71]">
                       No results
                     </div>
-                    <div className="text-sm text-[#37352f80]">
+                    <div className="text-sm text-[#37352f80] dark:text-[#7f7f7f]">
                       Some result may be in your the Trash
                     </div>
                     <div className="text-sm text-[#2383e2] cursor-pointer">
@@ -160,11 +160,11 @@ export const SearchCommand = () => {
           </ScrollArea>
           {/* Footer */}
           <div className="shrink-0">
-            <div className="shadow-[0_-1px_0_rgba(55,53,47,0.09)] mt-[1px] flex flex-row justify-between items-center">
+            <div className="shadow-[0_-1px_0_rgba(55,53,47,0.09)] mt-[1px] flex flex-row justify-between items-center dark:shadow-[0_-1px_0_rgba(255,255,255,0.094)]">
               <div className="flex items-center w-full min-h-8 whitespace-nowrap overflow-hidden text-ellipsis">
                 <div className="px-3 flex-auto">
                   <div className="whitespace-nowrap overflow-hidden text-ellipsis">
-                    <ul className="whitespace-nowrap overflow-hidden text-ellipsis inline-flex items-center text-xs text-[#37352f80] gap-5">
+                    <ul className="whitespace-nowrap overflow-hidden text-ellipsis inline-flex items-center text-xs text-[#37352f80] dark:text-[#ffffff48] gap-5">
                       <li className="flex gap-1.5 items-center h-max">
                         <ArrowUpDownIcon className="size-3 text-[#9a9a97]" />
                         Select

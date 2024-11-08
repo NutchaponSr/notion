@@ -9,7 +9,7 @@ import { typesCompetency } from "@/db/schema";
 import { Skeleton } from "@/components/ui/skeleton";
 
 import { IconWrapper } from "@/components/icon-wrapper";
-import { WorkspaceItem } from "@/components/workspace-item";
+import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
 import { Category } from "@/features/competencies/components/category";
 import { GroupYearItem } from "@/features/groups/components/group-year-item";
@@ -103,18 +103,16 @@ export const Workspace = () => {
           }
         ))}
         {openGroupChild && (
-          <div className="flex items-center h-[30px] w-full hover:bg-[#00000008] cursor-pointer space-x-2">
-            <div className="ml-3 text-sm text-[#91918e]">
-              More detail...
-            </div>
-          </div>
+          <WorkspaceSubItem indent="ml-3">
+            More detail...
+          </WorkspaceSubItem>
         )}
         <WorkspaceItem label="Competency" href="/competencies">
           <IconWrapper
             indent="ml-1"
             isOpen={openCompetencyChild}
             onClick={toggleCompetencyChild}
-            className="bg-[#fadec9] text-[#c47830]"
+            className="bg-[#fadec9] text-[#c47830] dark:bg-[#5c3b23] dark:text-[#c37a38]"
           >
             <HiMiniBuildingLibrary className="size-[18px]" />
           </IconWrapper>

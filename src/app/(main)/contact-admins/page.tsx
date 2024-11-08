@@ -7,10 +7,10 @@ const ContactAdminsPage = () => {
         <div className="max-w-[1080px] mx-auto">
           <div className="grid lg:grid-cols-[minmax(0,1fr)_max-content] grid-cols-1 gap-12">
             <div className="lg:max-w-[413px] max-w-[600px] text-start flex flex-col mx-auto space-y-3">
-              <h1 className="text-5xl font-semibold tracking-tight text-balance lg:text-start text-center">
+              <h1 className="text-5xl font-semibold tracking-tight text-balance lg:text-start text-center text-[#1a1a1a]">
                 Contact our admins team
               </h1>
-              <h2 className="text-base lg:text-start text-center">
+              <h2 className="text-base lg:text-start text-center text-[#1a1a1a]">
                 Get help with pricing and plans, schedule a demo, 
                 explore use-cases for your team, and more.
               </h2>

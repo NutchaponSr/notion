@@ -30,7 +30,7 @@ export const WorkspaceItem = ({
   return (
     <div 
       onClick={() => router.push(href)}
-      className="flex items-center h-[30px] w-full hover:bg-[#00000008] p-1 group/workspace cursor-pointer"
+      className="flex items-center h-[30px] w-full hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] p-1 group/workspace cursor-pointer"
     >
       {children}
       <div className="flex-auto whitespace-nowrap overflow-hidden text-clip flex items-center space-x-2">
@@ -38,7 +38,7 @@ export const WorkspaceItem = ({
           {label}
         </div>
         {showBadge && (
-          <Badge className="rounded-sm h-[18px] shadow-[0px_0px_0px_1px_rgba(91,151,189,.12)_inset,0_1px_2px_rgba(91,151,189,.12)_inset]">
+          <Badge className="rounded-sm h-[18px]">
             current
           </Badge>
         )}
@@ -64,9 +64,9 @@ export const WorkspaceSubItem = ({
   return (
     <div 
       onClick={() => href ? router.push(href) : null} 
-      className="flex items-center h-[30px] w-full hover:bg-[#00000008] cursor-pointer space-x-2"
+      className="flex items-center h-[30px] w-full hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] cursor-pointer space-x-2"
     >
-      <div className={cn("text-sm text-[#91918e] flex items-center", indent)}>
+      <div className={cn("text-sm text-[#91918e] dark:text-[#ffffff48] flex items-center", indent)}>
         {children}
       </div>
     </div>

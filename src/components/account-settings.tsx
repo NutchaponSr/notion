@@ -21,31 +21,31 @@ export const AccountSettings = () => {
       "grow px-[60px] py-9 overflow-auto", 
       child === "account" ? "block" : "hidden",
     )}>
-      <div className="border-b border-[#37352f17] mb-4 pb-3 text-base font-medium text-[#37352f]">
+      <div className="border-b border-[#37352f17] dark:border-[#ffffff18] mb-4 pb-3 text-base font-medium text-[#37352f] dark:text-[#ffffffcf]">
         My profile
       </div>
       <div className="flex flex-col">
         <ProfileForm />
         <div className="flex items-center h-[48px] w-full" />
       </div>
-      <div className="border-b border-[#37352f17] mb-4 pb-3 text-base font-medium text-[#37352f]">
+      <div className="border-b border-[#37352f17] dark:border-[#ffffff18] mb-4 pb-3 text-base font-medium text-[#37352f] dark:text-[#ffffffcf]">
         Account security
       </div>
       <div className="flex items-center justify-between">
         <div className="flex flex-col mr-[10%] w-[60%]">
-          <div className="text-sm w-auto text-[#37352f]">
+          <div className="text-sm w-auto text-[#37352f] dark:text-[#ffffffcf]">
             <h2 className="flex flex-row">Email</h2>
           </div>
-          <p className="text-xs text-[#37352fa6]">{email}</p>
+          <p className="text-xs text-[#37352fa6] dark:text-[#ffffff71]">{email}</p>
         </div>
       </div>
       <div className="flex items-center h-[18px] w-full" />
       <div className="flex items-center justify-between">
         <div className="flex flex-col mr-[10%] w-[60%]">
-          <div className="text-sm w-auto text-[#37352f]">
+          <div className="text-sm w-auto text-[#37352f] dark:text-[#ffffffcf]">
             <h2 className="flex flex-row">Password</h2>
           </div>
-          <p className="text-xs text-[#37352fa6]">
+          <p className="text-xs text-[#37352fa6] dark:text-[#ffffff71]">
             Change your password to login to your account.
           </p>
         </div>
@@ -53,7 +53,7 @@ export const AccountSettings = () => {
           size="md" 
           onClick={openChangePassword}
           variant="outline" 
-          className="text-[#37352f] font-normal"
+          className="text-[#37352f] dark:text-[#ffffffcf] font-normal"
         >
           Change password
         </Button>
@@ -61,10 +61,10 @@ export const AccountSettings = () => {
       <div className="flex items-center h-[18px] w-full" />
       <div className="flex items-center justify-between">
         <div className="flex flex-col mr-[10%] w-[60%]">
-          <div className="text-sm w-auto text-[#37352f]">
+          <div className="text-sm w-auto text-[#37352f] dark:text-[#ffffffcf]">
             <h2 className="flex flex-row">Role</h2>
           </div>
-          <p className="text-xs text-[#37352fa6]">
+          <p className="text-xs text-[#37352fa6] dark:text-[#ffffff71]">
             {role}
           </p>
         </div>

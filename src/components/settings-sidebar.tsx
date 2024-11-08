@@ -17,10 +17,10 @@ export const SettingsSidebar = () => {
   const imageUrl = data?.user.image ?? "";
 
   return (
-    <div className="h-full bg-[#fbfbfa] w-60 grow-0 shrink-0 rounded-l-lg overflow-y-auto">
+    <div className="h-full bg-[#fbfbfa] dark:bg-[#ffffff08] w-60 grow-0 shrink-0 rounded-l-lg overflow-y-auto">
       <div className="flex flex-col h-full justify-between pt-2.5 px-1">
         <div className="overflow-auto pb-3">
-          <div className="text-xs text-[#37352fa6] font-semibold items-center flex h-6 px-3 text-ellipsis overflow-hidden">
+          <div className="text-xs text-[#37352fa6] dark:text-[#ffffff71] font-semibold items-center flex h-6 px-3 text-ellipsis overflow-hidden">
             Account
           </div>
           <div className="flex items-center h-11 px-3 space-x-2">
@@ -31,10 +31,10 @@ export const SettingsSidebar = () => {
               fallbackClassName="size-5 bg-[#2383e2] text-white text-xs"
             />
             <div className="flex flex-col">
-              <h2 className="text-sm text-[#37352f] whitespace-nowrap overflow-hidden text-ellipsis font-medium">
+              <h2 className="text-sm text-[#37352f] dark:text-[#ffffffcf] whitespace-nowrap overflow-hidden text-ellipsis font-medium">
                 {name}
               </h2>
-              <p className="text-xs text-[#37352fa6] whitespace-nowrap overflow-hidden text-ellipsis">
+              <p className="text-xs text-[#37352fa6] dark:text-[#ffffff71] whitespace-nowrap overflow-hidden text-ellipsis">
                 {email}
               </p>
             </div>
@@ -49,7 +49,7 @@ export const SettingsSidebar = () => {
             />
           ))}
           <div className="flex items-center h-[18px] w-full" />
-          <div className="text-xs text-[#37352fa6] font-semibold items-center flex h-6 px-3 text-ellipsis overflow-hidden">
+          <div className="text-xs text-[#37352fa6] dark:text-[#ffffff71] font-semibold items-center flex h-6 px-3 text-ellipsis overflow-hidden">
             Workspace
           </div>
           <ButtonItem 

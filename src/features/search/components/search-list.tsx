@@ -79,7 +79,7 @@ export const SearchList = ({
       {data?.map(({ label, data }) => (
         data.length > 0 ? (
           <div key={label} className="mb-[18px]">
-            <div className="flex px-3 my-2 text-[#37352fa6] text-xs font-semibold">
+            <div className="flex px-3 my-2 text-[#37352fa6] dark:text-[#ffffff71] text-xs font-semibold">
               {label}
             </div>
             {data.map((item) => {
@@ -92,7 +92,7 @@ export const SearchList = ({
                   key={item.id}
                   className={cn(
                     "mx-1 rounded-[6px] cursor-pointer group",
-                    globalIndex === index && "bg-[#37352f0f]"
+                    globalIndex === index && "bg-[#37352f0f] dark:bg-[#ffffff0e]"
                   )}
                   ref={(el) => {
                     if (el) itemRefs.current[globalIndex] = el;
@@ -117,9 +117,9 @@ export const SearchList = ({
                     </div>
                     <div className="mx-1 flex-auto inline-flex items-center w-full">
                       <div className="flex items-center space-x-1 text-sm text-ellipsis overflow-hidden font-medium whitespace-nowrap">
-                        <p className="text-[#37352f]">{item.name}</p>
-                        <Separator className="w-3 h-[0.5px] bg-[#37352f80]" />
-                        <span className="whitespace-nowrap overflow-hidden text-ellipsis text-[#37352f80] text-xs">
+                        <p className="text-[#37352f] dark:text-[#ffffffcf]">{item.name}</p>
+                        <Separator className="w-3 h-[0.5px] bg-[#37352f80] dark:bg-[#ffffff21]" />
+                        <span className="whitespace-nowrap overflow-hidden text-ellipsis text-xs text-[#37352f80] dark:text-[#ffffff48]">
                           {item.description}
                         </span>
                       </div>
@@ -127,9 +127,9 @@ export const SearchList = ({
                     <div className="ml-auto mr-3 min-w-0 flex-none">
                       <div className="flex items-center">
                         {globalIndex === index ? (
-                          <CornerDownLeftIcon className="size-3 text-[#acaba9] hiddengroup-hover:block" />
+                          <CornerDownLeftIcon className="size-3 text-[#acaba9] dark:text-[#5a5a5a]hidden group-hover:block" />
                         ) : (
-                          <p className="text-xs text-[#acaba9] visible group-hover:hidden">
+                          <p className="text-xs text-[#acaba9] dark:text-[#5a5a5a] visible group-hover:hidden">
                             {formatTimeElapsed(item.createdAt)}
                           </p>
                         )}

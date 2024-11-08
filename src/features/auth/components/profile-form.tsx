@@ -138,8 +138,8 @@ export const ProfileForm = () => {
                   disabled={updateProfile.isPending}
                 />
                 {(previewImage) && (
-                  <button type="button" onClick={handleRemoveImage} className="absolute hidden group-hover:block right-0 top-0 bg-white p-0.5 rounded-full shadow-[0_0_0_1px_rgba(15,15,15,0.1),0_2px_4px_rgba(15,15,15,0.1)] hover:bg-[#e3e2e0]">
-                    <XIcon className="size-3 text-[#7c7c78]" />
+                  <button type="button" onClick={handleRemoveImage} className="absolute hidden group-hover:block right-0 top-0 bg-white dark:bg-[#2f2f2f] p-0.5 rounded-full shadow-[0_0_0_1px_rgba(15,15,15,0.1),0_2px_4px_rgba(15,15,15,0.1)] dark:shadow-[0_0_0_1px_rgba(15,15,15,0.2),0_2px_4px_rgba(15,15,15,0.2)] hover:bg-[#e3e2e0] dark:hover:bg-[#5a5a5a]">
+                    <XIcon className="size-3 text-[#7c7c78] dark:text-[#ffffffcf]" />
                   </button>
                 )}
               </div>
@@ -147,14 +147,14 @@ export const ProfileForm = () => {
           )}
         </div>
         <div className="w-[250px]">
-          <Label htmlFor="name" className="text-xs text-[#37352fa6]">
+          <Label htmlFor="name" className="text-xs text-[#37352fa6] dark:text-[#ffffff71]">
             Preferred name
           </Label>
           <input 
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="max-w-full w-full whitespace-pre-wrap break-words grow text-sm py-1 px-2.5 rounded-sm shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] bg-[#f2f1ee99] focus-visible:outline-none text-[#37352f]"
+            className="max-w-full w-full whitespace-pre-wrap break-words grow text-sm py-1 px-2.5 rounded-sm shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.075)] bg-[#f2f1ee99] dark:bg-[#ffffff0e] focus-visible:outline-none text-[#37352f] dark:text-[#ffffffcf]"
           />
         </div>
       </div>

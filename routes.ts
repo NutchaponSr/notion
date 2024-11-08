@@ -10,4 +10,4 @@ export const authRoutes = [
 
 export const apiPrefix = "/api";
 
-export const DEFAULT_SIGNIN_REDIRECT = "/";
+export const DEFAULT_SIGNIN_REDIRECT = "/tasks";

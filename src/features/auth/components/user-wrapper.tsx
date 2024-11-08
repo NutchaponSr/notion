@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { UserAvatar } from "@/features/auth/components/user-avatar";
+import { useSettings } from "@/stores/use-settings";
 
 interface UserWrapperProps {
   children: React.ReactNode;
@@ -27,6 +28,7 @@ export const UserWrapper = ({
   alignOffset
 }: UserWrapperProps) => {
   const { data } = useSession();
+  const { onOpen: openSettings } = useSettings();
   
   const name = data?.user.name ?? "";
   const role = data?.user.role ?? "";
@@ -39,7 +41,7 @@ export const UserWrapper = ({
         {children}
       </DropdownMenuTrigger>
       <DropdownMenuContent 
-        className="w-[300px]" 
+        className="w-60" 
         side="bottom" 
         align={align} 
         sideOffset={sideOffset} 
@@ -47,9 +49,9 @@ export const UserWrapper = ({
       >
         <div className="flex flex-col">
           <div className="flex items-center justify-between px-1 pt-1.5">
-            <p className="text-xs text-muted-foreground overflow-hidden">{ email }</p>
+            <p className="text-xs text-[#27252fa6] dark:text-[#ffffff71] overflow-hidden">{email}</p>
             <button className="h-5 w-5 hover:bg-muted flex justify-center items-center rounded-sm">
-              <MoreHorizontalIcon className="size-4 text-muted-foreground" />
+              <MoreHorizontalIcon className="size-4 text-[#27252fa6] dark:text-[#ffffff71]" />
             </button>
           </div>
           <div className="flex items-center justify-start py-1.5 px-1.5 space-x-2">
@@ -60,8 +62,10 @@ export const UserWrapper = ({
               fallbackClassName="rounded-md size-8 bg-[#008AF2] text-accent font-medium"
             />
             <div className="flex flex-col">
-              <p className="text-sm line-clamp-1">{ name }&apos;s Notion</p>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-sm line-clamp-1 text-[#37352f] dark:text-[#ffffffcf]">
+                {name}&apos;s Notion
+              </p>
+              <p className="text-xs text-[#27252fa6] dark:text-[#ffffff71]">
                 Role · <span className="font-medium underline">{ role }</span>
               </p>
             </div>
@@ -69,7 +73,7 @@ export const UserWrapper = ({
         </div>
         <DropdownMenuSeparator />
         {/* TODO: Settings modal */}
-        <DropdownMenuItem onClick={() => {}}>
+        <DropdownMenuItem onClick={openSettings}>
           <SettingsIcon className="size-4" />
           Settings
         </DropdownMenuItem>

@@ -14,11 +14,11 @@ export const SettingsModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-6xl h-[calc(-100px+100vh)] max-h-[715px] p-0">
+      <DialogContent className="max-w-6xl h-[calc(-100px+100vh)] max-h-[715px] p-0 dark:bg-[#252525] rounded-lg border-none">
         <div className="flex flex-row h-full">
           <SettingsSidebar />
           <div className="grow relative h-full overflow-hidden rounded-r-lg">
-            <div className="flex flex-col w-full h-full bg-white">
+            <div className="flex flex-col w-full h-full bg-white dark:bg-[#202020]">
               <AccountSettings />
               <SettingsSettings />
             </div>

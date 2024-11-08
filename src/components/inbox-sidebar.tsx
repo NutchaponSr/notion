@@ -21,7 +21,7 @@ export const InboxSidebar = ({
   return (
     <div
       className={cn(
-        "h-full w-[390px] fixed top-0 left-0 z-50 transition duration-300 ease-in-out bg-white dark:bg-[#191919] dark:border-r shadow-[0_0_0_1px_rgba(15,15,15,0.04),0_3px_6px_rgba(15,15,15,0.03)]",
+        "h-full w-[390px] fixed top-0 left-0 z-50 transition duration-300 ease-in-out bg-white dark:bg-[#191919] shadow-[0_0_0_1px_rgba(15,15,15,0.04),0_3px_6px_rgba(15,15,15,0.03)] dark:shadow-[inset_-1px_0_0_0_rgba(13,13,13),0_0_0_1px_rgba(15,15,15,0.05),0_3px_6px_rgba(15,15,15,0.1),0_9px_24px_rgba(15,15,15,0.2)]",
         isOpen ? "opacity-100" : "opacity-0"
       )}
       style={{

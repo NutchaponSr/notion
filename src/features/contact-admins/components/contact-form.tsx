@@ -70,7 +70,7 @@ export const ContactForm = () => {
             name="firstName"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>First name
+                <FormLabel className="text-[#1a1a1a]">First name
                   <span className="ml-1 text-[#0009]">*</span>
                 </FormLabel>
                 <FormControl>
@@ -79,6 +79,7 @@ export const ContactForm = () => {
                     type="text"
                     placeholder="Ada"
                     disabled={isPending}
+                    className="text-[#1a1a1a]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -90,7 +91,7 @@ export const ContactForm = () => {
             name="lastName"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Last name
+                <FormLabel className="text-[#1a1a1a]">Last name
                   <span className="ml-1 text-[#0009]">*</span>
                 </FormLabel>
                 <FormControl>
@@ -99,6 +100,7 @@ export const ContactForm = () => {
                     type="text"
                     placeholder="Lovelace"
                     disabled={isPending}
+                    className="text-[#1a1a1a]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -111,7 +113,7 @@ export const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Work email
+              <FormLabel className="text-[#1a1a1a]">Work email
                 <span className="ml-1 text-[#0009]">*</span>
               </FormLabel>
               <FormControl>
@@ -119,6 +121,7 @@ export const ContactForm = () => {
                   {...field}
                   type="email"
                   disabled={isPending}
+                  className="text-[#1a1a1a]"
                 />
               </FormControl>
               <FormMessage />
@@ -131,7 +134,7 @@ export const ContactForm = () => {
             name="department"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Department
+                <FormLabel className="text-[#1a1a1a]">Department
                   <span className="ml-1 text-[#0009]">*</span>
                 </FormLabel>
                 <Select 
@@ -141,7 +144,7 @@ export const ContactForm = () => {
                   disabled={isPending}
                 >
                   <FormControl>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full text-[#1a1a1a]">
                       <SelectValue placeholder="Select..." />
                     </SelectTrigger>
                   </FormControl>
@@ -161,7 +164,7 @@ export const ContactForm = () => {
             name="position"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Position
+                <FormLabel className="text-[#1a1a1a]">Position
                   <span className="ml-1 text-[#0009]">*</span>
                 </FormLabel>
                 <Select 
@@ -171,7 +174,7 @@ export const ContactForm = () => {
                   disabled={isPending}
                 >
                   <FormControl>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full text-[#1a1a1a]">
                       <SelectValue placeholder="Select..." />
                     </SelectTrigger>
                   </FormControl>
@@ -192,11 +195,14 @@ export const ContactForm = () => {
           name="description"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Provide more detail (optional)</FormLabel>
+              <FormLabel className="text-[#1a1a1a]">
+                Provide more detail (optional)
+              </FormLabel>
               <FormControl>
                 <Textarea 
                   {...field}
                   value={field.value ?? ""}
+                  className="text-[#1a1a1a]"
                   placeholder="How are you looking to use Notion?"
                   disabled={isPending}
                 />
