@@ -10,14 +10,17 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { Trash } from "@/components/trash";
+import { Navbar } from "@/components/navbar";
 import { Favorite } from "@/components/favorite";
 import { Workspace } from "@/components/workspace";
 import { Navigation } from "@/components/navigation";
 import { InboxSidebar } from "@/components/inbox-sidebar";
 
 import { UserButton } from "@/features/auth/components/user-button";
+import { useSidebar } from "@/stores/use-sidebar";
 
 export const Sidebar = () => {
+  const { isCollapsed, setCollapse } = useSidebar();
   const isMobile = useMedia("(max-width: 768px)");
 
   const isResizingRef = useRef(false);
@@ -26,7 +29,6 @@ export const Sidebar = () => {
 
   const [isDragging, setIsDragging] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
   const [sidebarWidth, setSidebarWidth] = useState(240);
 
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -64,7 +66,7 @@ export const Sidebar = () => {
 
   const resetWidth = () => {
     if (sidebarRef.current && navbarRef.current) {
-      setIsCollapsed(false);
+      setCollapse(false);
       setIsResetting(true);
 
       const defaultWidth = isMobile ? window.innerWidth : 240;
@@ -87,7 +89,7 @@ export const Sidebar = () => {
 
   const collapse = () => {
     if (sidebarRef.current && navbarRef.current) {
-      setIsCollapsed(true);
+      setCollapse(true);
       setIsResetting(true);
 
       sidebarRef.current.style.width = "0";
@@ -103,7 +105,8 @@ export const Sidebar = () => {
       <aside 
         ref={sidebarRef} 
         className={cn(
-          "h-full bg-secondary overflow-hidden select-none relative flex w-60 flex-col z-[100] bg-[#f7f7f5] dark:bg-[#202020] transition group [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)] dark:[&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(255,255,255,0.1)]",
+          "h-full overflow-hidden select-none relative flex w-60 flex-col z-[100] bg-[#f7f7f5] dark:bg-[#202020] group [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)] dark:[&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(255,255,255,0.1)]",
+          isResetting && "transition-all ease-in-out duration-300",
           isDragging ? 
             "shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)] dark:shadow-[inset_-2px_0_0_0_rgba(255,255,255,0.1)]" : 
             "shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)] dark:shadow-[inset_-1px_0_0_0_rgba(255,255,255,0.05)]",
@@ -154,9 +157,14 @@ export const Sidebar = () => {
       <div
         ref={navbarRef}
         className={cn(
-          "absolute top-0 z-[99999] left-60 w-[calc-(100%-240px)]",
+          "absolute top-0 z-[80] left-60 w-[calc(100%-240px)]",
+          isResetting && "transition-all ease-in-out duration-300",
         )}
-      />
+      >
+        <div className="order-3 flex flex-col w-full overflow-hidden isolation-auto">
+          <Navbar isCollapsed={isCollapsed} onResetWidth={resetWidth} />
+        </div>
+      </div>
     </>
   );
 }

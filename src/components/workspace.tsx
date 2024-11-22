@@ -76,7 +76,7 @@ export const Workspace = () => {
             indent="ml-1"
             isOpen={openGroupChild}
             onClick={toggleGroupChild}
-            className="bg-[#f5e0e9] text-[#ac5488]"
+            className="bg-[#f5e0e9] text-[#ac5488] dark:bg-[#4e2c3c] dark:text-[#b24b78]"
           >
             <HiMiniCircleStack className="size-[18px]" />
           </IconWrapper>
@@ -145,7 +145,7 @@ export const Workspace = () => {
             indent="ml-1"
             isOpen={false}
             onClick={() => {}}
-            className="bg-[#d8e5ee] text-[#527da5]"
+            className="bg-[#d8e5ee] text-[#527da5] dark:bg-[#143a4e] dark:text-[#527cca]"
           >
             <HiMiniUsers className="size-[18px]" />
           </IconWrapper>

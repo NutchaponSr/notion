@@ -7,9 +7,9 @@ interface DashboardLayoutProps {
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <div className="h-screen overflow-hidden relative">
-      <div className="w-screen h-full relative flex bg-white dark:bg-[#191919]">
+      <div className="w-screen h-full relative flex">
         <Sidebar />
-        <div className="order-3 cursor-text">
+        <div className="flex-1 h-full overflow-y-auto bg-white dark:bg-[#191919]">
           {children}
         </div>
       </div>

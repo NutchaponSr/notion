@@ -32,3 +32,4 @@ export function formatTimeElapsed(date: string) {
 
   return `${timeElapsed} ago`;
 }
+

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { auth } from "@/auth";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import { cn } from "@/lib/utils";
@@ -16,11 +17,13 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+const font = Inter({ subsets: ["latin"] });
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +40,7 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(geistSans.className, "bg-white dark:bg-white")}>
+        <body className={cn(font.className, "bg-white dark:bg-white")}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

@@ -11,6 +11,24 @@ import { GroupInstant } from "@/features/groups/types";
 
 const app = new Hono()
   .get(
+    "/",
+    async (c) => {
+      const session = await auth();
+
+      if (!session) {
+        return c.text("Unauthorized", 401);
+      }
+
+      const group = await db
+        .select()
+        .from(groups)
+        .where(eq(groups.inTrash, false))
+
+
+      return c.json({ data: group });
+    }
+  )
+  .get(
     "/instant",
     async (c) => {
       const session = await auth();
