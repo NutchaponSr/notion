@@ -39,16 +39,18 @@ export const useConfirm = (
   const ConfirmationDialog = () => (
     <Dialog open={promise !== null}>
       <DialogContent className={cn(props.className)}>
-        <div className="text-base text-center text-[#37352f]">
-          {props.title}
-        </div>
-        <div className="flex flex-col w-full space-y-1.5">
-          <Button variant="destructive" onClick={handleConfirm} className="font-normal h-8">
-            {props.confirmLabel}
-          </Button>
-          <Button variant="gray" onClick={handleCancel} className="font-normal h-8">
-            {props.cancelLabel}
-          </Button>
+          <div className="text-center text-[#37352f]">
+            {props.title?.split("\n").map((line, i) => (
+              <div key={i}>{line}</div>
+            ))}
+          </div>
+          <div className="flex flex-col w-full space-y-1.5">
+            <Button variant="destructive" onClick={handleConfirm} className="font-normal h-8">
+              {props.confirmLabel}
+            </Button>
+            <Button variant="gray" onClick={handleCancel} className="font-normal h-8">
+              {props.cancelLabel}
+            </Button>
           </div>
       </DialogContent>
     </Dialog>

@@ -1,9 +1,15 @@
+import { 
+  ChevronDownIcon, 
+  ListFilterIcon, 
+  LucideIcon, 
+  MoreHorizontalIcon, 
+  Trash2Icon, 
+} from "lucide-react";
 import { useState } from "react";
 import { IconType } from "react-icons/lib";
 import { DateRange } from "react-day-picker";
 import { GiCheckMark } from "react-icons/gi";
 import { HiMiniCalendarDays } from "react-icons/hi2";
-import { ChevronDownIcon, LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -33,9 +39,12 @@ import { UserAvatar } from "@/features/auth/components/user-avatar";
 
 import { useDate } from "@/features/search/hooks/use-date";
 
+import { useFilter } from "@/stores/use-filter";
+import { FILTER_CONDITIONS } from "@/constants/filters";
+import { useSort } from "@/stores/use-sort";
 
 interface FilterProps {
-  icon: IconType | LucideIcon;
+  icon: React.ReactNode;
   label: string;
   data: {
     name: string;
@@ -57,11 +66,11 @@ interface FilterProps {
     };
     onRange: (range: { from: Date; to: Date | undefined; }) => void;
   }[];
-  variant: "command" | "dropdown" | "calendar";
+  variant: "command" | "dropdown" | "calendar" | "filter" | "sort";
 }
 
 export const Filter = ({
-  icon: Icon,
+  icon,
   label,
   data,
   onSelect,
@@ -73,6 +82,8 @@ export const Filter = ({
   presets,
   variant,
 }: FilterProps) => {
+  const { onRemove } = useSort();
+  const { onDelete } = useFilter();
   const { type, onReset, onCreate, onEdit } = useDate();
 
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
@@ -97,7 +108,7 @@ export const Filter = ({
       variant={isSelected ? "active": "outline"} 
       className="gap-1 text-xs"
     >
-      <Icon className="size-[14px]" />
+      {icon}
       <span className="max-w-[150px] whitespace-nowrap overflow-hidden text-ellipsis">{label}</span>
       <ChevronDownIcon className={cn(
         "size-3",
@@ -223,6 +234,113 @@ export const Filter = ({
               onSelect={onDate}
               numberOfMonths={1}
             />
+          </PopoverContent>
+        </Popover>
+      );
+    case "filter":
+      return (
+        <Popover>
+          <PopoverTrigger asChild>
+            {triggerButton}
+          </PopoverTrigger>
+          <PopoverContent className="w-[220px] min-w-[180px] max-w-[calc(100vw-24px)] h-full max-h-[50vh] p-0 overflow-hidden flex flex-col">
+            <div className="flex flex-col py-1">
+              <div className="flex justify-between text-[#37352f80] text-xs mb-1.5 mx-2">
+                <div className="flex items-center">
+                  <span className="shrink whitespace-nowrap overflow-hidden text-ellipsis">
+                    {label}
+                  </span>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button className="mx-0.5 transition px-0.5 rounded-[4px] hover:bg-[#37352f0f] shrink-0">
+                        <div className="flex items-center gap-0.5">
+                          <span className="text-[#37352fa6] font-medium text-xs">
+                            contains
+                          </span>
+                          <ChevronDownIcon className="size-3" />
+                        </div>
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-[190px]" align="center">
+                      {FILTER_CONDITIONS.map((condition) => (
+                        <DropdownMenuItem key={condition.value}>
+                          <span>{condition.label}</span>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" className="size-4 rounded-sm text-[#7C7C78] hover:text-[#7C7C78]">
+                      <MoreHorizontalIcon className="size-[14px]" /> 
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent side="right" align="start" className="w-[240px]">
+                    <DropdownMenuItem className="focus:text-[#eb5757]" onClick={() => onDelete(label)}>
+                      <Trash2Icon className="size-4" />
+                      Delete filter
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <ListFilterIcon className="size-4" />
+                      Add to advanced filter
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+              <div className="pt-3 pb-2 mx-2">
+                <input 
+                  value={""}
+                  onChange={() => {}}
+                  placeholder="Type a value..."
+                  className="max-w-full w-full whitespace-pre-wrap break-words grow text-sm py-1 px-2.5 rounded-md shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] bg-[#f2f1ee99] focus-visible:outline-none text-[#37352f] placeholder:text-[#91918e] font-light dark:bg-[#ffffff0e] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.075)] dark:text-[#ffffffcf] focus-visible:shadow-[inset_0_0_0_1px_rgba(35,131,226,0.57),0_0_0_2px_rgba(35,131,226,0.35)]"
+                />
+              </div>
+            </div>
+          </PopoverContent>
+        </Popover>
+      );
+    case "sort":
+      return (
+        <Popover>
+          <PopoverTrigger asChild>
+            {triggerButton}
+          </PopoverTrigger>
+          <PopoverContent className="flex flex-col w-full h-full max-h-[80vh] p-0">
+            <div className="flex flex-col px-2 py-2 w-full">
+                <div className="flex items-center w-full min-h-7 text-sm">
+                  <div className="flex-auto mx-3">
+                    <div className="flex items-center whitespace-nowrap space-x-2">
+                      <Button variant="outline" size="md" className="text-sm text-[#37352f]">
+                        {/* <icon className="size-4 text-[#a4a4a2]" /> */}
+                        {label}
+                        <ChevronDownIcon className="size-3 text-[#a4a4a2]" />
+                      </Button>
+                      <Button variant="outline" size="md" className="text-sm text-[#37352f]">
+                        Ascending
+                        <ChevronDownIcon className="size-3 text-[#a4a4a2]" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              <div className="flex flex-col pt-1">
+                <div 
+                  className="w-[calc(100%-8px)] mx-1 rounded-[6px] hover:bg-[#37352f0f] cursor-pointer group transition-colors"
+                  onClick={onRemove}
+                >
+                  <div className="flex items-center w-full min-h-7">
+                    <div className="flex items-center justify-center ml-2.5 mr-1">
+                      <Trash2Icon className="size-4 text-[#9A9A97] group-hover:text-[#eb5757]" />
+                    </div>
+                    <div className="ml-1.5 mr-3 min-w-0">
+                      <p className="text-[#37352fa6] text-sm whitespace-pre-wrap overflow-hidden text-ellipsis group-hover:text-[#eb5757]">
+                        Delete sort
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </PopoverContent>
         </Popover>
       );

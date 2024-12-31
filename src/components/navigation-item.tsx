@@ -1,15 +1,12 @@
-import { LucideIcon } from "lucide-react";
-import { IconType } from "react-icons/lib";
-
 interface NavigationItemProps {
-  icon: LucideIcon | IconType;
+  icon: JSX.Element;
   label: string;
   onClick: () => void;
   showBadge?: boolean;
 }
 
 export const NavigationItem = ({
-  icon: Icon,
+  icon,
   label,
   onClick,
   showBadge = false
@@ -17,7 +14,7 @@ export const NavigationItem = ({
   return (
     <button onClick={onClick} className="flex items-center h-[30px] w-full hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] focus-visible:ring-0 focus-visible:outline-none p-1 group/sidebar">
       <div className="shrink-0 grow-0 rounded-sm size-[22px] flex justify-center items-center ml-1 mr-2">
-        <Icon className="size-[18px] text-[#91918e]" />
+        {icon}
       </div>
       <div className="whitespace-nowrap overflow-hidden text-ellipsis text-sm">
         {label}

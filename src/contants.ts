@@ -119,14 +119,12 @@ export const categories = [
 ];
 
 export const comfirmDeleteTrash = {
-  title: "Are you sure you want to delete this stuff from Trash?",
+  title: "Are you sure you want to delete \n this stuff from Trash?",
   description: "",
   className: "w-[300px]",
   confirmLabel: "Yes. Delete this stuff",
   cancelLabel: "Cancel",
 }
-
-
 
 export const settingsSidebars: SettingSidebarItem[] = [
   {

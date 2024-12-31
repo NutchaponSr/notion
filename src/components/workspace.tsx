@@ -57,9 +57,12 @@ export const Workspace = () => {
           Workspace
         </div>
         <div className="flex flex-col gap-1">
-          <Skeleton className="h-[26px] w-full rounded-sm" />
-          <Skeleton className="h-[26px] w-full rounded-sm" />
-          <Skeleton className="h-[26px] w-full rounded-sm" />
+          {Array.from({ length: 3 }).map((_, index) => (
+          <div key={index} className="flex items-center space-x-2">
+            <Skeleton className="h-6 w-6 rounded-sm" />
+            <Skeleton className="h-3 w-2/4 rounded-full" />
+          </div>
+          ))}
         </div>
       </div>
     );

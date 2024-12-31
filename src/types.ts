@@ -21,3 +21,13 @@ export interface SettingSidebarItem {
 }
 
 export type SettingChild = "account" | "setting" | "language" | "people";
+export type SortDirection = "asc" | "desc"
+
+export interface SortableItem {
+  [key: string]: string | number | Date;
+}
+
+export interface SortConfig<T> {
+  header: keyof T;
+  direction: SortDirection;
+}

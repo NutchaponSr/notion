@@ -33,3 +33,34 @@ export function formatTimeElapsed(date: string) {
   return `${timeElapsed} ago`;
 }
 
+export function sortBy<T extends Record<string, string | number | boolean | null>>(
+  arr: T[], 
+  header: keyof T, 
+  direction: "asc" | "desc"
+) {
+  return [...arr].sort((a, b) => {
+    const aValue = a[header];
+    const bValue = b[header];
+    
+    if (typeof aValue === "string" && typeof bValue === "string") {
+      return direction === "asc"
+        ? aValue.localeCompare(bValue)
+        : bValue.localeCompare(aValue);
+    }
+
+    if (typeof aValue === "number" && typeof bValue === "number") {
+      return direction === "asc" 
+        ? aValue - bValue
+        : bValue - aValue;
+    }
+
+    if (aValue instanceof Date && bValue instanceof Date) {
+      return direction === "asc"
+        ? aValue.getTime() - bValue.getTime()
+        : bValue.getTime() - aValue.getTime();
+    }
+
+    return 0;
+  });
+}
+

@@ -30,6 +30,7 @@ const buttonVariants = cva(
         xl: "h-[45px] rounded-lg px-5 py-2.5",
         filter: "h-6 px-2 rounded-full",
         icon: "h-7 w-7 rounded-sm",
+        ms: "h-6 rounded-md px-1.5 text-xs",
         xs: "h-5 px-1 rounded-sm text-xs text-[#37352fa6] hover:text-[#37352fa6] font-medium gap-0.5",
       },
     },

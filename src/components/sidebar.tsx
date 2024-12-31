@@ -16,8 +16,9 @@ import { Workspace } from "@/components/workspace";
 import { Navigation } from "@/components/navigation";
 import { InboxSidebar } from "@/components/inbox-sidebar";
 
-import { UserButton } from "@/features/auth/components/user-button";
 import { useSidebar } from "@/stores/use-sidebar";
+
+import { UserButton } from "@/features/auth/components/user-button";
 
 export const Sidebar = () => {
   const { isCollapsed, setCollapse } = useSidebar();

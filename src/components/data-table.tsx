@@ -25,8 +25,6 @@ interface DataTableProps<TData, TValue> {
 export const DataTable = <TData, TValue>({ table }: DataTableProps<TData, TValue>) => {
   const isSelectedAll = table.getSelectedRowModel().rows.length > 0;
 
-  console.log(table.getHeaderGroups())
-
   return (
     <div className="grow shrink-0 flex flex-col relative">
       <div className="relative float-left min-w-full pb-[180px] pr-[96px] pl-16">

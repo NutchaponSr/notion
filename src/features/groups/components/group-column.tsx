@@ -1,4 +1,8 @@
-import { CalendarDaysIcon, GripVertical, TypeIcon } from "lucide-react";
+import { 
+  CalendarDaysIcon, 
+  GripVertical, 
+  TypeIcon 
+} from "lucide-react";
 import { InferResponseType } from "hono";
 import { ColumnDef } from "@tanstack/react-table";
 
@@ -10,7 +14,7 @@ type ResponseType = InferResponseType<typeof client.api.groups.$get, 200>["data"
 export const columns: ColumnDef<ResponseType>[] = [
   {
     id: "action",
-    cell: ({ row }) => (
+    cell: ({ }) => (
       <button className="flex items-center justify-center rounded-sm w-[18px] h-6 transition hover:bg-[#37352f0f]">
         <GripVertical className="text-[#B9B9B7]" />
       </button>
@@ -41,7 +45,7 @@ export const columns: ColumnDef<ResponseType>[] = [
         Name
       </div>
     ),
-    cell: ({ row, table }) => (
+    cell: ({ row }) => (
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <div className="size-[22px] inline-flex items-center justify-center mr-1">
@@ -65,7 +69,7 @@ export const columns: ColumnDef<ResponseType>[] = [
   },
   {
     accessorKey: "year",
-    header: ({ column }) => (
+    header: ({  }) => (
       <div className="flex items-center">
         <CalendarDaysIcon className="size-3.5 text-[#A4A4A2] mr-1.5" />
         Year

@@ -1,20 +1,13 @@
 "use client";
 
-import { Toolbar } from "@/features/groups/components/toolbar";
-import { columns } from "@/features/groups/components/group-column";
-
-import { useGetGroups } from "../api/use-get-groups";
-import { getCoreRowModel, useReactTable } from "@tanstack/react-table";
 import { DataTable } from "@/components/data-table";
 
-export const GroupContent = () => {
-  const { data: groups, isLoading } = useGetGroups();
+import { Toolbar } from "@/components/toolbar";
 
-  const table = useReactTable({
-    data: groups || [],
-    columns,
-    getCoreRowModel: getCoreRowModel(),
-  });
+import { useGroupTable } from "@/features/groups/hooks/use-group-table";
+
+export const GroupContent = () => {
+  const { table, isLoading } = useGroupTable();
 
   if (isLoading) return null;
 
