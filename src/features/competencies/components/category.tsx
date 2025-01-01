@@ -1,10 +1,11 @@
 import React from "react";
 
-import { PlusIcon } from "lucide-react";
-import { SiGitbook } from "react-icons/si";
-
 import { cn } from "@/lib/utils";
 
+import {
+  Notebook2Icon,
+  PlusIcon,
+} from "@/components/icons";
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
@@ -17,6 +18,7 @@ interface CategoryProps {
   className: string[];
   isChild: boolean;
   data: CompetencyInstant[];
+  fill: string;
   onChild: () => void;
   onClick: () => void;
 }
@@ -27,6 +29,7 @@ export const Category = ({
   className,
   isChild,
   data,
+  fill,
   onChild,
   onClick
 }: CategoryProps) => {
@@ -42,8 +45,8 @@ export const Category = ({
         label={label} 
         href={`/competencies?type=${query}`}
         sideButton={
-          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
-            <PlusIcon className="size-[18px]" />
+          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
+            <PlusIcon className="size-[18px] text-[#91918e]" />
           </button> 
         }
       >
@@ -53,7 +56,7 @@ export const Category = ({
           onClick={onChild}
           className={className[0]}
         >
-          <SiGitbook className={cn(className[1], "size-4")} />
+          <Notebook2Icon className={cn(className[1], "size-4")} variant="SOLID" fill={fill} />
         </IconWrapper>
       </WorkspaceItem>
       {isChild && (

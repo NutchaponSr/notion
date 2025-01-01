@@ -17,7 +17,7 @@ import { useCreateInstantGroup } from "@/features/groups/api/use-create-instant-
 import { useCompetencyChild } from "@/features/competencies/stores/use-competency-child";
 import { useCreateInstantCompetency } from "@/features/competencies/api/use-create-instant-group";
 import { useGetInstantCompetencies } from "@/features/competencies/api/use-get-instant-competencies";
-import { FolderLibraryIcon, NotebookIcon, UserIcon } from "./icons";
+import { FolderLibraryIcon, Notebook1Icon, UsersIcon } from "./icons";
 
 export const Workspace = () => {
   const {
@@ -112,7 +112,7 @@ export const Workspace = () => {
             onClick={toggleCompetencyChild}
             className="bg-[#fadec9] dark:bg-[#5c3b23]"
           >
-            <NotebookIcon className="size-[18px]" variant="SOLID" fill="#c47830" />
+            <Notebook1Icon className="size-[18px]" variant="SOLID" fill="#c47830" />
           </IconWrapper>
         </WorkspaceItem> 
         {openCompetencyChild && (
@@ -133,6 +133,7 @@ export const Workspace = () => {
                     type: category.query as typeof typesCompetency.enumValues[number]
                   }
                 })}
+                fill={category.fill}
               />
             );
           })
@@ -145,7 +146,7 @@ export const Workspace = () => {
             onClick={() => {}}
             className="bg-[#d8e5ee] dark:bg-[#143a4e]"
           >
-            <UserIcon className="size-[18px]" variant="SOLID" fill="#527da5" />
+            <UsersIcon className="size-[18px]" variant="SOLID" fill="#527da5" />
           </IconWrapper>
         </WorkspaceItem> 
       </div>

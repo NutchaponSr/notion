@@ -1,14 +1,5 @@
 import toast from "react-hot-toast";
 
-import { 
-  CopyIcon, 
-  LinkIcon, 
-  MoveUpRightIcon, 
-  SquarePenIcon, 
-  StarIcon, 
-  StarOffIcon, 
-  Trash2Icon 
-} from "lucide-react";
 import { format } from "date-fns";
 
 import {
@@ -18,6 +9,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+import {
+  CopyIcon,
+  LinkIcon,
+  LinkSquareIcon,
+  NoteEditIcon,
+  StarIcon,
+  StarOffIcon,
+  TrashIcon
+} from "@/components/icons";  
 
 import { GroupSidebarType } from "@/features/groups/types";
 
@@ -73,12 +74,12 @@ export const GroupActions = ({
       >
         {data.isFavorite ? (
           <DropdownMenuItem onClick={() => unfavorite({ param: { id: data.id } })}>
-            <StarOffIcon className="size-4" />
+            <StarOffIcon className="size-4 text-[#37352f]" />
             Remove from Favorite
           </DropdownMenuItem>
         ) : (
           <DropdownMenuItem onClick={() => favorite({ param: { id: data.id } })}>
-            <StarIcon className="size-4" />
+            <StarIcon className="size-4 text-[#37352f]" />
             Add to Favorite
           </DropdownMenuItem>
         )}
@@ -93,20 +94,20 @@ export const GroupActions = ({
           <span className="text-xs text-[#37352f80]">Ctrl+D</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={onRename}>
-          <SquarePenIcon className="size-4" />
+          <NoteEditIcon className="size-4" />
           <span className="flex-auto">Rename</span>
           <span className="text-xs text-[#37352f80]">Ctrl+Shift+R</span>
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => trash({ param: { id: data.id } })} 
-          className="focus:text-[#eb5757]"
+          className="group focus:text-[#eb5757]"
         >
-          <Trash2Icon className="size-4" />
+          <TrashIcon className="size-4 text-[#37352f] group-focus:text-[#eb5757] transition-colors" />
           Move to trash
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleNewTab}>
-          <MoveUpRightIcon className="size-4" />
+          <LinkSquareIcon className="size-4" />
           Open in new tab
         </DropdownMenuItem>
         <DropdownMenuSeparator />

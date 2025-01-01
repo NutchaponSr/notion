@@ -1,12 +1,12 @@
-import { MoreHorizontalIcon } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 
+import { MoreHorizontalIcon } from "@/components/icons";
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem } from "@/components/workspace-item";
 
-import { CompetencyInstant } from "../types";
-import { CompetencyActions } from "./competency-actions";
-import { CompetencyRenamePopover } from "./competency-rename-popover";
+import { CompetencyActions } from "@/features/competencies/components/competency-actions";
+import { CompetencyRenamePopover } from "@/features/competencies/components/competency-rename-popover";
+import { CompetencyInstant } from "@/features/competencies/types";
 
 interface CompetencyItemProps {
   data: CompetencyInstant;
@@ -41,8 +41,8 @@ export const CompetencyItem = ({
           href={`/compotencies/${data.id}`}
           sideButton={
             <CompetencyActions data={data} onRename={onRename}>
-              <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
-                <MoreHorizontalIcon className="size-[18px]" />
+              <button className="transition relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
+                <MoreHorizontalIcon className="size-[18px] text-[#91918e]" />
               </button> 
             </CompetencyActions>
           }

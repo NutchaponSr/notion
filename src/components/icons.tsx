@@ -3,10 +3,10 @@ import { createIcon } from "@/lib/utils";
 export const HashIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M7 2V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M17 2V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M22 7L2 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M22 17L2 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M7 2V22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M17 2V22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M22 7L2 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M22 17L2 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
     </svg>
   ),
   SOLID: (
@@ -30,8 +30,8 @@ export const HashIcon = createIcon({
 export const SettingsIcon = createIcon({ 
     STROKE: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-        <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" stroke="currentColor" stroke-width="1.5" />
-        <path d="M21.011 14.0965C21.5329 13.9558 21.7939 13.8854 21.8969 13.7508C22 13.6163 22 13.3998 22 12.9669V11.0332C22 10.6003 22 10.3838 21.8969 10.2493C21.7938 10.1147 21.5329 10.0443 21.011 9.90358C19.0606 9.37759 17.8399 7.33851 18.3433 5.40087C18.4817 4.86799 18.5509 4.60156 18.4848 4.44529C18.4187 4.28902 18.2291 4.18134 17.8497 3.96596L16.125 2.98673C15.7528 2.77539 15.5667 2.66972 15.3997 2.69222C15.2326 2.71472 15.0442 2.90273 14.6672 3.27873C13.208 4.73448 10.7936 4.73442 9.33434 3.27864C8.95743 2.90263 8.76898 2.71463 8.60193 2.69212C8.43489 2.66962 8.24877 2.77529 7.87653 2.98663L6.15184 3.96587C5.77253 4.18123 5.58287 4.28891 5.51678 4.44515C5.45068 4.6014 5.51987 4.86787 5.65825 5.4008C6.16137 7.3385 4.93972 9.37763 2.98902 9.9036C2.46712 10.0443 2.20617 10.1147 2.10308 10.2492C2 10.3838 2 10.6003 2 11.0332V12.9669C2 13.3998 2 13.6163 2.10308 13.7508C2.20615 13.8854 2.46711 13.9558 2.98902 14.0965C4.9394 14.6225 6.16008 16.6616 5.65672 18.5992C5.51829 19.1321 5.44907 19.3985 5.51516 19.5548C5.58126 19.7111 5.77092 19.8188 6.15025 20.0341L7.87495 21.0134C8.24721 21.2247 8.43334 21.3304 8.6004 21.3079C8.76746 21.2854 8.95588 21.0973 9.33271 20.7213C10.7927 19.2644 13.2088 19.2643 14.6689 20.7212C15.0457 21.0973 15.2341 21.2853 15.4012 21.3078C15.5682 21.3303 15.7544 21.2246 16.1266 21.0133L17.8513 20.034C18.2307 19.8187 18.4204 19.711 18.4864 19.5547C18.5525 19.3984 18.4833 19.132 18.3448 18.5991C17.8412 16.6616 19.0609 14.6226 21.011 14.0965Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" stroke="currentColor" stroke-width="1.7" />
+        <path d="M21.011 14.0965C21.5329 13.9558 21.7939 13.8854 21.8969 13.7508C22 13.6163 22 13.3998 22 12.9669V11.0332C22 10.6003 22 10.3838 21.8969 10.2493C21.7938 10.1147 21.5329 10.0443 21.011 9.90358C19.0606 9.37759 17.8399 7.33851 18.3433 5.40087C18.4817 4.86799 18.5509 4.60156 18.4848 4.44529C18.4187 4.28902 18.2291 4.18134 17.8497 3.96596L16.125 2.98673C15.7528 2.77539 15.5667 2.66972 15.3997 2.69222C15.2326 2.71472 15.0442 2.90273 14.6672 3.27873C13.208 4.73448 10.7936 4.73442 9.33434 3.27864C8.95743 2.90263 8.76898 2.71463 8.60193 2.69212C8.43489 2.66962 8.24877 2.77529 7.87653 2.98663L6.15184 3.96587C5.77253 4.18123 5.58287 4.28891 5.51678 4.44515C5.45068 4.6014 5.51987 4.86787 5.65825 5.4008C6.16137 7.3385 4.93972 9.37763 2.98902 9.9036C2.46712 10.0443 2.20617 10.1147 2.10308 10.2492C2 10.3838 2 10.6003 2 11.0332V12.9669C2 13.3998 2 13.6163 2.10308 13.7508C2.20615 13.8854 2.46711 13.9558 2.98902 14.0965C4.9394 14.6225 6.16008 16.6616 5.65672 18.5992C5.51829 19.1321 5.44907 19.3985 5.51516 19.5548C5.58126 19.7111 5.77092 19.8188 6.15025 20.0341L7.87495 21.0134C8.24721 21.2247 8.43334 21.3304 8.6004 21.3079C8.76746 21.2854 8.95588 21.0973 9.33271 20.7213C10.7927 19.2644 13.2088 19.2643 14.6689 20.7212C15.0457 21.0973 15.2341 21.2853 15.4012 21.3078C15.5682 21.3303 15.7544 21.2246 16.1266 21.0133L17.8513 20.034C18.2307 19.8187 18.4204 19.711 18.4864 19.5547C18.5525 19.3984 18.4833 19.132 18.3448 18.5991C17.8412 16.6616 19.0609 14.6226 21.011 14.0965Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
       </svg>
     ),
     SOLID: (
@@ -50,8 +50,8 @@ export const SettingsIcon = createIcon({
 export const UserIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M18.5 20V17.9704C18.5 16.7281 17.9407 15.5099 16.8103 14.9946C15.4315 14.3661 13.7779 14 12 14C10.2221 14 8.5685 14.3661 7.18968 14.9946C6.05927 15.5099 5.5 16.7281 5.5 17.9704V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <circle cx="12" cy="7.5" r="3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18.5 20V17.9704C18.5 16.7281 17.9407 15.5099 16.8103 14.9946C15.4315 14.3661 13.7779 14 12 14C10.2221 14 8.5685 14.3661 7.18968 14.9946C6.05927 15.5099 5.5 16.7281 5.5 17.9704V20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="12" cy="7.5" r="3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -70,10 +70,10 @@ export const UserIcon = createIcon({
 export const TrashIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M3 5.5H21M16.0557 5.5L15.3731 4.09173C14.9196 3.15626 14.6928 2.68852 14.3017 2.39681C14.215 2.3321 14.1231 2.27454 14.027 2.2247C13.5939 2 13.0741 2 12.0345 2C10.9688 2 10.436 2 9.99568 2.23412C9.8981 2.28601 9.80498 2.3459 9.71729 2.41317C9.32164 2.7167 9.10063 3.20155 8.65861 4.17126L8.05292 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M3 5.5H21M16.0557 5.5L15.3731 4.09173C14.9196 3.15626 14.6928 2.68852 14.3017 2.39681C14.215 2.3321 14.1231 2.27454 14.027 2.2247C13.5939 2 13.0741 2 12.0345 2C10.9688 2 10.436 2 9.99568 2.23412C9.8981 2.28601 9.80498 2.3459 9.71729 2.41317C9.32164 2.7167 9.10063 3.20155 8.65861 4.17126L8.05292 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
     </svg>
   ),
   SOLID: (
@@ -140,8 +140,8 @@ export const LayersIcon = createIcon({
 export const InboxIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M21.5 13.5H16.5743C15.7322 13.5 15.0706 14.2036 14.6995 14.9472C14.2963 15.7551 13.4889 16.5 12 16.5C10.5111 16.5 9.70373 15.7551 9.30054 14.9472C8.92942 14.2036 8.26777 13.5 7.42566 13.5H2.5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+      <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M21.5 13.5H16.5743C15.7322 13.5 15.0706 14.2036 14.6995 14.9472C14.2963 15.7551 13.4889 16.5 12 16.5C10.5111 16.5 9.70373 15.7551 9.30054 14.9472C8.92942 14.2036 8.26777 13.5 7.42566 13.5H2.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -160,8 +160,8 @@ export const InboxIcon = createIcon({
 export const HomeIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M10 18L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.3831 2 14.5817 2.86667 16.979 4.6L18.4189 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5537 22 13.1388 22H10.8612C7.44633 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+      <path d="M10 18L14 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.3831 2 14.5817 2.86667 16.979 4.6L18.4189 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5537 22 13.1388 22H10.8612C7.44633 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -180,8 +180,8 @@ export const HomeIcon = createIcon({
 export const HelpCircleIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
-      <path d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.7" />
+      <path d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
       <path d="M11.992 17H12.001" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
@@ -202,9 +202,9 @@ export const HelpCircleIcon = createIcon({
 export const FolderLibraryIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M16.2627 10.5H7.73725C5.15571 10.5 3.86494 10.5 3.27143 11.3526C2.67793 12.2052 3.11904 13.4258 4.00126 15.867L5.08545 18.867C5.54545 20.1398 5.77545 20.7763 6.2889 21.1381C6.80235 21.5 7.47538 21.5 8.82143 21.5H15.1786C16.5246 21.5 17.1976 21.5 17.7111 21.1381C18.2245 20.7763 18.4545 20.1398 18.9146 18.867L19.9987 15.867C20.881 13.4258 21.3221 12.2052 20.7286 11.3526C20.1351 10.5 18.8443 10.5 16.2627 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
-      <path d="M19 8C19 7.53406 19 7.30109 18.9239 7.11732C18.8224 6.87229 18.6277 6.67761 18.3827 6.57612C18.1989 6.5 17.9659 6.5 17.5 6.5H6.5C6.03406 6.5 5.80109 6.5 5.61732 6.57612C5.37229 6.67761 5.17761 6.87229 5.07612 7.11732C5 7.30109 5 7.53406 5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M16.5 4C16.5 3.53406 16.5 3.30109 16.4239 3.11732C16.3224 2.87229 16.1277 2.67761 15.8827 2.57612C15.6989 2.5 15.4659 2.5 15 2.5H9C8.53406 2.5 8.30109 2.5 8.11732 2.57612C7.87229 2.67761 7.67761 2.87229 7.57612 3.11732C7.5 3.30109 7.5 3.53406 7.5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16.2627 10.5H7.73725C5.15571 10.5 3.86494 10.5 3.27143 11.3526C2.67793 12.2052 3.11904 13.4258 4.00126 15.867L5.08545 18.867C5.54545 20.1398 5.77545 20.7763 6.2889 21.1381C6.80235 21.5 7.47538 21.5 8.82143 21.5H15.1786C16.5246 21.5 17.1976 21.5 17.7111 21.1381C18.2245 20.7763 18.4545 20.1398 18.9146 18.867L19.9987 15.867C20.881 13.4258 21.3221 12.2052 20.7286 11.3526C20.1351 10.5 18.8443 10.5 16.2627 10.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" />
+      <path d="M19 8C19 7.53406 19 7.30109 18.9239 7.11732C18.8224 6.87229 18.6277 6.67761 18.3827 6.57612C18.1989 6.5 17.9659 6.5 17.5 6.5H6.5C6.03406 6.5 5.80109 6.5 5.61732 6.57612C5.37229 6.67761 5.17761 6.87229 5.07612 7.11732C5 7.30109 5 7.53406 5 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16.5 4C16.5 3.53406 16.5 3.30109 16.4239 3.11732C16.3224 2.87229 16.1277 2.67761 15.8827 2.57612C15.6989 2.5 15.4659 2.5 15 2.5H9C8.53406 2.5 8.30109 2.5 8.11732 2.57612C7.87229 2.67761 7.67761 2.87229 7.57612 3.11732C7.5 3.30109 7.5 3.53406 7.5 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -226,9 +226,9 @@ export const FolderLibraryIcon = createIcon({
 export const File1Icon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M8 7L16 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M8 11L12 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8 7L16 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8 11L12 11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -249,8 +249,8 @@ export const File1Icon = createIcon({
 export const ArrowMoveUpLeftIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M20 21V18.9231C20 16.9221 20 15.9217 19.8547 15.0846C19.0547 10.4765 15.0934 6.86243 10.0426 6.13259C9.12509 6 7.19318 6 5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M7 3C6.39316 3.58984 4 5.15973 4 6C4 6.84027 6.39316 8.41016 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20 21V18.9231C20 16.9221 20 15.9217 19.8547 15.0846C19.0547 10.4765 15.0934 6.86243 10.0426 6.13259C9.12509 6 7.19318 6 5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7 3C6.39316 3.58984 4 5.15973 4 6C4 6.84027 6.39316 8.41016 7 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -269,8 +269,8 @@ export const ArrowMoveUpLeftIcon = createIcon({
 export const AiChatIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-      <path d="M7.5 15L9.34189 9.47434C9.43631 9.19107 9.7014 9 10 9C10.2986 9 10.5637 9.19107 10.6581 9.47434L12.5 15M15.5 9V15M8.5 13H11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+      <path d="M7.5 15L9.34189 9.47434C9.43631 9.19107 9.7014 9 10 9C10.2986 9 10.5637 9.19107 10.6581 9.47434L12.5 15M15.5 9V15M8.5 13H11.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -286,13 +286,13 @@ export const AiChatIcon = createIcon({
   ),
 });
 
-export const NotebookIcon = createIcon({
+export const Notebook1Icon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M22 14V10C22 6.22876 22 4.34315 20.8284 3.17157C19.6569 2 17.7712 2 14 2H12C8.22876 2 6.34315 2 5.17157 3.17157C4 4.34315 4 6.22876 4 10V14C4 17.7712 4 19.6569 5.17157 20.8284C6.34315 22 8.22876 22 12 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14Z" stroke="currentColor" stroke-width="1.5" />
-      <path d="M5 6L2 6M5 12H2M5 18H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M17.5 7L13.5 7M15.5 11H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M9 22L9 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M22 14V10C22 6.22876 22 4.34315 20.8284 3.17157C19.6569 2 17.7712 2 14 2H12C8.22876 2 6.34315 2 5.17157 3.17157C4 4.34315 4 6.22876 4 10V14C4 17.7712 4 19.6569 5.17157 20.8284C6.34315 22 8.22876 22 12 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14Z" stroke="currentColor" stroke-width="1.7" />
+      <path d="M5 6L2 6M5 12H2M5 18H2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17.5 7L13.5 7M15.5 11H13.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9 22L9 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -312,13 +312,13 @@ export const NotebookIcon = createIcon({
   ),
 });
 
-export const CalendarDay = createIcon({
+export const CalendarDayIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M18 2V4M6 2V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M10 17L9.99999 13.3472C9.99999 13.1555 9.86325 13 9.69458 13H9M13.6297 17L14.9842 13.3492C15.0475 13.1785 14.9128 13 14.7207 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M6 8H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18 2V4M6 2V4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M10 17L9.99999 13.3472C9.99999 13.1555 9.86325 13 9.69458 13H9M13.6297 17L14.9842 13.3492C15.0475 13.1785 14.9128 13 14.7207 13H13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6 8H18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -341,7 +341,7 @@ export const CalendarDay = createIcon({
 export const PlusIcon = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -408,7 +408,7 @@ export const MoreVerticalIcon = createIcon({
 export const ChevronRight = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -427,7 +427,7 @@ export const ChevronRight = createIcon({
 export const ChevronLeft = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -446,7 +446,7 @@ export const ChevronLeft = createIcon({
 export const ChevronUp = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M17.9998 15C17.9998 15 13.5809 9.00001 11.9998 9C10.4187 8.99999 5.99985 15 5.99985 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17.9998 15C17.9998 15 13.5809 9.00001 11.9998 9C10.4187 8.99999 5.99985 15 5.99985 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -465,7 +465,7 @@ export const ChevronUp = createIcon({
 export const ChevronDown = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -484,8 +484,8 @@ export const ChevronDown = createIcon({
 export const ChevronsLeft = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M11.5 18C11.5 18 5.50001 13.5811 5.5 12C5.49999 10.4188 11.5 6 11.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M18.5 18C18.5 18 12.5 13.5811 12.5 12C12.5 10.4188 18.5 6 18.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M11.5 18C11.5 18 5.50001 13.5811 5.5 12C5.49999 10.4188 11.5 6 11.5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18.5 18C18.5 18 12.5 13.5811 12.5 12C12.5 10.4188 18.5 6 18.5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -505,8 +505,8 @@ export const ChevronsLeft = createIcon({
 export const ChevronsRight = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M12.5 18C12.5 18 18.5 13.5811 18.5 12C18.5 10.4188 12.5 6 12.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M5.50005 18C5.50005 18 11.5 13.5811 11.5 12C11.5 10.4188 5.5 6 5.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12.5 18C12.5 18 18.5 13.5811 18.5 12C18.5 10.4188 12.5 6 12.5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M5.50005 18C5.50005 18 11.5 13.5811 11.5 12C11.5 10.4188 5.5 6 5.5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -526,8 +526,8 @@ export const ChevronsRight = createIcon({
 export const ChevronsUpDown = createIcon({
   STROKE: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-      <path d="M17.9999 14C17.9999 14 13.581 19 11.9999 19C10.4188 19 5.99994 14 5.99994 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M17.9999 9.99996C17.9999 9.99996 13.581 5.00001 11.9999 5C10.4188 4.99999 5.99994 10 5.99994 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17.9999 14C17.9999 14 13.581 19 11.9999 19C10.4188 19 5.99994 14 5.99994 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17.9999 9.99996C17.9999 9.99996 13.581 5.00001 11.9999 5C10.4188 4.99999 5.99994 10 5.99994 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   ),
   SOLID: (
@@ -540,6 +540,285 @@ export const ChevronsUpDown = createIcon({
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path opacity="0.4" d="M5.08836 10.411C5.24998 10.7695 5.60674 11 6.00001 11L18 11C18.3933 11 18.75 10.7694 18.9117 10.4109C19.0733 10.0524 19.0097 9.63241 18.7493 9.33773L18.7477 9.33596C18.7121 9.29609 18.6106 9.18259 18.548 9.11355C18.4209 8.97338 18.2384 8.77403 18.0147 8.53517C17.5682 8.05838 16.9534 7.41974 16.2853 6.77852C15.6215 6.14138 14.885 5.48226 14.1974 4.97599C13.8543 4.72332 13.5018 4.49266 13.1606 4.32127C12.84 4.16021 12.4305 4 12 4C11.5694 4 11.1599 4.1602 10.8393 4.32126C10.4981 4.49265 10.1457 4.72332 9.80251 4.97599C9.11493 5.48226 8.37843 6.1414 7.71461 6.77854C7.04653 7.41977 6.43175 8.05841 5.98524 8.53521C5.76155 8.77408 5.57906 8.97343 5.45202 9.11359C5.38919 9.18292 5.28755 9.29656 5.25229 9.33599L5.25113 9.33729C4.9907 9.63198 4.92673 10.0524 5.08836 10.411Z" />
       <path d="M5.08836 13.589C5.24998 13.2305 5.60674 13 6.00001 13L18 13C18.3933 13 18.75 13.2306 18.9117 13.5891C19.0733 13.9476 19.0097 14.3676 18.7493 14.6623L18.7477 14.664C18.7121 14.7039 18.6106 14.8174 18.548 14.8865C18.4209 15.0266 18.2384 15.226 18.0147 15.4648C17.5682 15.9416 16.9534 16.5803 16.2853 17.2215C15.6215 17.8586 14.885 18.5177 14.1974 19.024C13.8543 19.2767 13.5018 19.5073 13.1606 19.6787C12.84 19.8398 12.4305 20 12 20C11.5694 20 11.1599 19.8398 10.8393 19.6787C10.4981 19.5073 10.1457 19.2767 9.80251 19.024C9.11493 18.5177 8.37843 17.8586 7.71461 17.2215C7.04653 16.5802 6.43175 15.9416 5.98524 15.4648C5.76155 15.2259 5.57906 15.0266 5.45202 14.8864C5.38919 14.8171 5.28755 14.7034 5.25229 14.664L5.25113 14.6627C4.9907 14.368 4.92673 13.9476 5.08836 13.589Z" />
+    </svg>
+  ),
+});
+
+export const StarIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#9b9b9b" fill="none">
+      <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M11.9961 1.25C13.0454 1.25 13.8719 2.04253 14.3995 3.11191L16.1616 6.66516C16.215 6.77513 16.3417 6.92998 16.5321 7.07164C16.7223 7.21315 16.9086 7.29121 17.0311 7.3118L20.2207 7.84613C21.3729 8.03973 22.3386 8.60449 22.6521 9.5879C22.9653 10.5705 22.5064 11.5916 21.6778 12.4216L21.677 12.4225L19.1991 14.9209C19.1009 15.0199 18.9909 15.2064 18.9219 15.4494C18.8534 15.6908 18.8473 15.9107 18.8784 16.0527L18.8788 16.0547L19.5877 19.1454C19.8818 20.4317 19.7843 21.7073 18.8771 22.3742C17.9667 23.0433 16.7227 22.7467 15.5925 22.0736L12.6026 20.289C12.477 20.214 12.2614 20.1532 12.0011 20.1532C11.7427 20.1532 11.5226 20.2132 11.3888 20.291L11.3869 20.2921L8.40288 22.0732C7.27405 22.7487 6.03154 23.04 5.12111 22.3702C4.21449 21.7032 4.11214 20.43 4.40711 19.1447L5.1159 16.0547L5.11633 16.0527C5.14741 15.9107 5.14133 15.6908 5.0728 15.4494C5.0038 15.2064 4.89379 15.0199 4.79558 14.9209L2.31585 12.4206C1.49265 11.5906 1.03521 10.5704 1.34595 9.58925C1.65759 8.60525 2.62143 8.0398 3.77433 7.84606L6.96132 7.31219L6.96233 7.31202C7.07917 7.29175 7.2627 7.21456 7.45248 7.07268C7.64261 6.93054 7.76959 6.77535 7.82312 6.66516L7.82582 6.65967L9.58562 3.11097L9.58632 3.10957C10.119 2.04108 10.948 1.25 11.9961 1.25Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" d="M11.9961 1.25C13.0454 1.25 13.8719 2.04253 14.3995 3.11191L16.1616 6.66516C16.215 6.77513 16.3417 6.92998 16.5321 7.07164C16.7223 7.21315 16.9086 7.29121 17.0311 7.3118L20.2207 7.84613C21.3729 8.03973 22.3386 8.60449 22.6521 9.5879C22.9653 10.5705 22.5064 11.5916 21.6778 12.4216L21.677 12.4225L19.1991 14.9209C19.1009 15.0199 18.9909 15.2064 18.9219 15.4494C18.8534 15.6908 18.8473 15.9107 18.8784 16.0527L18.8788 16.0547L19.5877 19.1454C19.8818 20.4317 19.7843 21.7073 18.8771 22.3742C17.9667 23.0433 16.7227 22.7467 15.5925 22.0736L12.6026 20.289C12.477 20.214 12.2614 20.1532 12.0011 20.1532C11.7427 20.1532 11.5226 20.2132 11.3888 20.291L11.3869 20.2921L8.40288 22.0732C7.27405 22.7487 6.03154 23.04 5.12111 22.3702C4.21449 21.7032 4.11214 20.43 4.40711 19.1447L5.1159 16.0547L5.11633 16.0527C5.14741 15.9107 5.14133 15.6908 5.0728 15.4494C5.0038 15.2064 4.89379 15.0199 4.79558 14.9209L2.31585 12.4206C1.49265 11.5906 1.03521 10.5704 1.34595 9.58925C1.65759 8.60525 2.62143 8.0398 3.77433 7.84606L6.96132 7.31219L6.96233 7.31202C7.07917 7.29175 7.2627 7.21456 7.45248 7.07268C7.64261 6.93054 7.76959 6.77535 7.82312 6.66516L7.82582 6.65967L9.58562 3.11097L9.58632 3.10957C10.119 2.04108 10.948 1.25 11.9961 1.25Z" />
+      <path d="M9.58632 3.10957C10.119 2.04108 10.948 1.25 11.9961 1.25V20.1532C11.7399 20.154 11.5217 20.2137 11.3888 20.291L11.3869 20.2921L8.40288 22.0732C7.27405 22.7487 6.03154 23.04 5.12111 22.3702C4.21449 21.7032 4.11214 20.43 4.40711 19.1447L5.1159 16.0547L5.11633 16.0527C5.14741 15.9107 5.14133 15.6908 5.0728 15.4494C5.0038 15.2064 4.89379 15.0199 4.79558 14.9209L2.31585 12.4206C1.49265 11.5906 1.03521 10.5704 1.34595 9.58925C1.65759 8.60525 2.62143 8.0398 3.77433 7.84606L6.96132 7.31219L6.96233 7.31202C7.07917 7.29175 7.2627 7.21456 7.45248 7.07268C7.64261 6.93054 7.76959 6.77535 7.82312 6.66516L7.82582 6.65967L9.58562 3.11097L9.58632 3.10957Z" />
+    </svg>
+  ),
+});
+
+export const StarOffIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M18.5038 14.5L21.1477 11.8925C22.616 10.4206 22.1366 8.92853 20.099 8.58575L16.9128 8.05143C16.3734 7.9607 15.7342 7.48687 15.4945 6.99288L13.7366 3.44418C12.7877 1.51861 11.2296 1.51861 10.2707 3.44418L9.5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7.29561 7.99998C7.22668 8.02267 7.15848 8.04006 7.09201 8.05144L3.90008 8.58576C1.85885 8.92853 1.38856 10.4206 2.84945 11.8925L5.33095 14.3927C5.7512 14.8161 5.98134 15.6327 5.85126 16.2175L5.14083 19.3125C4.58049 21.7522 5.88128 22.7099 8.02257 21.4296L11.0144 19.6452C11.5647 19.3226 12.4553 19.3226 12.9956 19.6452L15.9874 21.4296C18.1387 22.7099 19.4295 21.7623 18.8691 19.3125L18.7974 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M2 2L22 22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.29289 1.29284C1.68342 0.902319 2.31658 0.902319 2.70711 1.29284L22.7071 21.2928C23.0976 21.6834 23.0976 22.3165 22.7071 22.7071C22.3166 23.0976 21.6834 23.0976 21.2929 22.7071L1.29289 2.70706C0.902369 2.31653 0.902369 1.68337 1.29289 1.29284Z" />
+      <path d="M11.9961 1.2499C13.0454 1.2499 13.8719 2.04243 14.3995 3.11182L16.1616 6.66506C16.215 6.77503 16.3417 6.92988 16.5321 7.07154C16.7223 7.21305 16.9086 7.29111 17.0311 7.31171L20.2207 7.84603C21.3729 8.03964 22.3386 8.60439 22.6521 9.5878C22.9653 10.5704 22.5064 11.5915 21.6778 12.4215L21.677 12.4224L19.1991 14.9208C19.0873 15.0335 19.0314 15.0899 19.0208 15.0988C18.8717 15.2236 18.7861 15.2238 18.6365 15.0995C18.6258 15.0907 18.5992 15.064 18.5459 15.0107L8.91586 5.3807C8.76876 5.2336 8.6952 5.16005 8.67958 5.06475C8.66395 4.96944 8.71017 4.87625 8.80259 4.68988L9.58562 3.11087L9.58632 3.10948C10.119 2.04098 10.948 1.2499 11.9961 1.2499Z" />
+      <path d="M6.96132 7.31209L6.96233 7.31192C7.07056 7.29314 7.12467 7.28376 7.14303 7.28285C7.23815 7.27815 7.26744 7.28743 7.34249 7.34604C7.35698 7.35736 7.37533 7.37571 7.41203 7.4124L19.5451 19.5455C19.617 19.6174 19.653 19.6533 19.6752 19.7002C19.6974 19.7472 19.7022 19.7942 19.7116 19.8884C19.8135 20.9037 19.6083 21.8366 18.8771 22.3741C17.9667 23.0432 16.7227 22.7466 15.5925 22.0735L12.6026 20.2889C12.477 20.2139 12.2614 20.1531 12.0011 20.1531C11.7427 20.1531 11.5226 20.2131 11.3888 20.2909L11.3869 20.292L8.40288 22.0731C7.27405 22.7486 6.03154 23.0399 5.12111 22.3701C4.21449 21.7031 4.11214 20.4299 4.40711 19.1446L5.1159 16.0546L5.11633 16.0526C5.14741 15.9106 5.14133 15.6907 5.0728 15.4493C5.0038 15.2063 4.89379 15.0198 4.79558 14.9208L2.31585 12.4205C1.49265 11.5905 1.03521 10.5703 1.34595 9.58916C1.65759 8.60515 2.62143 8.0397 3.77433 7.84596L6.96132 7.31209Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.29289 1.29284C1.68342 0.902319 2.31658 0.902319 2.70711 1.29284L22.7071 21.2928C23.0976 21.6834 23.0976 22.3165 22.7071 22.7071C22.3166 23.0976 21.6834 23.0976 21.2929 22.7071L1.29289 2.70706C0.902369 2.31653 0.902369 1.68337 1.29289 1.29284Z" />
+      <path d="M6.96132 7.3115L6.96233 7.31133C7.07056 7.29255 7.12467 7.28317 7.14303 7.28226C7.23815 7.27756 7.26744 7.28684 7.34249 7.34545C7.35698 7.35677 7.37533 7.37512 7.41203 7.41181L19.5451 19.5449C19.617 19.6168 19.653 19.6527 19.6752 19.6997C19.6974 19.7466 19.7022 19.7936 19.7116 19.8878C19.8135 20.9031 19.6083 21.836 18.8771 22.3735C17.9667 23.0426 16.7227 22.746 15.5925 22.0729L12.6026 20.2883C12.477 20.2133 12.2614 20.1525 12.0011 20.1525C11.7427 20.1525 11.5226 20.2125 11.3888 20.2903L11.3869 20.2914L8.40288 22.0725C7.27405 22.748 6.03154 23.0393 5.12111 22.3695C4.21449 21.7025 4.11214 20.4293 4.40711 19.144L5.1159 16.054L5.11633 16.0521C5.14741 15.91 5.14133 15.6901 5.0728 15.4488C5.0038 15.2057 4.89379 15.0192 4.79558 14.9202L2.31585 12.4199C1.49265 11.5899 1.03521 10.5697 1.34595 9.58857C1.65759 8.60456 2.62143 8.03911 3.77433 7.84537L6.96132 7.3115Z" />
+      <path opacity="0.4" d="M11.9953 1.24995C13.0446 1.24995 13.8711 2.04248 14.3987 3.11187L16.1608 6.66511C16.2142 6.77508 16.3409 6.92993 16.5313 7.07159C16.7215 7.2131 16.9077 7.29116 17.0303 7.31176L20.2199 7.84608C21.3721 8.03968 22.3378 8.60444 22.6513 9.58785C22.9645 10.5704 22.5055 11.5916 21.677 12.4216L21.6762 12.4224L19.1983 14.9208C19.0865 15.0335 19.0306 15.0899 19.02 15.0988C18.8709 15.2236 18.7853 15.2238 18.6357 15.0996C18.625 15.0907 18.5984 15.0641 18.5451 15.0108L8.91506 5.38075C8.76795 5.23365 8.6944 5.1601 8.67878 5.0648C8.66315 4.96949 8.70936 4.8763 8.80179 4.68993L9.58482 3.11092L9.58551 3.10952C10.1182 2.04103 10.9472 1.24995 11.9953 1.24995Z" />
+    </svg>
+  ),
+});
+
+export const LinkIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M9.14339 10.691L9.35031 10.4841C11.329 8.50532 14.5372 8.50532 16.5159 10.4841C18.4947 12.4628 18.4947 15.671 16.5159 17.6497L13.6497 20.5159C11.671 22.4947 8.46279 22.4947 6.48405 20.5159C4.50532 18.5372 4.50532 15.329 6.48405 13.3503L6.9484 12.886" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path d="M17.0516 11.114L17.5159 10.6497C19.4947 8.67095 19.4947 5.46279 17.5159 3.48405C15.5372 1.50532 12.329 1.50532 10.3503 3.48405L7.48405 6.35031C5.50532 8.32904 5.50532 11.5372 7.48405 13.5159C9.46279 15.4947 12.671 15.4947 14.6497 13.5159L14.8566 13.309" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8088 11.1912C14.2602 9.64256 11.7729 9.60392 10.1781 11.0753C9.77214 11.4497 9.13949 11.4243 8.765 11.0183C8.39052 10.6124 8.416 9.97975 8.82193 9.60526C11.2024 7.40914 14.9125 7.46636 17.2231 9.77694C19.5923 12.1462 19.5923 15.9875 17.2231 18.3568L14.3568 21.223C11.9875 23.5923 8.14621 23.5923 5.77695 21.223C3.40768 18.8538 3.40768 15.0125 5.77695 12.6432L6.24129 12.1788C6.63182 11.7883 7.26498 11.7883 7.65551 12.1789C8.04603 12.5694 8.04603 13.2025 7.6555 13.5931L7.19116 14.0574C5.60295 15.6456 5.60295 18.2206 7.19116 19.8088C8.77937 21.397 11.3544 21.397 12.9426 19.8088L15.8088 16.9426C17.3971 15.3544 17.3971 12.7794 15.8088 11.1912Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8088 4.19116C15.2206 2.60295 12.6456 2.60295 11.0574 4.19116L8.19116 7.05741C6.60295 8.64563 6.60295 11.2206 8.19116 12.8088C9.73975 14.3574 12.2271 14.3961 13.8219 12.9247C14.2279 12.5503 14.8605 12.5757 15.235 12.9817C15.6095 13.3876 15.584 14.0202 15.1781 14.3947C12.7976 16.5909 9.08752 16.5336 6.77695 14.2231C4.40768 11.8538 4.40768 8.01246 6.77695 5.6432L9.6432 2.77695C12.0125 0.407685 15.8538 0.407685 18.2231 2.77695C20.5923 5.14621 20.5923 8.98754 18.2231 11.3568L17.7587 11.8211C17.3682 12.2117 16.735 12.2117 16.3445 11.8211C15.954 11.4306 15.954 10.7975 16.3445 10.4069L16.8088 9.94258C18.3971 8.35437 18.3971 5.77937 16.8088 4.19116Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M16.8088 4.19116C15.2206 2.60295 12.6456 2.60295 11.0574 4.19116L8.19116 7.05741C6.60295 8.64563 6.60295 11.2206 8.19116 12.8088C9.73975 14.3574 12.2271 14.3961 13.8219 12.9247C14.2279 12.5503 14.8605 12.5757 15.235 12.9817C15.6095 13.3876 15.584 14.0202 15.1781 14.3947C12.7976 16.5909 9.08752 16.5336 6.77695 14.2231C4.40768 11.8538 4.40768 8.01246 6.77695 5.6432L9.6432 2.77695C12.0125 0.407685 15.8538 0.407685 18.2231 2.77695C20.5923 5.14621 20.5923 8.98754 18.2231 11.3568L17.7587 11.8211C17.3682 12.2117 16.735 12.2117 16.3445 11.8211C15.954 11.4306 15.954 10.7975 16.3445 10.4069L16.8088 9.94258C18.3971 8.35437 18.3971 5.77937 16.8088 4.19116Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68501 12.7371C3.40809 15.1129 3.43874 18.8848 5.77695 21.223C8.14621 23.5923 11.9875 23.5923 14.3568 21.223L17.2231 18.3568C19.5923 15.9875 19.5923 12.1462 17.2231 9.77694C14.9125 7.46636 11.2024 7.40914 8.82193 9.60526C8.416 9.97975 8.39052 10.6124 8.765 11.0183C9.13949 11.4243 9.77214 11.4497 10.1781 11.0753C11.7729 9.60392 14.2602 9.64256 15.8088 11.1912C17.3971 12.7794 17.3971 15.3544 15.8088 16.9426L12.9426 19.8088C11.3544 21.397 8.77937 21.397 7.19116 19.8088C5.70006 18.3177 5.60888 15.9568 6.91764 14.3594C6.87019 14.3148 6.82329 14.2694 6.77695 14.2231C6.32784 13.7739 5.96386 13.2719 5.68501 12.7371Z" />
+    </svg>
+  ),
+});
+
+export const CopyIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M16.9637 8.98209C16.9613 6.03194 16.9167 4.50384 16.0578 3.45753C15.892 3.25546 15.7067 3.07019 15.5047 2.90436C14.4008 1.99854 12.7609 1.99854 9.48087 1.99854C6.20089 1.99854 4.5609 1.99854 3.45708 2.90436C3.255 3.07018 3.06971 3.25546 2.90387 3.45753C1.99799 4.56128 1.99799 6.20116 1.99799 9.48091C1.99799 12.7607 1.99799 14.4005 2.90387 15.5043C3.0697 15.7063 3.255 15.8916 3.45708 16.0574C4.50346 16.9162 6.03167 16.9608 8.98201 16.9632" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M14.0283 9.02455L16.994 8.98193M14.0143 22.0013L16.9799 21.9586M21.9716 14.0221L21.9436 16.9818M9.01033 14.0357L8.98236 16.9953M11.4873 9.02455C10.6545 9.17371 9.31781 9.32713 9.01033 11.0488M19.4946 21.9586C20.3296 21.8223 21.6685 21.6894 22.0025 19.9726M19.4946 9.02455C20.3274 9.17371 21.6641 9.32713 21.9716 11.0488M11.5 21.9573C10.6672 21.8086 9.33039 21.6559 9.02197 19.9344" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M6.74994 14.8569C6.74985 13.5627 6.74977 12.3758 6.87984 11.4084C7.02314 10.3425 7.36028 9.21504 8.28763 8.28769C9.21498 7.36034 10.3425 7.0232 11.4083 6.8799C12.3758 6.74983 13.5627 6.74991 14.8569 6.75L17.0931 6.75C17.3891 6.75 17.5371 6.75 17.6261 6.65419C17.7151 6.55838 17.7045 6.4142 17.6832 6.12584C17.6648 5.87546 17.6412 5.63892 17.6111 5.41544C17.4818 4.45589 17.2231 3.6585 16.6717 2.98663C16.4744 2.74612 16.2538 2.52558 16.0133 2.3282C15.3044 1.74638 14.4557 1.49055 13.4247 1.36868C12.4205 1.24998 11.1511 1.24999 9.54887 1.25H9.45103C7.84877 1.24999 6.57941 1.24998 5.57519 1.36868C4.54422 1.49054 3.69552 1.74638 2.98657 2.3282C2.74606 2.52558 2.52552 2.74612 2.32814 2.98663C1.74632 3.69558 1.49048 4.54428 1.36862 5.57525C1.24992 6.57947 1.24993 7.84882 1.24994 9.45108V9.54891C1.24993 11.1512 1.24992 12.4205 1.36862 13.4247C1.49048 14.4557 1.74632 15.3044 2.32814 16.0134C2.52552 16.2539 2.74606 16.4744 2.98657 16.6718C3.65844 17.2232 4.45583 17.4818 5.41538 17.6111C5.63886 17.6412 5.8754 17.6648 6.12578 17.6833C6.41414 17.7045 6.55831 17.7151 6.65413 17.6261C6.74994 17.5371 6.74994 17.3891 6.74994 17.0931V14.8569Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5535 9.09108C12.6229 9.62041 12.25 10.1058 11.7207 10.1752C11.0847 10.2586 10.7687 10.3983 10.5613 10.5688C10.3784 10.7193 10.2497 10.9156 10.1643 11.3404C10.0592 11.8638 9.54968 12.2029 9.02627 12.0978C8.50285 11.9927 8.16377 11.4831 8.2689 10.9597C8.41673 10.2237 8.71907 9.58093 9.33313 9.07578C9.93546 8.58028 10.6592 8.36455 11.4693 8.25831C11.9987 8.1889 12.4841 8.56174 12.5535 9.09108ZM18.4463 9.09108C18.5157 8.56174 19.0011 8.1889 19.5304 8.25831C20.3405 8.36455 21.0643 8.58028 21.6666 9.07578C22.2807 9.58093 22.583 10.2237 22.7308 10.9597C22.836 11.4831 22.4969 11.9927 21.9735 12.0978C21.4501 12.2029 20.9405 11.8638 20.8354 11.3404C20.7501 10.9156 20.6213 10.7193 20.4384 10.5688C20.2311 10.3983 19.915 10.2586 19.279 10.1752C18.7497 10.1058 18.3769 9.62041 18.4463 9.09108ZM13.0832 9.21676C13.0832 8.68289 13.516 8.25011 14.0499 8.25011H16.9498C17.4837 8.25011 17.9165 8.68289 17.9165 9.21676C17.9165 9.75063 17.4837 10.1834 16.9498 10.1834H14.0499C13.516 10.1834 13.0832 9.75063 13.0832 9.21676ZM9.21663 13.0834C9.75049 13.0834 10.1833 13.5162 10.1833 14.05V16.95C10.1833 17.4838 9.75049 17.9166 9.21663 17.9166C8.68276 17.9166 8.24997 17.4838 8.24997 16.95V14.05C8.24997 13.5162 8.68276 13.0834 9.21663 13.0834ZM21.7831 13.0834C22.317 13.0834 22.7498 13.5162 22.7498 14.05V16.95C22.7498 17.4838 22.317 17.9166 21.7831 17.9166C21.2492 17.9166 20.8165 17.4838 20.8165 16.95V14.05C20.8165 13.5162 21.2492 13.0834 21.7831 13.0834ZM9.02627 18.9022C9.54968 18.7971 10.0592 19.1362 10.1643 19.6596C10.2497 20.0844 10.3784 20.2807 10.5613 20.4312C10.7687 20.6017 11.0847 20.7414 11.7207 20.8248C12.25 20.8942 12.6229 21.3796 12.5535 21.9089C12.4841 22.4383 11.9987 22.8111 11.4693 22.7417C10.6592 22.6355 9.93546 22.4197 9.33313 21.9242C8.71906 21.4191 8.41673 20.7763 8.2689 20.0403C8.16377 19.5169 8.50285 19.0073 9.02627 18.9022ZM21.9735 18.9022C22.4969 19.0073 22.836 19.5169 22.7308 20.0403C22.583 20.7763 22.2807 21.4191 21.6666 21.9242C21.0643 22.4197 20.3405 22.6355 19.5304 22.7417C19.0011 22.8111 18.5157 22.4383 18.4463 21.9089C18.3769 21.3796 18.7497 20.8942 19.279 20.8248C19.915 20.7414 20.2311 20.6017 20.4384 20.4312C20.6213 20.2807 20.7501 20.0844 20.8354 19.6596C20.9405 19.1362 21.45 18.7971 21.9735 18.9022ZM13.0832 21.7832C13.0832 21.2494 13.516 20.8166 14.0499 20.8166H16.9498C17.4837 20.8166 17.9165 21.2494 17.9165 21.7832C17.9165 22.3171 17.4837 22.7499 16.9498 22.7499H14.0499C13.516 22.7499 13.0832 22.3171 13.0832 21.7832Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M6.74994 14.8569C6.74985 13.5627 6.74977 12.3758 6.87984 11.4084C7.02314 10.3425 7.36028 9.21504 8.28763 8.28769C9.21498 7.36034 10.3425 7.0232 11.4083 6.8799C12.3758 6.74983 13.5627 6.74991 14.8569 6.75L17.0931 6.75C17.3891 6.75 17.5371 6.75 17.6261 6.65419C17.7151 6.55838 17.7045 6.4142 17.6832 6.12584C17.6648 5.87546 17.6412 5.63892 17.6111 5.41544C17.4818 4.45589 17.2231 3.6585 16.6717 2.98663C16.4744 2.74612 16.2538 2.52558 16.0133 2.3282C15.3044 1.74638 14.4557 1.49055 13.4247 1.36868C12.4205 1.24998 11.1511 1.24999 9.54887 1.25H9.45103C7.84877 1.24999 6.57941 1.24998 5.57519 1.36868C4.54422 1.49054 3.69552 1.74638 2.98657 2.3282C2.74606 2.52558 2.52552 2.74612 2.32814 2.98663C1.74632 3.69558 1.49048 4.54428 1.36862 5.57525C1.24992 6.57947 1.24993 7.84882 1.24994 9.45108V9.54891C1.24993 11.1512 1.24992 12.4205 1.36862 13.4247C1.49048 14.4557 1.74632 15.3044 2.32814 16.0134C2.52552 16.2539 2.74606 16.4744 2.98657 16.6718C3.65844 17.2232 4.45583 17.4818 5.41538 17.6111C5.63886 17.6412 5.8754 17.6648 6.12578 17.6833C6.41414 17.7045 6.55831 17.7151 6.65413 17.6261C6.74994 17.5371 6.74994 17.3891 6.74994 17.0931V14.8569Z" />
+      <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M12.5535 9.09108C12.6229 9.62041 12.25 10.1058 11.7207 10.1752C11.0847 10.2586 10.7687 10.3983 10.5613 10.5688C10.3784 10.7193 10.2497 10.9156 10.1643 11.3404C10.0592 11.8638 9.54968 12.2029 9.02627 12.0978C8.50285 11.9927 8.16377 11.4831 8.2689 10.9597C8.41673 10.2237 8.71907 9.58093 9.33313 9.07578C9.93546 8.58028 10.6592 8.36455 11.4693 8.25831C11.9987 8.1889 12.4841 8.56174 12.5535 9.09108ZM18.4463 9.09108C18.5157 8.56174 19.0011 8.1889 19.5304 8.25831C20.3405 8.36455 21.0643 8.58028 21.6666 9.07578C22.2807 9.58093 22.583 10.2237 22.7308 10.9597C22.836 11.4831 22.4969 11.9927 21.9735 12.0978C21.4501 12.2029 20.9405 11.8638 20.8354 11.3404C20.7501 10.9156 20.6213 10.7193 20.4384 10.5688C20.2311 10.3983 19.915 10.2586 19.279 10.1752C18.7497 10.1058 18.3769 9.62041 18.4463 9.09108ZM13.0832 9.21676C13.0832 8.68289 13.516 8.25011 14.0499 8.25011H16.9498C17.4837 8.25011 17.9165 8.68289 17.9165 9.21676C17.9165 9.75063 17.4837 10.1834 16.9498 10.1834H14.0499C13.516 10.1834 13.0832 9.75063 13.0832 9.21676ZM9.21663 13.0834C9.75049 13.0834 10.1833 13.5162 10.1833 14.05V16.95C10.1833 17.4838 9.75049 17.9166 9.21663 17.9166C8.68276 17.9166 8.24997 17.4838 8.24997 16.95V14.05C8.24997 13.5162 8.68276 13.0834 9.21663 13.0834ZM21.7831 13.0834C22.317 13.0834 22.7498 13.5162 22.7498 14.05V16.95C22.7498 17.4838 22.317 17.9166 21.7831 17.9166C21.2492 17.9166 20.8165 17.4838 20.8165 16.95V14.05C20.8165 13.5162 21.2492 13.0834 21.7831 13.0834ZM9.02627 18.9022C9.54968 18.7971 10.0592 19.1362 10.1643 19.6596C10.2497 20.0844 10.3784 20.2807 10.5613 20.4312C10.7687 20.6017 11.0847 20.7414 11.7207 20.8248C12.25 20.8942 12.6229 21.3796 12.5535 21.9089C12.4841 22.4383 11.9987 22.8111 11.4693 22.7417C10.6592 22.6355 9.93546 22.4197 9.33313 21.9242C8.71906 21.4191 8.41673 20.7763 8.2689 20.0403C8.16377 19.5169 8.50285 19.0073 9.02627 18.9022ZM21.9735 18.9022C22.4969 19.0073 22.836 19.5169 22.7308 20.0403C22.583 20.7763 22.2807 21.4191 21.6666 21.9242C21.0643 22.4197 20.3405 22.6355 19.5304 22.7417C19.0011 22.8111 18.5157 22.4383 18.4463 21.9089C18.3769 21.3796 18.7497 20.8942 19.279 20.8248C19.915 20.7414 20.2311 20.6017 20.4384 20.4312C20.6213 20.2807 20.7501 20.0844 20.8354 19.6596C20.9405 19.1362 21.45 18.7971 21.9735 18.9022ZM13.0832 21.7832C13.0832 21.2494 13.516 20.8166 14.0499 20.8166H16.9498C17.4837 20.8166 17.9165 21.2494 17.9165 21.7832C17.9165 22.3171 17.4837 22.7499 16.9498 22.7499H14.0499C13.516 22.7499 13.0832 22.3171 13.0832 21.7832Z" />
+    </svg>
+  ),
+});
+
+export const NoteEditIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M10.2892 21.9614H9.39111C6.14261 21.9614 4.51836 21.9614 3.50918 20.9363C2.5 19.9111 2.5 18.2612 2.5 14.9614V9.96139C2.5 6.66156 2.5 5.01165 3.50918 3.98653C4.51836 2.9614 6.14261 2.9614 9.39111 2.9614H12.3444C15.5929 2.9614 17.4907 3.01658 18.5 4.04171C19.5092 5.06683 19.5 6.66156 19.5 9.96139V11.1478" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.9453 2V4M10.9453 2V4M5.94531 2V4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7 15H11M7 10H15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <path opacity="0.93" d="M20.7598 14.8785C19.8544 13.8641 19.3112 13.9245 18.7076 14.1056C18.2851 14.166 16.8365 15.8568 16.2329 16.3952C15.2419 17.3743 14.2464 18.3823 14.1807 18.5138C13.9931 18.8188 13.8186 19.3592 13.7341 19.963C13.5771 20.8688 13.3507 21.8885 13.6375 21.9759C13.9242 22.0632 14.7239 21.8954 15.6293 21.7625C16.2329 21.6538 16.6554 21.533 16.9572 21.3519C17.3797 21.0983 18.1644 20.2046 19.5164 18.8761C20.3644 17.9833 21.1823 17.3664 21.4238 16.7626C21.6652 15.8568 21.3031 15.3737 20.7598 14.8785Z" stroke="currentColor" stroke-width="1.7" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1.125C6.55228 1.125 7 1.57272 7 2.125V4.125C7 4.67728 6.55228 5.125 6 5.125C5.44772 5.125 5 4.67728 5 4.125V2.125C5 1.57272 5.44772 1.125 6 1.125ZM11 1.125C11.5523 1.125 12 1.57272 12 2.125V4.125C12 4.67728 11.5523 5.125 11 5.125C10.4477 5.125 10 4.67728 10 4.125V2.125C10 1.57272 10.4477 1.125 11 1.125ZM16 1.125C16.5523 1.125 17 1.57272 17 2.125V4.125C17 4.67728 16.5523 5.125 16 5.125C15.4477 5.125 15 4.67728 15 4.125V2.125C15 1.57272 15.4477 1.125 16 1.125Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5558 2.375H9.44426H9.44425C7.84167 2.37498 6.56269 2.37497 5.55962 2.50983C4.52335 2.64915 3.66994 2.94466 2.9948 3.6198C2.31966 4.29494 2.02415 5.14835 1.88483 6.18462C1.74997 7.18769 1.74998 8.46665 1.75 10.0692V10.0692V15.1808V15.1808C1.74998 16.7834 1.74997 18.0623 1.88483 19.0654C2.02415 20.1017 2.31966 20.9551 2.9948 21.6302C3.66994 22.3053 4.52335 22.6008 5.55962 22.7402C6.5627 22.875 7.84167 22.875 9.44426 22.875H10.7878C10.8861 22.875 10.9727 22.875 11.0486 22.8737C11.1667 22.8716 11.2257 22.8705 11.3138 22.7559C11.4018 22.6414 11.3797 22.552 11.3355 22.3731C11.2408 21.9906 11.2433 21.6508 11.257 21.435C11.272 21.1997 11.3452 20.7858 11.3973 20.5014C11.4542 20.1907 11.5176 19.869 11.5554 19.6895C11.5952 19.4601 11.6482 19.1685 11.7251 18.8673C11.8859 18.2375 12.1944 17.3808 12.9295 16.6457L16.341 13.2339C16.5768 12.9968 16.9379 12.6335 17.3767 12.3802C18.0881 11.9694 18.9002 11.8092 19.6902 11.8994C19.9297 11.9267 20.0495 11.9404 20.1497 11.8509C20.25 11.7614 20.25 11.6649 20.25 11.4718V10.0693C20.25 8.46667 20.25 7.1877 20.1152 6.18462C19.9758 5.14835 19.6803 4.29494 19.0052 3.6198C18.3301 2.94466 17.4767 2.64915 16.4404 2.50983C15.4373 2.37497 14.1583 2.37498 12.5558 2.375H12.5558ZM7 9.375C6.58579 9.375 6.25 9.71079 6.25 10.125C6.25 10.5392 6.58579 10.875 7 10.875H15C15.4142 10.875 15.75 10.5392 15.75 10.125C15.75 9.71079 15.4142 9.375 15 9.375H7ZM7 14.375C6.58579 14.375 6.25 14.7108 6.25 15.125C6.25 15.5392 6.58579 15.875 7 15.875H11C11.4142 15.875 11.75 15.5392 11.75 15.125C11.75 14.7108 11.4142 14.375 11 14.375H7Z" />
+      <path d="M18.1269 13.6792C18.8294 13.2736 19.695 13.2736 20.3976 13.6792C20.6592 13.8303 20.9533 14.1249 21.2264 14.3985C21.5001 14.6717 21.7947 14.9657 21.9457 15.2273C22.3513 15.9299 22.3513 16.7955 21.9457 17.4981C21.7947 17.7597 21.5599 17.994 21.2862 18.2671L17.9784 21.5749C17.513 22.0402 16.8913 22.3174 16.3865 22.4463C16.1345 22.5106 15.8813 22.5565 15.6516 22.5962C15.3456 22.6617 14.348 22.8547 14.0947 22.8708C13.8157 22.8886 13.4113 22.8612 13.0875 22.5374C12.7637 22.2137 12.7364 21.8092 12.7541 21.5302C12.7702 21.277 12.9632 20.2793 13.0288 19.9733C13.0684 19.7436 13.1143 19.4904 13.1786 19.2384C13.3075 18.7336 13.525 18.1717 13.9903 17.7064L17.3579 14.3387C17.631 14.065 17.8653 13.8303 18.1269 13.6792Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1.125C6.55228 1.125 7 1.57272 7 2.125V4.125C7 4.67728 6.55228 5.125 6 5.125C5.44772 5.125 5 4.67728 5 4.125V2.125C5 1.57272 5.44772 1.125 6 1.125ZM11 1.125C11.5523 1.125 12 1.57272 12 2.125V4.125C12 4.67728 11.5523 5.125 11 5.125C10.4477 5.125 10 4.67728 10 4.125V2.125C10 1.57272 10.4477 1.125 11 1.125ZM16 1.125C16.5523 1.125 17 1.57272 17 2.125V4.125C17 4.67728 16.5523 5.125 16 5.125C15.4477 5.125 15 4.67728 15 4.125V2.125C15 1.57272 15.4477 1.125 16 1.125Z" />
+      <path opacity="0.4" d="M9.44426 2.375H12.5558C14.1583 2.37498 15.4373 2.37497 16.4404 2.50983C17.4767 2.64915 18.3301 2.94466 19.0052 3.6198C19.6803 4.29494 19.9758 5.14835 20.1152 6.18461C20.25 7.1877 20.25 8.46666 20.25 10.0693V11.4718C20.25 11.6649 20.25 11.7614 20.1497 11.8509C20.0495 11.9404 19.9297 11.9267 19.6902 11.8994C18.9002 11.8092 18.0881 11.9694 17.3767 12.3802C16.9379 12.6335 16.5768 12.9968 16.341 13.2339L12.9295 16.6457C12.1944 17.3808 11.8859 18.2375 11.7251 18.8673C11.6482 19.1685 11.5952 19.4601 11.5554 19.6895C11.5176 19.869 11.4542 20.1907 11.3973 20.5014C11.3452 20.7858 11.272 21.1997 11.257 21.435C11.2433 21.6508 11.2408 21.9906 11.3355 22.3731C11.3797 22.552 11.4018 22.6414 11.3138 22.7559C11.2257 22.8705 11.1667 22.8716 11.0486 22.8737C10.9727 22.875 10.8861 22.875 10.7878 22.875H9.44426C7.84167 22.875 6.5627 22.875 5.55962 22.7402C4.52335 22.6008 3.66994 22.3053 2.9948 21.6302C2.31966 20.9551 2.02415 20.1017 1.88483 19.0654C1.74997 18.0623 1.74998 16.7833 1.75 15.1808V10.0692C1.74998 8.46666 1.74997 7.18769 1.88483 6.18462C2.02415 5.14835 2.31966 4.29494 2.9948 3.6198C3.66994 2.94466 4.52335 2.64915 5.55962 2.50983C6.5627 2.37497 7.84168 2.37498 9.44426 2.375Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 10.125C6.25 9.71079 6.58579 9.375 7 9.375H15C15.4142 9.375 15.75 9.71079 15.75 10.125C15.75 10.5392 15.4142 10.875 15 10.875H7C6.58579 10.875 6.25 10.5392 6.25 10.125ZM6.25 15.125C6.25 14.7108 6.58579 14.375 7 14.375H11C11.4142 14.375 11.75 14.7108 11.75 15.125C11.75 15.5392 11.4142 15.875 11 15.875H7C6.58579 15.875 6.25 15.5392 6.25 15.125Z" />
+      <path d="M18.1269 13.6792C18.8294 13.2736 19.695 13.2736 20.3976 13.6792C20.6592 13.8303 20.9533 14.1249 21.2264 14.3985C21.5001 14.6717 21.7947 14.9657 21.9457 15.2273C22.3513 15.9299 22.3513 16.7955 21.9457 17.4981C21.7947 17.7597 21.5599 17.994 21.2862 18.2671L17.9784 21.5749C17.513 22.0402 16.8913 22.3174 16.3865 22.4463C16.1345 22.5106 15.8813 22.5565 15.6516 22.5962C15.3456 22.6617 14.348 22.8547 14.0947 22.8708C13.8157 22.8886 13.4113 22.8612 13.0875 22.5374C12.7637 22.2137 12.7364 21.8092 12.7541 21.5302C12.7702 21.277 12.9632 20.2793 13.0288 19.9733C13.0684 19.7436 13.1143 19.4904 13.1786 19.2384C13.3075 18.7336 13.525 18.1717 13.9903 17.7064L17.3579 14.3387C17.631 14.065 17.8653 13.8303 18.1269 13.6792Z" />
+    </svg>
+  ),
+});
+
+export const LinkSquareIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M11.1004 3.00208C7.4515 3.00864 5.54073 3.09822 4.31962 4.31931C3.00183 5.63706 3.00183 7.75796 3.00183 11.9997C3.00183 16.2415 3.00183 18.3624 4.31962 19.6801C5.6374 20.9979 7.75836 20.9979 12.0003 20.9979C16.2421 20.9979 18.3631 20.9979 19.6809 19.6801C20.902 18.4591 20.9916 16.5484 20.9982 12.8996" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20.4803 3.51751L14.931 9.0515M20.4803 3.51751C19.9863 3.023 16.6587 3.0691 15.9552 3.0791M20.4803 3.51751C20.9742 4.01202 20.9282 7.34329 20.9182 8.04754" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1002 2.9982C12.1012 3.55048 11.6543 3.999 11.102 4C9.26069 4.00331 7.95244 4.02946 6.95832 4.19037C5.99343 4.34655 5.43598 4.61383 5.02517 5.02464C4.58291 5.4669 4.30569 6.08056 4.15584 7.19512C4.00213 8.33845 4 9.85009 4 11.9997C4 14.1494 4.00212 15.661 4.15584 16.8044C4.30569 17.9189 4.5829 18.5326 5.02516 18.9748C5.46742 19.4171 6.08108 19.6943 7.19564 19.8442C8.33897 19.9979 9.85061 20 12.0003 20C14.1499 20 15.6616 19.9979 16.8049 19.8442C17.9194 19.6943 18.5331 19.4171 18.9754 18.9748C19.3862 18.564 19.6534 18.0066 19.8096 17.0417C19.9705 16.0476 19.9967 14.7393 20 12.898C20.001 12.3457 20.4495 11.8988 21.0018 11.8998C21.5541 11.9008 22.001 12.3493 22 12.9016C21.9967 14.7099 21.9748 16.182 21.7839 17.3613C21.5883 18.5697 21.2001 19.5785 20.3896 20.3891C19.5138 21.2648 18.4077 21.6467 17.0714 21.8263C15.7793 22 14.1328 22 12.0744 22H11.9262C9.86771 22 8.22126 22 6.92915 21.8263C5.59281 21.6467 4.48675 21.2648 3.61095 20.389C2.73515 19.5133 2.35334 18.4072 2.17367 17.0709C1.99996 15.7787 1.99998 14.1323 2 12.0738L2 11.9257C1.99998 9.86718 1.99996 8.22073 2.17368 6.92862C2.35334 5.59229 2.73516 4.48623 3.61095 3.61043C4.4215 2.79988 5.43031 2.41167 6.63875 2.21607C7.81796 2.0252 9.29011 2.00326 11.0984 2C11.6507 1.99901 12.0992 2.44592 12.1002 2.9982Z" />
+      <path d="M16.6278 2.05969C17.5062 2.00814 19.2561 1.93287 20.3023 2.11815C20.7322 2.19428 21.1066 2.40101 21.3861 2.69873L21.3948 2.70812C21.6424 2.97543 21.8141 3.31484 21.882 3.69821C22.067 4.74418 21.9919 6.49371 21.9404 7.37214C21.8724 8.53179 20.4836 9.007 19.698 8.22141L18.4671 6.99058L15.7317 9.70515C15.3334 10.1004 14.6901 10.098 14.2948 9.69967C13.8996 9.30138 13.902 8.65808 14.3003 8.26282L17.0302 5.55371L15.7786 4.3021C14.9931 3.51657 15.4682 2.12775 16.6278 2.05969Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M12.1002 2.9982C12.1012 3.55048 11.6543 3.999 11.102 4C9.26069 4.00331 7.95244 4.02946 6.95832 4.19037C5.99343 4.34655 5.43598 4.61383 5.02517 5.02464C4.58291 5.4669 4.30569 6.08056 4.15584 7.19512C4.00213 8.33845 4 9.85009 4 11.9997C4 14.1494 4.00212 15.661 4.15584 16.8044C4.30569 17.9189 4.5829 18.5326 5.02516 18.9748C5.46742 19.4171 6.08108 19.6943 7.19564 19.8442C8.33897 19.9979 9.85061 20 12.0003 20C14.1499 20 15.6616 19.9979 16.8049 19.8442C17.9194 19.6943 18.5331 19.4171 18.9754 18.9748C19.3862 18.564 19.6534 18.0066 19.8096 17.0417C19.9705 16.0476 19.9967 14.7393 20 12.898C20.001 12.3457 20.4495 11.8988 21.0018 11.8998C21.5541 11.9008 22.001 12.3493 22 12.9016C21.9967 14.7099 21.9748 16.182 21.7839 17.3613C21.5883 18.5697 21.2001 19.5785 20.3896 20.3891C19.5138 21.2648 18.4077 21.6467 17.0714 21.8263C15.7793 22 14.1328 22 12.0744 22H11.9262C9.86771 22 8.22126 22 6.92915 21.8263C5.59281 21.6467 4.48675 21.2648 3.61095 20.389C2.73515 19.5133 2.35334 18.4072 2.17367 17.0709C1.99996 15.7787 1.99998 14.1323 2 12.0738L2 11.9257C1.99998 9.86718 1.99996 8.22073 2.17368 6.92862C2.35334 5.59229 2.73516 4.48623 3.61095 3.61043C4.4215 2.79988 5.43031 2.41167 6.63875 2.21607C7.81796 2.0252 9.29011 2.00326 11.0984 2C11.6507 1.99901 12.0992 2.44592 12.1002 2.9982Z" />
+      <path d="M16.6278 2.05969C17.5062 2.00814 19.2561 1.93287 20.3023 2.11815C20.7322 2.19428 21.1066 2.40101 21.3861 2.69873L21.3948 2.70812C21.6424 2.97543 21.8141 3.31484 21.882 3.69821C22.067 4.74418 21.9919 6.49371 21.9404 7.37214C21.8724 8.53179 20.4836 9.007 19.698 8.22141L18.4671 6.99058L15.7317 9.70515C15.3334 10.1004 14.6901 10.098 14.2948 9.69967C13.8996 9.30138 13.902 8.65808 14.3003 8.26282L17.0302 5.55371L15.7786 4.3021C14.9931 3.51657 15.4682 2.12775 16.6278 2.05969Z" />
+    </svg>
+  ),
+});
+
+export const Notebook2Icon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M9 14.5H13M9 9.5H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M4 10C4 6.22876 4 4.34315 5.17157 3.17157C6.34315 2 8.22876 2 12 2H13.5C17.2712 2 19.1569 2 20.3284 3.17157C21.5 4.34315 21.5 6.22876 21.5 10V14C21.5 17.7712 21.5 19.6569 20.3284 20.8284C19.1569 22 17.2712 22 13.5 22H12C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V10Z" stroke="currentColor" stroke-width="1.5" />
+      <path d="M5 6L2.5 6M5 12L2.5 12M5 18H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.625 6C1.625 5.44772 2.07272 5 2.625 5L5.125 5C5.67729 5 6.125 5.44772 6.125 6C6.125 6.55229 5.67728 7 5.125 7L2.625 7C2.07272 7 1.625 6.55228 1.625 6ZM1.625 12C1.625 11.4477 2.07272 11 2.625 11L5.125 11C5.67729 11 6.125 11.4477 6.125 12C6.125 12.5523 5.67728 13 5.125 13H2.625C2.07272 13 1.625 12.5523 1.625 12ZM1.625 18C1.625 17.4477 2.07272 17 2.625 17H5.125C5.67728 17 6.125 17.4477 6.125 18C6.125 18.5523 5.67728 19 5.125 19H2.625C2.07272 19 1.625 18.5523 1.625 18Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6814 1.25H13.6814H13.6814H12.0686H12.0686H12.0686C10.2308 1.24999 8.77519 1.24997 7.63598 1.40314C6.46356 1.56076 5.51461 1.89288 4.76624 2.64124C4.01788 3.38961 3.68576 4.33856 3.52814 5.51098C3.37497 6.65019 3.37499 8.10581 3.375 9.94356V9.94357V9.94358V14.0564V14.0564V14.0564C3.37499 15.8942 3.37497 17.3498 3.52814 18.489C3.68576 19.6614 4.01788 20.6104 4.76624 21.3588C5.51461 22.1071 6.46356 22.4392 7.63598 22.5969C8.77518 22.75 10.2308 22.75 12.0685 22.75H12.0686H13.6814H13.6815C15.5192 22.75 16.9748 22.75 18.114 22.5969C19.2864 22.4392 20.2354 22.1071 20.9838 21.3588C21.7321 20.6104 22.0642 19.6614 22.2219 18.489C22.375 17.3498 22.375 15.8942 22.375 14.0565V14.0564V9.94359V9.94354C22.375 8.10581 22.375 6.65018 22.2219 5.51098C22.0642 4.33856 21.7321 3.38961 20.9838 2.64124C20.2354 1.89288 19.2864 1.56076 18.114 1.40314C16.9748 1.24997 15.5192 1.24999 13.6814 1.25ZM9.125 8.5C8.57272 8.5 8.125 8.94772 8.125 9.5C8.125 10.0523 8.57272 10.5 9.125 10.5H17.125C17.6773 10.5 18.125 10.0523 18.125 9.5C18.125 8.94772 17.6773 8.5 17.125 8.5H9.125ZM9.125 13.5C8.57272 13.5 8.125 13.9477 8.125 14.5C8.125 15.0523 8.57272 15.5 9.125 15.5H13.125C13.6773 15.5 14.125 15.0523 14.125 14.5C14.125 13.9477 13.6773 13.5 13.125 13.5H9.125Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" d="M13.6814 1.25C15.5192 1.24998 16.9748 1.24997 18.114 1.40314C19.2864 1.56076 20.2354 1.89288 20.9838 2.64124C21.7321 3.38961 22.0642 4.33856 22.2219 5.51098C22.375 6.65018 22.375 8.1058 22.375 9.94354V9.94359V14.0564V14.0565C22.375 15.8942 22.375 17.3498 22.2219 18.489C22.0642 19.6614 21.7321 20.6104 20.9838 21.3588C20.2354 22.1071 19.2864 22.4392 18.114 22.5969C16.9748 22.75 15.5192 22.75 13.6815 22.75H13.6814H12.0686H12.0685C10.2308 22.75 8.77518 22.75 7.63598 22.5969C6.46356 22.4392 5.51461 22.1071 4.76624 21.3588C4.01788 20.6104 3.68576 19.6614 3.52814 18.489C3.37497 17.3498 3.37498 15.8942 3.375 14.0564V14.0564V9.94358V9.94357C3.37498 8.10582 3.37497 6.65019 3.52814 5.51098C3.68576 4.33856 4.01788 3.38961 4.76624 2.64124C5.51461 1.89288 6.46356 1.56076 7.63598 1.40314C8.77519 1.24997 10.2308 1.24998 12.0686 1.25H12.0686H13.6814H13.6814Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.61135 5H2.625C2.07272 5 1.625 5.44772 1.625 6C1.625 6.55228 2.07272 7 2.625 7H3.40942C3.43162 6.45243 3.46811 5.95741 3.52814 5.51098C3.5517 5.33568 3.57917 5.16538 3.61135 5ZM3.375 11H2.625C2.07272 11 1.625 11.4477 1.625 12C1.625 12.5523 2.07272 13 2.625 13H3.375V11ZM3.40942 17H2.625C2.07272 17 1.625 17.4477 1.625 18C1.625 18.5523 2.07272 19 2.625 19H3.61135C3.57917 18.8346 3.5517 18.6643 3.52814 18.489C3.46811 18.0426 3.43162 17.5476 3.40942 17Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.125 9.5C8.125 8.94772 8.57272 8.5 9.125 8.5H17.125C17.6773 8.5 18.125 8.94772 18.125 9.5C18.125 10.0523 17.6773 10.5 17.125 10.5H9.125C8.57272 10.5 8.125 10.0523 8.125 9.5ZM8.125 14.5C8.125 13.9477 8.57272 13.5 9.125 13.5H13.125C13.6773 13.5 14.125 13.9477 14.125 14.5C14.125 15.0523 13.6773 15.5 13.125 15.5H9.125C8.57272 15.5 8.125 15.0523 8.125 14.5Z" />
+    </svg>
+  ),
+});
+
+export const UsersIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M16.5 20V17.9704C16.5 16.7281 15.9407 15.5099 14.8103 14.9946C13.4315 14.3661 11.7779 14 10 14C8.22212 14 6.5685 14.3661 5.18968 14.9946C4.05927 15.5099 3.5 16.7281 3.5 17.9704V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20.5 20.001V17.9713C20.5 16.729 19.9407 15.5109 18.8103 14.9956C18.5497 14.8768 18.2792 14.7673 18 14.668" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="10" cy="7.5" r="3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15 4.14453C16.4457 4.57481 17.5 5.91408 17.5 7.49959C17.5 9.0851 16.4457 10.4244 15 10.8547" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M5.37835 14.3122C6.8607 13.6364 8.62118 13.25 10.4998 13.25C12.3783 13.25 14.1388 13.6364 15.6212 14.3122C17.0994 14.986 17.7498 16.5343 17.7498 17.9704C17.7498 18.4032 17.7499 18.8744 17.7065 19.1972C17.6587 19.5527 17.5462 19.9284 17.2372 20.2374C16.9282 20.5465 16.5525 20.6589 16.197 20.7067C15.8742 20.7501 15.4773 20.7501 15.0445 20.75H15.0445H5.95502H5.95501C5.52219 20.7501 5.12537 20.7501 4.80256 20.7067C4.44708 20.6589 4.07135 20.5465 3.76233 20.2374C3.4533 19.9284 3.34086 19.5527 3.29306 19.1972C3.24966 18.8744 3.24971 18.4032 3.24976 17.9704C3.24976 16.5343 3.90015 14.986 5.37835 14.3122Z" />
+      <path d="M6.24976 7.5C6.24976 5.15279 8.15255 3.25 10.4998 3.25C12.847 3.25 14.7498 5.15279 14.7498 7.5C14.7498 9.84721 12.847 11.75 10.4998 11.75C8.15255 11.75 6.24976 9.84721 6.24976 7.5Z" />
+      <path d="M18.4333 20.7493C18.7711 20.265 18.8936 19.754 18.9461 19.3631C19.0009 18.9553 19.0007 18.4148 19.0006 18.0198L19.0006 17.9695C19.0005 16.3515 18.321 14.4388 16.5994 13.4141C17.6878 13.5879 18.7079 13.8947 19.6222 14.3115C21.1004 14.9853 21.7508 16.5336 21.7508 17.9697C21.7508 18.4025 21.7509 18.8737 21.7075 19.1965C21.6597 19.552 21.5472 19.9277 21.2382 20.2367C20.9292 20.5458 20.5535 20.6582 20.198 20.706C19.8752 20.7494 19.4784 20.7494 19.0455 20.7493H18.4333Z" />
+      <path d="M14.023 11.7235C15.2311 10.7146 15.9998 9.19708 15.9998 7.5C15.9998 5.80292 15.2311 4.28537 14.023 3.27647C14.1796 3.25898 14.3387 3.25 14.5 3.25C16.8472 3.25 18.75 5.15279 18.75 7.5C18.75 9.84721 16.8472 11.75 14.5 11.75C14.3387 11.75 14.1796 11.741 14.023 11.7235Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" d="M5.37835 14.3122C6.8607 13.6364 8.62118 13.25 10.4998 13.25C12.3783 13.25 14.1388 13.6364 15.6212 14.3122C17.0994 14.986 17.7498 16.5343 17.7498 17.9704C17.7498 18.4032 17.7499 18.8744 17.7065 19.1972C17.6587 19.5527 17.5462 19.9284 17.2372 20.2374C16.9282 20.5465 16.5525 20.6589 16.197 20.7067C15.8742 20.7501 15.4773 20.7501 15.0445 20.75H15.0445H5.95502H5.95501C5.52219 20.7501 5.12537 20.7501 4.80256 20.7067C4.44708 20.6589 4.07135 20.5465 3.76233 20.2374C3.4533 19.9284 3.34086 19.5527 3.29306 19.1972C3.24966 18.8744 3.24971 18.4032 3.24976 17.9704C3.24976 16.5343 3.90015 14.986 5.37835 14.3122Z" />
+      <path opacity="0.4" d="M6.24976 7.5C6.24976 5.15279 8.15255 3.25 10.4998 3.25C12.847 3.25 14.7498 5.15279 14.7498 7.5C14.7498 9.84721 12.847 11.75 10.4998 11.75C8.15255 11.75 6.24976 9.84721 6.24976 7.5Z" />
+      <path d="M18.4333 20.7493C18.7711 20.265 18.8936 19.754 18.9461 19.3631C19.0009 18.9553 19.0007 18.4148 19.0006 18.0198L19.0006 17.9695C19.0005 16.3515 18.321 14.4388 16.5994 13.4141C17.6878 13.5879 18.7079 13.8947 19.6222 14.3115C21.1004 14.9853 21.7508 16.5336 21.7508 17.9697C21.7508 18.4025 21.7509 18.8737 21.7075 19.1965C21.6597 19.552 21.5472 19.9277 21.2382 20.2367C20.9292 20.5458 20.5535 20.6582 20.198 20.706C19.8752 20.7494 19.4784 20.7494 19.0455 20.7493H18.4333Z" />
+      <path d="M14.023 11.7235C15.2311 10.7146 15.9998 9.19708 15.9998 7.5C15.9998 5.80292 15.2311 4.28537 14.023 3.27647C14.1796 3.25898 14.3387 3.25 14.5 3.25C16.8472 3.25 18.75 5.15279 18.75 7.5C18.75 9.84721 16.8472 11.75 14.5 11.75C14.3387 11.75 14.1796 11.741 14.023 11.7235Z" />
+    </svg>
+  ),
+});
+
+export const CornerDownLeftIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M20 3V5.07692C20 7.07786 20 8.07833 19.8547 8.91545C19.0547 13.5235 15.0934 17.1376 10.0426 17.8674C9.12509 18 7.19318 18 5 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7 21C6.39316 20.4102 4 18.8403 4 18C4 17.1597 6.39316 15.5898 7 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M20 2C20.5523 2 21 2.44772 21 3L21 5.20428C21.0001 7.08446 21.0001 8.16375 20.8399 9.08649C19.9572 14.1711 15.6121 18.073 10.1857 18.8571C9.67764 18.9305 8.91037 18.9662 7.99997 18.9836C7.99958 19.4971 7.99543 19.9701 7.95605 20.3387C7.92065 20.6702 7.8117 21.5004 7.12434 21.8623C6.44192 22.2217 5.83032 21.7854 5.58587 21.598C5.28839 21.37 4.93593 21.0199 4.55929 20.6457L4.51352 20.6003C4.18398 20.273 3.84245 19.9055 3.57595 19.534C3.44219 19.3475 3.30836 19.134 3.20433 18.9012C3.10358 18.6756 3 18.3639 3 18C3 17.6361 3.10358 17.3244 3.20433 17.0988C3.30836 16.866 3.44219 16.6525 3.57594 16.4661C3.84245 16.0945 4.18398 15.727 4.51351 15.3997L4.55928 15.3543C4.93593 14.9801 5.28838 14.63 5.58587 14.402C5.83032 14.2146 6.44192 13.7783 7.12434 14.1377C7.8117 14.4996 7.92065 15.3298 7.95605 15.6613C7.99458 16.022 7.99939 16.4825 7.99994 16.9832C8.83226 16.9675 9.48977 16.9369 9.89963 16.8777C14.5748 16.2021 18.1522 12.8759 18.8694 8.74441C18.9963 8.01354 19 7.11961 19 5.07692V3C19 2.44772 19.4477 2 20 2Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" d="M20 2C20.5523 2 21 2.44772 21 3L21 5.20428C21.0001 7.08446 21.0001 8.16375 20.8399 9.08649C19.9572 14.1711 15.6121 18.073 10.1857 18.8571C9.67764 18.9305 8.91037 18.9662 7.99997 18.9836L7.99994 16.9832C8.83226 16.9675 9.48976 16.9369 9.89962 16.8777C14.5748 16.2021 18.1522 12.8759 18.8694 8.74441C18.9963 8.01354 19 7.11961 19 5.07692V3C19 2.44772 19.4477 2 20 2Z" />
+      <path d="M5.58587 14.402C5.83032 14.2146 6.44192 13.7783 7.12434 14.1377C7.8117 14.4996 7.92065 15.3298 7.95605 15.6613C7.99458 16.022 7.99942 18.4829 7.99997 18.9836C7.99958 19.4971 7.99543 19.9701 7.95605 20.3387C7.92065 20.6702 7.8117 21.5004 7.12434 21.8623C6.44192 22.2217 5.83032 21.7854 5.58587 21.598C5.28839 21.37 4.93593 21.0199 4.55929 20.6457L4.51352 20.6003C4.18398 20.273 3.84245 19.9055 3.57595 19.534C3.44219 19.3475 3.30836 19.134 3.20433 18.9012C3.10358 18.6756 3 18.3639 3 18C3 17.6361 3.10358 17.3244 3.20433 17.0988C3.30836 16.866 3.44219 16.6525 3.57594 16.4661C3.84245 16.0945 4.18398 15.727 4.51351 15.3997L4.55928 15.3543C4.93593 14.9801 5.28838 14.63 5.58587 14.402Z" />
+    </svg>
+  ),
+});
+
+export const ArrowsUpDown = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M7 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17 19L17 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M10 6.99998C10 6.99998 7.79053 4.00001 6.99998 4C6.20942 3.99999 4 7 4 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20 17C20 17 17.7905 20 17 20C16.2094 20 14 17 14 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M7.75001 19.9999C7.75001 20.5522 7.30229 20.9999 6.75001 20.9999C6.19773 20.9999 5.75001 20.5522 5.75001 19.9999V7.99999L4.56829 8L4.53443 8.00003H4.53442C4.39798 8.00025 4.19919 8.00056 4.02998 7.9746C3.84511 7.94624 3.36011 7.83812 3.11374 7.32267C2.86919 6.81104 3.08093 6.36183 3.17545 6.19364C3.26004 6.04314 3.38325 5.88606 3.46679 5.77954L3.48764 5.75295C3.83845 5.3042 4.34774 4.67868 4.85106 4.15775C5.10066 3.89942 5.3718 3.64263 5.63789 3.44332C5.77108 3.34356 5.92353 3.24258 6.08808 3.16319C6.24265 3.08862 6.47491 3 6.74999 3C7.02506 3 7.25731 3.08862 7.41188 3.16319C7.57642 3.24258 7.72888 3.34356 7.86206 3.44332C8.12815 3.64263 8.3993 3.89941 8.6489 4.15774C9.15222 4.67866 9.66152 5.30417 10.0123 5.75291L10.0332 5.77951L10.0332 5.77952C10.1167 5.88603 10.24 6.04311 10.3245 6.19361C10.4191 6.36179 10.6308 6.811 10.3863 7.32264C10.1399 7.83809 9.65489 7.94621 9.47003 7.97458C9.30081 8.00054 9.10202 8.00023 8.96557 8.00002L8.93172 7.99998L7.75001 7.99998V19.9999Z" />
+      <path d="M18.25 4.00006C18.25 3.44778 17.8023 3.00006 17.25 3.00006C16.6977 3.00006 16.25 3.44778 16.25 4.00006V16L15.0683 16L15.0344 16H15.0344C14.898 15.9998 14.6992 15.9994 14.53 16.0254C14.3451 16.0538 13.8601 16.1619 13.6137 16.6773C13.3692 17.189 13.5809 17.6382 13.6755 17.8064C13.76 17.9569 13.8832 18.1139 13.9668 18.2205L13.9876 18.2471C14.3385 18.6958 14.8477 19.3213 15.3511 19.8422C15.6007 20.1006 15.8718 20.3574 16.1379 20.5567C16.2711 20.6564 16.4235 20.7574 16.5881 20.8368C16.7426 20.9114 16.9749 21 17.25 21C17.5251 21 17.7573 20.9114 17.9119 20.8368C18.0764 20.7574 18.2289 20.6564 18.3621 20.5567C18.6282 20.3574 18.8993 20.1006 19.1489 19.8423C19.6522 19.3213 20.1615 18.6958 20.5123 18.2471L20.5332 18.2205L20.5332 18.2205C20.6167 18.114 20.74 17.9569 20.8245 17.8064C20.9191 17.6382 21.1308 17.189 20.8863 16.6774C20.6399 16.1619 20.1549 16.0538 19.97 16.0254C19.8008 15.9995 19.602 15.9998 19.4656 16L19.4317 16L18.25 16V4.00006Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" d="M7.75002 20C7.75002 20.5522 7.3023 21 6.75002 21C6.19773 21 5.75002 20.5522 5.75002 20V8.00001L7.75002 8V20Z" />
+      <path d="M6.08808 3.16319C6.24265 3.08862 6.47491 3 6.74999 3C7.02506 3 7.25731 3.08862 7.41188 3.16319C7.57642 3.24258 7.72888 3.34356 7.86206 3.44332C8.12815 3.64263 8.3993 3.89941 8.6489 4.15774C9.15222 4.67866 9.66152 5.30417 10.0123 5.75291L10.0332 5.77951L10.0332 5.77952C10.1167 5.88603 10.24 6.04311 10.3245 6.19361C10.4191 6.36179 10.6308 6.811 10.3863 7.32264C10.1399 7.83809 9.65489 7.94621 9.47003 7.97458C9.30081 8.00054 9.10202 8.00023 8.96557 8.00002L8.93172 7.99998L7.75001 7.99998L4.56829 8L4.53443 8.00003H4.53442C4.39798 8.00025 4.19919 8.00056 4.02998 7.9746C3.84511 7.94624 3.36011 7.83812 3.11374 7.32267C2.86919 6.81104 3.08093 6.36183 3.17545 6.19364C3.26004 6.04314 3.38325 5.88606 3.46679 5.77954L3.48764 5.75295C3.83845 5.3042 4.34774 4.67868 4.85106 4.15775C5.10066 3.89942 5.3718 3.64263 5.63789 3.44332C5.77108 3.34356 5.92353 3.24258 6.08808 3.16319Z" />
+      <path opacity="0.4" d="M18.25 4.00005C18.25 3.44776 17.8023 3.00005 17.25 3.00005C16.6977 3.00005 16.25 3.44776 16.25 4.00005V16L18.25 16V4.00005Z" />
+      <path d="M16.5881 20.8368C16.7426 20.9114 16.9749 21 17.25 21C17.5251 21 17.7573 20.9114 17.9119 20.8368C18.0764 20.7574 18.2289 20.6564 18.3621 20.5567C18.6282 20.3574 18.8993 20.1006 19.1489 19.8423C19.6522 19.3213 20.1615 18.6958 20.5123 18.2471L20.5332 18.2205L20.5332 18.2205C20.6167 18.114 20.74 17.9569 20.8245 17.8064C20.9191 17.6382 21.1308 17.189 20.8863 16.6774C20.6399 16.1619 20.1549 16.0538 19.97 16.0254C19.8008 15.9995 19.602 15.9998 19.4656 16L19.4317 16L18.25 16L15.0683 16L15.0344 16H15.0344C14.898 15.9998 14.6992 15.9994 14.53 16.0254C14.3451 16.0538 13.8601 16.1619 13.6137 16.6773C13.3692 17.189 13.5809 17.6382 13.6755 17.8064C13.76 17.9569 13.8832 18.1139 13.9668 18.2205L13.9876 18.2471C14.3385 18.6958 14.8477 19.3213 15.3511 19.8422C15.6007 20.1006 15.8718 20.3574 16.1379 20.5567C16.2711 20.6564 16.4235 20.7574 16.5881 20.8368Z" />
+    </svg>
+  ),
+});
+
+export const FilterCircle = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" stroke-width="1.5" />
+      <path d="M9 12L15.0001 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M10 15.5H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8 8.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12ZM9 11C8.44772 11 8 11.4477 7.99999 12C7.99999 12.5523 8.4477 13 8.99999 13L15.0001 13C15.5523 13.0001 16.0001 12.5523 16.0001 12.0001C16.0001 11.4478 15.5524 11.0001 15.0001 11L9 11ZM9 15.5C9 14.9477 9.44771 14.5 10 14.5H14C14.5523 14.5 15 14.9477 15 15.5C15 16.0523 14.5523 16.5 14 16.5H10C9.44771 16.5 9 16.0523 9 15.5ZM8 7.5C7.44772 7.5 7 7.94772 7 8.5C7 9.05228 7.44772 9.5 8 9.5H16C16.5523 9.5 17 9.05228 17 8.5C17 7.94772 16.5523 7.5 16 7.5H8Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path opacity="0.4" d="M12 22.75C6.06294 22.75 1.25 17.9371 1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C17.9371 1.25 22.75 6.06294 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99999 12C8 11.4477 8.44772 11 9 11L15.0001 11C15.5524 11.0001 16.0001 11.4478 16.0001 12.0001C16.0001 12.5523 15.5523 13.0001 15.0001 13L8.99999 13C8.4477 13 7.99999 12.5523 7.99999 12Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 15.5C9 14.9477 9.44772 14.5 10 14.5H14C14.5523 14.5 15 14.9477 15 15.5C15 16.0523 14.5523 16.5 14 16.5H10C9.44772 16.5 9 16.0523 9 15.5Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7 8.5C7 7.94772 7.44772 7.5 8 7.5H16C16.5523 7.5 17 7.94772 17 8.5C17 9.05228 16.5523 9.5 16 9.5H8C7.44772 9.5 7 9.05228 7 8.5Z" />
+    </svg>
+  ),
+});
+
+export const CalendarDaysIcon = createIcon({
+  STROKE: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+      <path d="M18 2V4M6 2V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M11.9955 13H12.0045M11.9955 17H12.0045M15.991 13H16M8 13H8.00897M8 17H8.00897" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M3.5 8H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M3 8H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  ),
+  SOLID: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M7 2C7 1.44772 6.55228 1 6 1C5.44772 1 5 1.44772 5 2V2.44885C5.38032 2.32821 5.78554 2.24208 6.21533 2.17961C6.46328 2.14357 6.72472 2.11476 7 2.09173V2Z" />
+      <path d="M19 2.44885C18.6197 2.32821 18.2145 2.24208 17.7847 2.17961C17.5367 2.14357 17.2753 2.11476 17 2.09173V2C17 1.44772 17.4477 1 18 1C18.5523 1 19 1.44772 19 2V2.44885Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0288 2H10.9712C9.02294 1.99997 7.45141 1.99994 6.21533 2.17961C4.92535 2.3671 3.8568 2.76781 3.01802 3.6746C2.18949 4.57031 1.83279 5.69272 1.66416 7.04866C1.49997 8.36894 1.49998 10.0541 1.5 12.1739V12.8261C1.49998 14.9459 1.49997 16.6311 1.66416 17.9513C1.83279 19.3073 2.18949 20.4297 3.01802 21.3254C3.8568 22.2322 4.92535 22.6329 6.21533 22.8204C7.45142 23.0001 9.02293 23 10.9712 23H13.0288C14.9771 23 16.5486 23.0001 17.7847 22.8204C19.0747 22.6329 20.1432 22.2322 20.982 21.3254C21.8105 20.4297 22.1672 19.3073 22.3358 17.9513C22.5 16.6311 22.5 14.9459 22.5 12.8261V12.1739C22.5 10.0541 22.5 8.36895 22.3358 7.04866C22.1672 5.69272 21.8105 4.57031 20.982 3.6746C20.1432 2.76781 19.0747 2.3671 17.7847 2.17961C16.5486 1.99994 14.9771 1.99997 13.0288 2ZM4.49783 9C4.03921 9 3.8099 9 3.66385 9.14417C3.51781 9.28833 3.51487 9.51472 3.509 9.96751C3.50027 10.6407 3.5 11.3942 3.5 12.2432V12.7568C3.5 14.9616 3.50182 16.5221 3.64887 17.7045C3.79327 18.8656 4.06263 19.5094 4.48622 19.9673C4.89956 20.4142 5.4647 20.6903 6.503 20.8412C7.57858 20.9975 9.00425 21 11.05 21H12.95C14.9957 21 16.4214 20.9975 17.497 20.8412C18.5353 20.6903 19.1004 20.4142 19.5138 19.9673C19.9374 19.5094 20.2067 18.8656 20.3511 17.7045C20.4982 16.5221 20.5 14.9616 20.5 12.7568V12.2432C20.5 11.3942 20.4997 10.6407 20.491 9.96751C20.4851 9.51472 20.4822 9.28833 20.3362 9.14417C20.1901 9 19.9608 9 19.5022 9H4.49783Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 13C6.75 12.3096 7.30964 11.75 8 11.75H8.00897C8.69933 11.75 9.25897 12.3096 9.25897 13C9.25897 13.6904 8.69933 14.25 8.00897 14.25H8C7.30964 14.25 6.75 13.6904 6.75 13ZM10.7455 13C10.7455 12.3096 11.3052 11.75 11.9955 11.75H12.0045C12.6948 11.75 13.2545 12.3096 13.2545 13C13.2545 13.6904 12.6948 14.25 12.0045 14.25H11.9955C11.3052 14.25 10.7455 13.6904 10.7455 13ZM14.741 13C14.741 12.3096 15.3007 11.75 15.991 11.75H16C16.6904 11.75 17.25 12.3096 17.25 13C17.25 13.6904 16.6904 14.25 16 14.25H15.991C15.3007 14.25 14.741 13.6904 14.741 13ZM6.75 17C6.75 16.3096 7.30964 15.75 8 15.75H8.00897C8.69933 15.75 9.25897 16.3096 9.25897 17C9.25897 17.6904 8.69933 18.25 8.00897 18.25H8C7.30964 18.25 6.75 17.6904 6.75 17ZM10.7455 17C10.7455 16.3096 11.3052 15.75 11.9955 15.75H12.0045C12.6948 15.75 13.2545 16.3096 13.2545 17C13.2545 17.6904 12.6948 18.25 12.0045 18.25H11.9955C11.3052 18.25 10.7455 17.6904 10.7455 17Z" />
+    </svg>
+  ),
+  BULK: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M7 2C7 1.44772 6.55228 1 6 1C5.44772 1 5 1.44772 5 2V2.44885C5.38032 2.32821 5.78554 2.24208 6.21533 2.17961C6.46328 2.14357 6.72472 2.11476 7 2.09173V2Z" />
+      <path d="M19 2.44885C18.6197 2.32821 18.2145 2.24208 17.7847 2.17961C17.5367 2.14357 17.2753 2.11476 17 2.09173V2C17 1.44772 17.4477 1 18 1C18.5523 1 19 1.44772 19 2V2.44885Z" />
+      <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M13.0288 2H10.9712C9.02294 1.99997 7.45141 1.99994 6.21533 2.17961C4.92535 2.3671 3.8568 2.76781 3.01802 3.6746C2.18949 4.57031 1.83279 5.69272 1.66416 7.04866C1.49997 8.36894 1.49998 10.0541 1.5 12.1739V12.8261C1.49998 14.9459 1.49997 16.6311 1.66416 17.9513C1.83279 19.3073 2.18949 20.4297 3.01802 21.3254C3.8568 22.2322 4.92535 22.6329 6.21533 22.8204C7.45142 23.0001 9.02293 23 10.9712 23H13.0288C14.9771 23 16.5486 23.0001 17.7847 22.8204C19.0747 22.6329 20.1432 22.2322 20.982 21.3254C21.8105 20.4297 22.1672 19.3073 22.3358 17.9513C22.5 16.6311 22.5 14.9459 22.5 12.8261V12.1739C22.5 10.0541 22.5 8.36895 22.3358 7.04866C22.1672 5.69272 21.8105 4.57031 20.982 3.6746C20.1432 2.76781 19.0747 2.3671 17.7847 2.17961C16.5486 1.99994 14.9771 1.99997 13.0288 2ZM4.49783 9C4.03921 9 3.8099 9 3.66385 9.14417C3.51781 9.28833 3.51487 9.51472 3.509 9.96751C3.50027 10.6407 3.5 11.3942 3.5 12.2432V12.7568C3.5 14.9616 3.50182 16.5221 3.64887 17.7045C3.79327 18.8656 4.06263 19.5094 4.48622 19.9673C4.89956 20.4142 5.4647 20.6903 6.503 20.8412C7.57858 20.9975 9.00425 21 11.05 21H12.95C14.9957 21 16.4214 20.9975 17.497 20.8412C18.5353 20.6903 19.1004 20.4142 19.5138 19.9673C19.9374 19.5094 20.2067 18.8656 20.3511 17.7045C20.4982 16.5221 20.5 14.9616 20.5 12.7568V12.2432C20.5 11.3942 20.4997 10.6407 20.491 9.96751C20.4851 9.51472 20.4822 9.28833 20.3362 9.14417C20.1901 9 19.9608 9 19.5022 9H4.49783Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 13C6.75 12.3096 7.30964 11.75 8 11.75H8.00897C8.69933 11.75 9.25897 12.3096 9.25897 13C9.25897 13.6904 8.69933 14.25 8.00897 14.25H8C7.30964 14.25 6.75 13.6904 6.75 13ZM10.7455 13C10.7455 12.3096 11.3052 11.75 11.9955 11.75H12.0045C12.6948 11.75 13.2545 12.3096 13.2545 13C13.2545 13.6904 12.6948 14.25 12.0045 14.25H11.9955C11.3052 14.25 10.7455 13.6904 10.7455 13ZM14.741 13C14.741 12.3096 15.3007 11.75 15.991 11.75H16C16.6904 11.75 17.25 12.3096 17.25 13C17.25 13.6904 16.6904 14.25 16 14.25H15.991C15.3007 14.25 14.741 13.6904 14.741 13ZM6.75 17C6.75 16.3096 7.30964 15.75 8 15.75H8.00897C8.69933 15.75 9.25897 16.3096 9.25897 17C9.25897 17.6904 8.69933 18.25 8.00897 18.25H8C7.30964 18.25 6.75 17.6904 6.75 17ZM10.7455 17C10.7455 16.3096 11.3052 15.75 11.9955 15.75H12.0045C12.6948 15.75 13.2545 16.3096 13.2545 17C13.2545 17.6904 12.6948 18.25 12.0045 18.25H11.9955C11.3052 18.25 10.7455 17.6904 10.7455 17Z" />
     </svg>
   ),
 });
