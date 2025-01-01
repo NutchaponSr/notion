@@ -3,8 +3,8 @@
 import HomeIcon from "@/components/icons/home";
 import InboxIcon from "@/components/icons/inbox";
 import SearchIcon from "@/components/icons/search";
+import AiChatIcon from "@/components/icons/ai-chat";
 import SettingsIcon from "@/components/icons/settings";
-import MagicWandIcon from "@/components/icons/magic-wand";
 
 import { useRouter } from "next/navigation";
 import { useKeyboard } from "@/hooks/use-keyboard";
@@ -14,11 +14,12 @@ import { useSearchCommand } from "@/stores/use-search-command";
 import { useSettings } from "@/stores/use-settings";
 
 import { NavigationItem } from "@/components/navigation-item";
+import { IconVariant } from "@/types";
 
 const iconProps = {
-  width: 18,
-  height: 18,
-  color: "#91918e",
+  variant: IconVariant.BULK,
+  className: "size-[18px]",
+  fill: "#91918e",
 };
 
 export const Navigation = () => {
@@ -42,7 +43,7 @@ export const Navigation = () => {
           showBadge: true
         },
         {
-          icon: <MagicWandIcon {...iconProps} />,
+          icon: <AiChatIcon {...iconProps} />,
           label: "Notion AI",
           onClick: () => {}
         },

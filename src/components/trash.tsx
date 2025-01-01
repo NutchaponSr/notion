@@ -2,14 +2,10 @@ import UserIcon from "@/components/icons/user";
 import File1Icon from "@/components/icons/file1";
 import TrashIcon from "@/components/icons/trash";
 import HelpCircleIcon from "@/components/icons/help-circle";
+import FolderLibraryIcon from "./icons/folder-library";
 
 import { useState } from "react";
 import { Category } from "@/types";
-import { 
-  HiMiniBuildingLibrary, 
-  HiMiniCircleStack, 
-  HiOutlineTrash, 
-} from "react-icons/hi2";
 
 import {
   Popover,
@@ -27,6 +23,8 @@ import { useDeleteGroup } from "@/features/groups/api/use-delete-group";
 import { useReStoreGroup } from "@/features/groups/api/use-restore-group";
 import { useDeleteCompetency } from "@/features/competencies/api/use-delete-competency";
 import { useReStoreCompetency } from "@/features/competencies/api/use-restore-competency";
+import LayersIcon from "./icons/layers";
+import { IconVariant } from "@/types";
 
 export const Trash = () => {
   const { 
@@ -70,7 +68,7 @@ export const Trash = () => {
       <PopoverTrigger asChild>
         <button onClick={onOpen} className="flex items-center h-[30px] w-full hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] focus-visible:ring-0 focus-visible:outline-none p-1">
           <div className="shrink-0 grow-0 rounded-sm size-[22px] flex justify-center items-center ml-1 mr-2">
-            <TrashIcon color="#91918e" width={18} height={18} />
+            <TrashIcon variant={IconVariant.BULK} className="size-[18px]" fill="#91918e" />
           </div>
           <div className="whitespace-nowrap overflow-hidden text-ellipsis text-sm">
             Trash
@@ -97,7 +95,8 @@ export const Trash = () => {
             </div>
             <div className="flex flex-row mx-2 space-x-1.5">
               <Filter
-                icon={<UserIcon width={14} height={14} fill="#7c7c78" color="#7c7c78" />}
+                fill
+                icon={UserIcon}
                 variant="command"
                 isSelected={isPeopleSelected}
                 label="Last edited by"
@@ -106,14 +105,14 @@ export const Trash = () => {
                 onSelect={(value: string[]) => setPeoples(value)}
               />
               <Filter
-                icon={<File1Icon width={14} height={14} color="#7c7c78" />}
+                icon={File1Icon}
                 variant="command"
                 isSelected={isCategorySelected}
                 label="In"
                 placeholder="Search in"
                 data={[
-                  { name: Category.COMPETENCY, icon: HiMiniBuildingLibrary },
-                  { name: Category.GROUP, icon: HiMiniCircleStack },
+                  { name: Category.COMPETENCY, icon: FolderLibraryIcon },
+                  { name: Category.GROUP, icon: LayersIcon },
                 ]}
                 onSelect={(value: string[]) => setCategories(value as Category[])}
               />
@@ -123,7 +122,7 @@ export const Trash = () => {
             <div className="py-1.5 h-full">
               {loadingTrashs ? (
                 <div className="flex flex-col items-center justify-center h-full space-y-2">
-                  <HiOutlineTrash className="text-[#c7c6c4] size-9" />
+                  <TrashIcon className="text-[#c7c6c4] size-9" variant={IconVariant.STROKE} />
                   <div className="text-sm font-semibold text-[#787774]">
                     Trashed stuff appear here 
                   </div>
@@ -131,7 +130,7 @@ export const Trash = () => {
               ) : (
                 filteredTrashs.length <= 0 ? (
                   <div className="flex flex-col items-center justify-center h-full space-y-2">
-                    <TrashIcon className="text-[#c7c6c4] dark:text-[#7f7f7f] size-9" />
+                    <TrashIcon className="text-[#c7c6c4] dark:text-[#7f7f7f] size-9" variant={IconVariant.STROKE} />
                     <div className="text-sm font-semibold text-[#787774] dark:text-[#7f7f7f]">
                       No results
                     </div>
@@ -156,7 +155,7 @@ export const Trash = () => {
               <div className="px-2 flex items-center justify-between">
                 <p className="text-xs text-[#37352fa6] dark:text-[#ffffff71]">Pages in Trash for over 30 days will be automatically deleted</p>
                 <button className="size-6 hover:bg-[#37352f0f] rounded-sm flex justify-center items-center flex-shrink-0">
-                  <HelpCircleIcon className="size-4 text-[#37352fa6] dark:text-[#ffffff71]" />
+                  <HelpCircleIcon className="size-4 text-[#37352fa6] dark:text-[#ffffff71]" variant={IconVariant.STROKE} />
                 </button>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import { IconType } from "react-icons/lib";
+import { IconType as ReactIconType } from "react-icons/lib";
 
 export enum Category {
   GROUP = "Group",
@@ -16,7 +16,7 @@ export type KeyboardType = {
 
 export interface SettingSidebarItem {
   label: string;
-  icon: IconType | LucideIcon;
+  icon: ReactIconType | LucideIcon;
   child: SettingChild; 
 }
 
@@ -31,3 +31,20 @@ export interface SortConfig<T> {
   header: keyof T;
   direction: SortDirection;
 }
+
+export enum IconVariant {
+  STROKE = "STROKE",
+  SOLID = "SOLID",
+  BULK = "BULK",
+}
+
+export type IconStyle = IconVariant;
+
+export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
+  size?: string | number;
+  color?: string;
+  fill?: string;
+  variant: IconStyle;
+}
+
+export type IconType = (props: IconBaseProps) => JSX.Element;

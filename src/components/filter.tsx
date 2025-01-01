@@ -1,12 +1,10 @@
 import { 
   ChevronDownIcon, 
   ListFilterIcon, 
-  LucideIcon, 
   MoreHorizontalIcon, 
   Trash2Icon, 
 } from "lucide-react";
 import { useState } from "react";
-import { IconType } from "react-icons/lib";
 import { DateRange } from "react-day-picker";
 import { GiCheckMark } from "react-icons/gi";
 import { HiMiniCalendarDays } from "react-icons/hi2";
@@ -39,17 +37,19 @@ import { UserAvatar } from "@/features/auth/components/user-avatar";
 
 import { useDate } from "@/features/search/hooks/use-date";
 
+import { IconType } from "@/types";
+import { useSort } from "@/stores/use-sort";
 import { useFilter } from "@/stores/use-filter";
 import { FILTER_CONDITIONS } from "@/constants/filters";
-import { useSort } from "@/stores/use-sort";
 
 interface FilterProps {
-  icon: React.ReactNode;
+  icon: IconType;
+  fill?: boolean;
   label: string;
   data: {
     name: string;
     image?: string | null;
-    icon?: LucideIcon | IconType;
+    icon?: IconType;
     onClick?: () => void;
   }[] | undefined;
   onSelect?: (value: string[]) => void;
@@ -70,7 +70,7 @@ interface FilterProps {
 }
 
 export const Filter = ({
-  icon,
+  icon: Icon,
   label,
   data,
   onSelect,
@@ -108,7 +108,7 @@ export const Filter = ({
       variant={isSelected ? "active": "outline"} 
       className="gap-1 text-xs"
     >
-      {icon}
+      <Icon className="text-[#7c7c78] size-[14px]" />
       <span className="max-w-[150px] whitespace-nowrap overflow-hidden text-ellipsis">{label}</span>
       <ChevronDownIcon className={cn(
         "size-3",
