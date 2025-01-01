@@ -37,13 +37,14 @@ import { UserAvatar } from "@/features/auth/components/user-avatar";
 
 import { useDate } from "@/features/search/hooks/use-date";
 
-import { IconType } from "@/types";
+import { IconType, IconVariant } from "@/types";
 import { useSort } from "@/stores/use-sort";
 import { useFilter } from "@/stores/use-filter";
 import { FILTER_CONDITIONS } from "@/constants/filters";
 
 interface FilterProps {
   icon: IconType;
+  iconVariant: IconVariant;
   fill?: boolean;
   label: string;
   data: {
@@ -71,6 +72,7 @@ interface FilterProps {
 
 export const Filter = ({
   icon: Icon,
+  iconVariant,
   label,
   data,
   onSelect,
@@ -108,7 +110,7 @@ export const Filter = ({
       variant={isSelected ? "active": "outline"} 
       className="gap-1 text-xs"
     >
-      <Icon className="text-[#7c7c78] size-[14px]" />
+      <Icon className="text-[#7c7c78] size-[14px]" variant={iconVariant} fill="#7c7c78" />
       <span className="max-w-[150px] whitespace-nowrap overflow-hidden text-ellipsis">{label}</span>
       <ChevronDownIcon className={cn(
         "size-3",
@@ -138,7 +140,7 @@ export const Filter = ({
                     >
                       {item.icon ? (
                         <div className="flex items-center justify-center size-5 shrink-0 text-base">
-                          <item.icon className="text-[#91918e]" />
+                          <item.icon variant="BULK" fill="#91918e" />
                         </div>
                       ) : (
                         <UserAvatar

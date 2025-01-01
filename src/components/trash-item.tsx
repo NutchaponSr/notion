@@ -1,14 +1,15 @@
-import { 
-  CornerUpLeftIcon, 
-  HashIcon, 
-  Trash2Icon 
-} from "lucide-react";
+import { comfirmDeleteTrash } from "@/contants";
+import { useConfirm } from "@/hooks/use-confirm";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { useConfirm } from "@/hooks/use-confirm";
-import { comfirmDeleteTrash } from "@/contants";
-import { Hint } from "./hint";
+
+import {
+  ArrowMoveUpLeftIcon,
+  HashIcon,
+  TrashIcon
+} from "@/components/icons";
+import { Hint } from "@/components/hint";
 
 interface TrashItemProps {
   name: string;
@@ -62,13 +63,13 @@ export const TrashItem = ({
         <div className="ml-auto mr-2.5">
           <div className="flex gap-1">
             <Hint label="Restore" side="bottom" sideOffset={8}>
-              <Button onClick={onRestore} variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] rounded-sm dark:text-[#8C8C8C]">
-                <CornerUpLeftIcon className="size-4" />
+              <Button onClick={onRestore} variant="ghost" className="size-6 hover:bg-[#37352f0f] rounded-sm">
+                <ArrowMoveUpLeftIcon className="size-4 text-[#a4a4a2] dark:text-[#8C8C8C]" />
               </Button>
             </Hint>
             <Hint label="Delete from Trash" side="bottom" sideOffset={8}>
-              <Button onClick={handleDelete} variant="ghost" className="size-6 hover:bg-[#37352f0f] text-[#a4a4a2] rounded-sm dark:text-[#8C8C8C]">
-                <Trash2Icon className="size-4" />
+              <Button onClick={handleDelete} variant="ghost" className="size-6 hover:bg-[#37352f0f] rounded-sm">
+                <TrashIcon className="size-4 text-[#a4a4a2] dark:text-[#8C8C8C]"  />
               </Button>
             </Hint>
           </div>

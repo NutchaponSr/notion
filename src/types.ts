@@ -32,19 +32,12 @@ export interface SortConfig<T> {
   direction: SortDirection;
 }
 
-export enum IconVariant {
-  STROKE = "STROKE",
-  SOLID = "SOLID",
-  BULK = "BULK",
-}
-
-export type IconStyle = IconVariant;
-
+export type IconVariant = "BULK" | "SOLID" | "STROKE";
 export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   size?: string | number;
   color?: string;
   fill?: string;
-  variant: IconStyle;
+  variant?: IconVariant;
 }
 
-export type IconType = (props: IconBaseProps) => JSX.Element;
+export type IconDefinition = Record<IconVariant, JSX.Element>;

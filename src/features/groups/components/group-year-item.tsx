@@ -1,7 +1,6 @@
 import React from "react";
 
 import { PlusIcon } from "lucide-react";
-import { HiMiniCalendarDays } from "react-icons/hi2";
 
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
@@ -10,6 +9,7 @@ import { GroupItem } from "@/features/groups/components/group-item";
 
 import { GroupSidebarType } from "@/features/groups/types";
 import { useGroupItemChild } from "@/features/groups/stores/use-group-item-child";
+import { CalendarDay } from "@/components/icons";
 
 interface GroupYearItemProps {
   year: string;
@@ -53,9 +53,9 @@ export const GroupYearItem = ({
           isOpen={isChild}
           onClick={onChild}
           indent="ml-3"
-          className="bg-[#37352f0f] text-[#91918e] dark:bg-[#ffffff0e]"
+          className="bg-[#37352f0f] dark:bg-[#ffffff0e]"
         >
-          <HiMiniCalendarDays className="size-[18px]" />
+          <CalendarDay className="size-[18px] text-[#91918e]" />
         </IconWrapper>
       </WorkspaceItem>
       {isChild && (

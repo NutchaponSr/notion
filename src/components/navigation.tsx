@@ -1,23 +1,25 @@
 "use client";
 
-import HomeIcon from "@/components/icons/home";
-import InboxIcon from "@/components/icons/inbox";
-import SearchIcon from "@/components/icons/search";
-import AiChatIcon from "@/components/icons/ai-chat";
-import SettingsIcon from "@/components/icons/settings";
-
 import { useRouter } from "next/navigation";
+
+import { IconVariant } from "@/types";
+import { useSettings } from "@/stores/use-settings";
 import { useKeyboard } from "@/hooks/use-keyboard";
 import { useInboxSidebar } from "@/hooks/use-inbox-sidebar";
 import { useSearchCommand } from "@/stores/use-search-command";
 
-import { useSettings } from "@/stores/use-settings";
-
 import { NavigationItem } from "@/components/navigation-item";
-import { IconVariant } from "@/types";
+
+import {
+  AiChatIcon,
+  HomeIcon,
+  InboxIcon,
+  SearchIcon,
+  SettingsIcon,
+} from "@/components/icons";
 
 const iconProps = {
-  variant: IconVariant.BULK,
+  variant: "BULK" as IconVariant,
   className: "size-[18px]",
   fill: "#91918e",
 };

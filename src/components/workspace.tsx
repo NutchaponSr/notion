@@ -1,9 +1,3 @@
-import { 
-  HiMiniBuildingLibrary, 
-  HiMiniCircleStack,
-  HiMiniUsers
-} from "react-icons/hi2";
-
 import { typesCompetency } from "@/db/schema";
 
 import { Skeleton } from "@/components/ui/skeleton";
@@ -23,6 +17,7 @@ import { useCreateInstantGroup } from "@/features/groups/api/use-create-instant-
 import { useCompetencyChild } from "@/features/competencies/stores/use-competency-child";
 import { useCreateInstantCompetency } from "@/features/competencies/api/use-create-instant-group";
 import { useGetInstantCompetencies } from "@/features/competencies/api/use-get-instant-competencies";
+import { FolderLibraryIcon, NotebookIcon, UserIcon } from "./icons";
 
 export const Workspace = () => {
   const {
@@ -79,9 +74,9 @@ export const Workspace = () => {
             indent="ml-1"
             isOpen={openGroupChild}
             onClick={toggleGroupChild}
-            className="bg-[#f5e0e9] text-[#ac5488] dark:bg-[#4e2c3c] dark:text-[#b24b78]"
+            className="bg-[#f5e0e9] dark:bg-[#4e2c3c]"
           >
-            <HiMiniCircleStack className="size-[18px]" />
+            <FolderLibraryIcon className="size-[18px]" variant="SOLID" fill="#ac5488" />
           </IconWrapper>
         </WorkspaceItem>       
         {openGroupChild && (
@@ -115,9 +110,9 @@ export const Workspace = () => {
             indent="ml-1"
             isOpen={openCompetencyChild}
             onClick={toggleCompetencyChild}
-            className="bg-[#fadec9] text-[#c47830] dark:bg-[#5c3b23] dark:text-[#c37a38]"
+            className="bg-[#fadec9] dark:bg-[#5c3b23]"
           >
-            <HiMiniBuildingLibrary className="size-[18px]" />
+            <NotebookIcon className="size-[18px]" variant="SOLID" fill="#c47830" />
           </IconWrapper>
         </WorkspaceItem> 
         {openCompetencyChild && (
@@ -148,9 +143,9 @@ export const Workspace = () => {
             indent="ml-1"
             isOpen={false}
             onClick={() => {}}
-            className="bg-[#d8e5ee] text-[#527da5] dark:bg-[#143a4e] dark:text-[#527cca]"
+            className="bg-[#d8e5ee] dark:bg-[#143a4e]"
           >
-            <HiMiniUsers className="size-[18px]" />
+            <UserIcon className="size-[18px]" variant="SOLID" fill="#527da5" />
           </IconWrapper>
         </WorkspaceItem> 
       </div>

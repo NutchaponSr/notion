@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useEffect, useRef, useState } from "react";
-import { DotIcon, HashIcon, MoreHorizontalIcon } from "lucide-react";
+import { DotIcon, MoreHorizontalIcon } from "lucide-react";
 
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
@@ -9,6 +9,7 @@ import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 import { GroupActions } from "@/features/groups/components/group-actions";
 import { GroupRenamePopover } from "@/features/groups/components/group-rename-popover";
 import { GroupInstant } from "../types";
+import { HashIcon } from "@/components/icons";
 
 interface GroupItemProps {
   isChild: boolean;
@@ -57,12 +58,11 @@ export const GroupItem = ({
             isOpen={isChild}
             onClick={onChlid}
             indent="ml-5"
-            className="text-[#91918e]"
           >
             {data.icon ? (
               data.icon
             ) : (
-              <HashIcon className="size-[18px]" />
+              <HashIcon className="size-[18px] text-[#91918e]" />
             )}
           </IconWrapper>
         </WorkspaceItem>
