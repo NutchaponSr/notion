@@ -1,7 +1,9 @@
 import React from "react";
 
-import { PlusIcon } from "lucide-react";
-
+import { 
+  CalendarDay, 
+  PlusIcon 
+} from "@/components/icons";
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
@@ -9,7 +11,6 @@ import { GroupItem } from "@/features/groups/components/group-item";
 
 import { GroupSidebarType } from "@/features/groups/types";
 import { useGroupItemChild } from "@/features/groups/stores/use-group-item-child";
-import { CalendarDay } from "@/components/icons";
 
 interface GroupYearItemProps {
   year: string;
@@ -44,8 +45,8 @@ export const GroupYearItem = ({
         label={year}
         showBadge={year === new Date().getFullYear().toString()}
         sideButton={
-          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
-            <PlusIcon className="size-[18px]" />
+          <button onClick={handleOnClick} className="transition relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
+            <PlusIcon className="size-[18px] text-[#91918e]" />
           </button> 
         }
       >

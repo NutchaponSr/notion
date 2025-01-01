@@ -1,15 +1,18 @@
 import React from "react";
 
+import { DotIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { DotIcon, MoreHorizontalIcon } from "lucide-react";
 
+import { 
+  HashIcon,
+  MoreHorizontalIcon
+} from "@/components/icons";
 import { IconWrapper } from "@/components/icon-wrapper";
 import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
 
 import { GroupActions } from "@/features/groups/components/group-actions";
 import { GroupRenamePopover } from "@/features/groups/components/group-rename-popover";
 import { GroupInstant } from "../types";
-import { HashIcon } from "@/components/icons";
 
 interface GroupItemProps {
   isChild: boolean;
@@ -48,8 +51,8 @@ export const GroupItem = ({
           label={data.name}
           sideButton={
             <GroupActions data={data} onRename={onRename}>
-              <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
-                <MoreHorizontalIcon className="size-[18px]" />
+              <button className="transition relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
+                <MoreHorizontalIcon className="size-[18px] text-[#91918e]" />
               </button> 
             </GroupActions>
           }
