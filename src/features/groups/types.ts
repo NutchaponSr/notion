@@ -1,9 +1,9 @@
 import { InferResponseType } from "hono";
-import { IconType } from "react-icons/lib";
-import { LucideIcon, TypeIcon } from "lucide-react";
 
 import { client } from "@/lib/rpc";
-import { SortDirection } from "@/types";
+import { SortDirection, IconType } from "@/types";
+                
+import { TextFontIcon } from "@/components/icons";
 
 export type GroupInstant = {
   id: string, 
@@ -20,7 +20,7 @@ export type Group = InferResponseType<typeof client.api.groups.$get, 200>["data"
 
 export type Header = {
   label: string;
-  icon: LucideIcon | IconType;
+  icon: IconType;
   type: "text" | "number" | "status";
   direction: SortDirection;
 }
@@ -28,8 +28,8 @@ export type Header = {
 export const headers: Header[] = [
   {
     label: "Name",
-    icon: TypeIcon,
+    icon: TextFontIcon,
     type: "text",
     direction: "asc"
-  }
+  },
 ]

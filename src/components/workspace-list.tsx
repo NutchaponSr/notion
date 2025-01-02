@@ -1,7 +1,11 @@
-import { HiMiniBuildingLibrary, HiMiniCircleStack, HiMiniUsers } from "react-icons/hi2";
 import { SquareDashedKanbanIcon } from "lucide-react";
 
-import { WorkspaceCard } from "./workspace-card";
+import {
+  FolderLibraryIcon,
+  Notebook1Icon,
+  UsersIcon,
+} from "@/components/icons";
+import { WorkspaceCard } from "@/components/workspace-card";
 
 
 export const WorkspaceList = () => {
@@ -24,9 +28,9 @@ export const WorkspaceList = () => {
               href="/groups"
               className={[
                 "bg-[#f5e0e9] dark:bg-[#4e2c3c]",
-                "text-[#ac5488] dark:text-[#b24b78]"
+                "fill-[#ac5488] dark:fill-[#b24b78]"
               ]}
-              icon={HiMiniCircleStack}
+              icon={FolderLibraryIcon}
               title="Group"
               description="Combining diverse skills to achieve shared goals."
             />
@@ -34,9 +38,9 @@ export const WorkspaceList = () => {
               href="/competencies"
               className={[
                 "bg-[#fadec9] dark:bg-[#5c3b23]",
-                "text-[#c47830] dark:text-[#c37a38]"
+                "fill-[#c47830] dark:fill-[#c37a38]"
               ]}
-              icon={HiMiniBuildingLibrary}
+              icon={Notebook1Icon}
               title="Competency"
               description="Diverse skills and competencies to achieve shared goals."
             />
@@ -44,9 +48,9 @@ export const WorkspaceList = () => {
               href="/employees"
               className={[
                 "bg-[#d8e5ee] dark:bg-[#143a4e]",
-                "text-[#527da5] dark:text-[#527cca]"
+                "fill-[#527da5] dark:fill-[#527cca]"
               ]}
-              icon={HiMiniUsers}
+              icon={UsersIcon}
               title="Employee"
               description="Manage employees with diverse competencies to achieve goals."
             />

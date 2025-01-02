@@ -76,7 +76,7 @@ export const Workspace = () => {
             onClick={toggleGroupChild}
             className="bg-[#f5e0e9] dark:bg-[#4e2c3c]"
           >
-            <FolderLibraryIcon className="size-[18px]" variant="SOLID" fill="#ac5488" />
+            <FolderLibraryIcon className="size-[18px] fill-[#ac5488]" variant="BULK" />
           </IconWrapper>
         </WorkspaceItem>       
         {openGroupChild && (
@@ -112,7 +112,7 @@ export const Workspace = () => {
             onClick={toggleCompetencyChild}
             className="bg-[#fadec9] dark:bg-[#5c3b23]"
           >
-            <Notebook1Icon className="size-[18px]" variant="SOLID" fill="#c47830" />
+            <Notebook1Icon className="size-[18px] fill-[#c47830]" variant="BULK" />
           </IconWrapper>
         </WorkspaceItem> 
         {openCompetencyChild && (
@@ -133,7 +133,6 @@ export const Workspace = () => {
                     type: category.query as typeof typesCompetency.enumValues[number]
                   }
                 })}
-                fill={category.fill}
               />
             );
           })
@@ -146,7 +145,7 @@ export const Workspace = () => {
             onClick={() => {}}
             className="bg-[#d8e5ee] dark:bg-[#143a4e]"
           >
-            <UsersIcon className="size-[18px]" variant="SOLID" fill="#527da5" />
+            <UsersIcon className="size-[18px] fill-[#527da5]" variant="BULK" />
           </IconWrapper>
         </WorkspaceItem> 
       </div>

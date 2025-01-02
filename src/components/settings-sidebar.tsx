@@ -1,9 +1,9 @@
 import { useSession } from "next-auth/react";
-import { HiOutlineUsers } from "react-icons/hi2";
 
 import { settingsSidebars } from "@/contants";
 import { useSettings } from "@/stores/use-settings";
 
+import { UsersIcon } from "@/components/icons";
 import { ButtonItem } from "@/components/button-item";
 
 import { UserAvatar } from "@/features/auth/components/user-avatar";
@@ -46,6 +46,7 @@ export const SettingsSidebar = () => {
               icon={item.icon}
               onClick={() => onChild(item.child)}
               isActive={child === item.child}
+              variant={item.variant}
             />
           ))}
           <div className="flex items-center h-[18px] w-full" />
@@ -54,8 +55,9 @@ export const SettingsSidebar = () => {
           </div>
           <ButtonItem 
             label="People"
-            icon={HiOutlineUsers}
+            icon={UsersIcon}
             onClick={() => onChild("people")}
+            variant="STROKE"
           />
         </div>
       </div>

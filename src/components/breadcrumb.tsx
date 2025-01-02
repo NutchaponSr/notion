@@ -3,10 +3,11 @@
 import React from "react";
 import Link from "next/link";
 
-import { HomeIcon } from "lucide-react";
 import { usePathname } from "next/navigation"; 
 
 import { Button } from "@/components/ui/button";
+
+import { HomeIcon } from "@/components/icons";
 
 export const Breadcrumb = () => {
   const pathname = usePathname();
@@ -27,7 +28,7 @@ export const Breadcrumb = () => {
           className="text-[#37352f] text-sm font-normal"
         >
           <Link href="/home">
-            <HomeIcon className="size-4 stroke-[1.7]" />
+            <HomeIcon className="size-4 text-[#37352f]" />
             Home
           </Link>
         </Button>

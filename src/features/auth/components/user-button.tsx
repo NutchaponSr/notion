@@ -1,9 +1,13 @@
 "use client";
 
-import {useSession } from "next-auth/react";
-import { ChevronDownIcon, ChevronsUpDownIcon, Loader } from "lucide-react";
+import { useSession } from "next-auth/react";
 
 import { Button } from "@/components/ui/button";
+
+import { 
+  ChevronDownIcon,
+  ChevronsUpDownIcon, 
+} from "@/components/icons";
 
 import { UserAvatar } from "@/features/auth/components/user-avatar";
 import { UserWrapper } from "@/features/auth/components/user-wrapper";
@@ -15,13 +19,10 @@ interface UserButtonProps {
 export const UserButton = ({ 
   side,
 }: UserButtonProps) => {
-  const { data, status } = useSession();
+  const { data } = useSession();
 
   const name = data?.user.name ?? "";
   const imageUrl = data?.user.image ?? "";
-
-  
-  if (status === "loading") return <Loader className="size-4 animate-spin text-muted-foreground" />
 
   if (side === "left") {
     return (

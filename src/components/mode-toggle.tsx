@@ -1,13 +1,15 @@
+import { useTheme } from "next-themes";
+import { GiCheckMark } from "react-icons/gi";
+
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
-import { useTheme } from "next-themes";
-import { Button } from "./ui/button";
-import { ChevronDownIcon } from "lucide-react";
-import { GiCheckMark } from "react-icons/gi";
+import { Button } from "@/components/ui/button";
+
+import { ChevronDownIcon } from "@/components/icons";
 
 export const ModeToggle = () => {
   const { setTheme, theme } = useTheme();

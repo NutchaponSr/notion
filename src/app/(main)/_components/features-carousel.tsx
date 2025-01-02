@@ -58,7 +58,10 @@ export const FeaturesCarousel = () => {
                     currentIndex === index ? "dark:text-white" : "dark:text-[#1a1a1a]",
                   )}
                 >
-                  <Icon className="size-4" />
+                  <Icon className={cn(
+                    "size-4", 
+                    currentIndex === index ? "text-white" : "dark:text-[#1a1a1a]"
+                  )} />
                   {label}
                 </Button>
               ))}

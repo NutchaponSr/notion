@@ -1,9 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { DotIcon, HashIcon, MoreHorizontalIcon } from "lucide-react";
+import { DotIcon} from "lucide-react";
 
-import { Skeleton } from "./ui/skeleton";
-import { WorkspaceItem, WorkspaceSubItem } from "./workspace-item";
-import { IconWrapper } from "./icon-wrapper";
+import { Skeleton } from "@/components/ui/skeleton";
+
+import {
+  HashIcon, 
+  MoreHorizontalIcon 
+} from "@/components/icons";
+import { IconWrapper } from "@/components/icon-wrapper";
+import { WorkspaceItem, WorkspaceSubItem } from "@/components/workspace-item";
+
 import { GroupActions } from "@/features/groups/components/group-actions";
 
 import { useGetFavorites } from "@/features/groups/api/use-get-favorites";
@@ -93,8 +99,8 @@ export const Favorite = () => {
                   href={`/groups/${favorite.groupId}`}
                   sideButton={
                     <GroupActions data={initialData} onRename={() => onRename(favorite.groupId)}>
-                      <button className="transition relative flex items-center justify-center size-6 rounded-sm text-[#91918e] hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
-                        <MoreHorizontalIcon className="size-[18px]" />
+                      <button className="transition relative flex items-center justify-center size-6 rounded-sm  hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]">
+                        <MoreHorizontalIcon className="size-[18px] text-[#91918e]" />
                       </button> 
                     </GroupActions>
                   }
@@ -107,7 +113,7 @@ export const Favorite = () => {
                     {favorite.icon ? (
                       favorite.icon
                     ) : (
-                      <HashIcon className="size-[18px]" />
+                      <HashIcon className="size-[18px] text-[#91918e]" />
                     )}
                   </IconWrapper>
                 </WorkspaceItem>

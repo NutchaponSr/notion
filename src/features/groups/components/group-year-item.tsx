@@ -1,7 +1,7 @@
 import React from "react";
 
 import { 
-  CalendarDay, 
+  CalendarDayIcon, 
   PlusIcon 
 } from "@/components/icons";
 import { IconWrapper } from "@/components/icon-wrapper";
@@ -56,7 +56,7 @@ export const GroupYearItem = ({
           indent="ml-3"
           className="bg-[#37352f0f] dark:bg-[#ffffff0e]"
         >
-          <CalendarDay className="size-[18px] text-[#91918e]" />
+          <CalendarDayIcon className="size-[18px] fill-[#91918e]" variant="BULK" />
         </IconWrapper>
       </WorkspaceItem>
       {isChild && (

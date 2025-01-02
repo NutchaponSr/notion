@@ -12,7 +12,7 @@ import {
   File1Icon,
   FolderLibraryIcon,
   HelpCircleIcon,
-  LayersIcon,
+  Notebook1Icon,
   TrashIcon, 
   UserIcon
 } from "@/components/icons";
@@ -113,8 +113,8 @@ export const Trash = () => {
                 label="In"
                 placeholder="Search in"
                 data={[
-                  { name: Category.COMPETENCY, icon: FolderLibraryIcon },
-                  { name: Category.GROUP, icon: LayersIcon },
+                  { name: Category.COMPETENCY, icon: Notebook1Icon },
+                  { name: Category.GROUP, icon: FolderLibraryIcon },
                 ]}
                 onSelect={(value: string[]) => setCategories(value as Category[])}
               />

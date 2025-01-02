@@ -1,16 +1,10 @@
 "use client";
 
-import { 
-  ArrowUpDownIcon, 
-  CornerDownLeftIcon, 
-  SearchIcon 
-} from "lucide-react";
 import { useEffect } from "react";
 import { useQueryState } from "nuqs";
 import { useToggle } from "react-use";
 import { useSession } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
-import { IoFilterCircleOutline } from "react-icons/io5";
 
 import { cn } from "@/lib/utils";
 import { useDebounce } from "@/hooks/use-debounce";
@@ -22,6 +16,13 @@ import {
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+import { 
+  ArrowUpDownIcon, 
+  CornerDownLeftIcon, 
+  FilterCircleIcon, 
+  SearchIcon 
+} from "@/components/icons";
+
 import { SearchList } from "@/features/search/components/search-list";
 import { SearchFilter } from "@/features/search/components/search-filter";
 
@@ -29,6 +30,7 @@ import { useSort } from "@/features/search/hooks/use-sort";
 import { useDate } from "@/features/search/hooks/use-date";
 import { useFilter } from "@/features/search/stores/use-filter";
 import { useGetSearchs } from "@/features/search/api/use-get-search";
+import { Button } from "@/components/ui/button";
 
 export const SearchCommand = () => {
   const searchParams = useSearchParams();
@@ -115,18 +117,19 @@ export const SearchCommand = () => {
                 />
               </div>
               <div className="ml-auto flex items-center justify-center">
-                <button 
+                <Button 
+                  variant="ghost"
                   onClick={toggleFilter} 
                   className={cn(
                     "transition flex items-center justify-center rounded-sm h-fit w-fit p-1",
                     isFilter ? "hover:bg-[#ebf5fe] dark:hover:bg-[#2383e212]" : "dark:hover:bg-[#ffffff0e]"
                   )}
                 >
-                  <IoFilterCircleOutline className={cn(
+                  <FilterCircleIcon className={cn(
                     "size-5",
                     isFilter ? "text-[#2383e2]" : "text-[#acaba9] dark:text-[#5a5a5a]",
                   )} />
-                </button>
+                </Button>
               </div>
             </div>
           </div>

@@ -1,5 +1,9 @@
-import { MenuIcon, MoreHorizontalIcon } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+
+import {
+  MenuIcon,
+  MoreHorizontalIcon
+} from "@/components/icons";
 import { Breadcrumb } from "./breadcrumb";
 
 interface NavbarProps {
@@ -18,13 +22,13 @@ export const Navbar = ({
           <div className="grow shrink flex items-center space-x-2.5">
             {isCollapsed && (
               <Button variant="ghost" size="icon" onClick={onResetWidth}>
-                <MenuIcon className="size-[18px]" />
+                <MenuIcon className="size-[18px] text-[#37352f]" />
               </Button>
             )}
             <Breadcrumb />
           </div>
           <Button variant="ghost" size="icon">
-            <MoreHorizontalIcon className="size-[18px]" />
+            <MoreHorizontalIcon className="size-[18px] text-[#37352f]" />
           </Button>
         </div>
       </div>

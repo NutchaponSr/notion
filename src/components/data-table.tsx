@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ChevronDownIcon, PlusIcon } from "lucide-react";
+import { ChevronDownIcon, PlusIcon } from "@/components/icons";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface DataTableProps<TData, TValue> {

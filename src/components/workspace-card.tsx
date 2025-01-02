@@ -1,13 +1,12 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { IconType } from "react-icons/lib";
-import { LucideIcon } from "lucide-react";
+import { IconType } from "@/types";
 
 interface WorkspaceCardProps {
   href: string;
   className: string[];
-  icon: IconType | LucideIcon;
+  icon: IconType;
   title: string;
   description: string;
 }
@@ -28,7 +27,7 @@ export const WorkspaceCard = ({
         <div className="relative mb-[14px]">
           <div className={cn("h-11", className[0])} />
           <div className="flex items-center justify-center rounded-e-sm absolute -bottom-[14px] left-4">
-            <Icon className={cn("size-7", className[1])} />
+            <Icon className={cn("size-7", className[1])} variant="SOLID" />
           </div>
         </div>
         <div className="w-full min-h-[72px] py-2.5 px-4 relative flex flex-col justify-start gap-2 grow">

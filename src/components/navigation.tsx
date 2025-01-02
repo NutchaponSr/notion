@@ -15,7 +15,7 @@ import {
   HomeIcon,
   InboxIcon,
   SearchIcon,
-  SettingsIcon,
+  Settings1Icon,
 } from "@/components/icons";
 
 const iconProps = {
@@ -60,7 +60,7 @@ export const Navigation = () => {
           onClick: toggle
         },
         {
-          icon: <SettingsIcon {...iconProps} />,
+          icon: <Settings1Icon {...iconProps} />,
           label: "Settings",
           onClick: openSettingsModal
         }

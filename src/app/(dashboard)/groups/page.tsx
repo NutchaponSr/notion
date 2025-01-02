@@ -1,7 +1,9 @@
-import { InfoIcon } from "lucide-react";
-import { HiMiniCircleStack } from "react-icons/hi2";
-
 import { Button } from "@/components/ui/button";
+
+import { 
+  FolderLibraryIcon,
+  InfoIcon
+} from "@/components/icons";
 
 import { GroupContent } from "@/features/groups/components/group-content";
 
@@ -14,13 +16,13 @@ const GroupsPage = () => {
           <div className="w-full pl-24 max-w-full">
             <div className="flex opacity-0 group-hover:opacity-100 justify-start flex-wrap py-1 transition duration-75">
               <Button variant="ghost" className="text-[#37352f80] hover:text-[#37352f80]">
-                <InfoIcon className="size-4" />
+                <InfoIcon className="size-4 fill-[#37352f80]" variant="SOLID" />
                 Hide Description 
               </Button>
             </div>
             <div className="pr-24 mb-2 w-full mt-1">
               <div className="flex justify-start space-x-2">
-                <HiMiniCircleStack className="size-9 text-[#ac5488] dark:text-[#b24b78]" />
+                <FolderLibraryIcon className="size-9 fill-[#ac5488] dark:fill-[#b24b78]" variant="BULK" />
                 <h1 className="text-3xl text-[#37352f] font-bold flex items-center whitespace-pre-wrap">
                   Group
                 </h1>

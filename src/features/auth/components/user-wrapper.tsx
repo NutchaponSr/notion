@@ -1,7 +1,6 @@
 "use client";
 
 import { signOut, useSession } from "next-auth/react";
-import { LogOutIcon, MoreHorizontalIcon, SettingsIcon } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -11,9 +10,15 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 
-import { UserAvatar } from "@/features/auth/components/user-avatar";
-import { useSettings } from "@/stores/use-settings";
+import {
+  LogOutIcon,
+  MoreHorizontalIcon,
+  Settings1Icon
+} from "@/components/icons";
 
+import { UserAvatar } from "@/features/auth/components/user-avatar";
+
+import { useSettings } from "@/stores/use-settings";
 interface UserWrapperProps {
   children: React.ReactNode;
   align: "start" | "center" | "end";
@@ -74,11 +79,11 @@ export const UserWrapper = ({
         <DropdownMenuSeparator />
         {/* TODO: Settings modal */}
         <DropdownMenuItem onClick={openSettings}>
-          <SettingsIcon className="size-4" />
+          <Settings1Icon className="size-4 text-[#37352f]" />
           Settings
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => signOut()}>
-          <LogOutIcon className="size-4" />
+          <LogOutIcon className="size-4 text-[#37352f]" />
           Sign out
         </DropdownMenuItem>
       </DropdownMenuContent>

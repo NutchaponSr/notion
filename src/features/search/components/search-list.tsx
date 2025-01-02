@@ -1,11 +1,21 @@
+import { 
+  useEffect, 
+  useRef, 
+  useState 
+} from "react";
 import { useKeyboard } from "@/hooks/use-keyboard";
-import { useEffect, useRef, useState } from "react";
 
-import { ResponseType } from "../api/use-get-search";
 import { cn, formatTimeElapsed } from "@/lib/utils";
-import { CornerDownLeftIcon, HashIcon } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+
 import { Skeleton } from "@/components/ui/skeleton";
+import { Separator } from "@/components/ui/separator";
+
+import {
+  CornerDownLeftIcon,
+  HashIcon
+} from "@/components/icons";
+
+import { ResponseType } from "@/features/search/api/use-get-search";
 
 interface SearchListProps {
   data: ResponseType;

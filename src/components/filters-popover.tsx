@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PlusIcon } from "lucide-react";
 
 import {
   Popover,
@@ -7,6 +6,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
+import { PlusIcon } from "@/components/icons";
 
 import { useFilter } from "@/stores/use-filter";
 import { useToolbar } from "@/stores/use-toolbar";

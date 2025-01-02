@@ -1,13 +1,6 @@
-import { 
-  ChevronDownIcon, 
-  ListFilterIcon, 
-  MoreHorizontalIcon, 
-  Trash2Icon, 
-} from "lucide-react";
 import { useState } from "react";
 import { DateRange } from "react-day-picker";
 import { GiCheckMark } from "react-icons/gi";
-import { HiMiniCalendarDays } from "react-icons/hi2";
 
 import { cn } from "@/lib/utils";
 
@@ -32,6 +25,14 @@ import {
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
+
+import {
+  CalendarDaysIcon,
+  ChevronDownIcon,
+  FilterCircleIcon,
+  MoreHorizontalIcon,
+  TrashIcon
+} from "@/components/icons";
 
 import { UserAvatar } from "@/features/auth/components/user-avatar";
 
@@ -110,7 +111,7 @@ export const Filter = ({
       variant={isSelected ? "active": "outline"} 
       className="gap-1 text-xs"
     >
-      <Icon className="text-[#7c7c78] size-[14px]" variant={iconVariant} fill="#7c7c78" />
+      <Icon className={cn("text-[#7c7c78] size-[14px]", isSelected && "text-[#2383e2]")} variant={iconVariant} fill="#7c7c78" />
       <span className="max-w-[150px] whitespace-nowrap overflow-hidden text-ellipsis">{label}</span>
       <ChevronDownIcon className={cn(
         "size-3",
@@ -192,7 +193,7 @@ export const Filter = ({
                 <DropdownMenuTrigger asChild>
                   <Button size="xs" variant="ghost">
                     {type === "create" ? "Create" : "Last edited"}
-                    <ChevronDownIcon className="size-3" />
+                    <ChevronDownIcon className="size-3 text-[#37352f] dark:text-[#ffffffcf]" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
@@ -213,14 +214,14 @@ export const Filter = ({
                 <button 
                   key={preset.label}
                   onClick={() => preset.onRange(preset.range)}
-                  className="rounded-[6px] transition w-[calc(100%-8px)] mx-1 hover:bg-[#37352f0f] text-[#37352f] dark:text-[#ffffffcf] dark:hover:bg-[#ffffff0e]"
+                  className="rounded-[6px] transition w-[calc(100%-8px)] mx-1 hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e]"
                 >
                   <div className="flex items-center w-full min-h-7 text-sm">
                     <div className="flex items-center justify-center ml-2.5">
-                      <HiMiniCalendarDays className="size-[18px]" />
+                      <CalendarDaysIcon className="size-[18px] text-[#37352f] dark:text-[#ffffffcf]" />
                     </div>
                     <div className="mx-1.5 flex-auto text-start">
-                      <div className="whitespace-nowrap overflow-hidden text-ellipsis">
+                      <div className="whitespace-nowrap overflow-hidden text-ellipsis text-[#37352f] dark:text-[#ffffffcf]">
                         {preset.label}
                       </div>
                     </div>
@@ -279,12 +280,12 @@ export const Filter = ({
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent side="right" align="start" className="w-[240px]">
-                    <DropdownMenuItem className="focus:text-[#eb5757]" onClick={() => onDelete(label)}>
-                      <Trash2Icon className="size-4" />
+                    <DropdownMenuItem className="group focus:text-[#eb5757]" onClick={() => onDelete(label)}>
+                      <TrashIcon className="size-4 text-[#37352f] group-focus:text-[#eb5757] transition-colors" />
                       Delete filter
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                      <ListFilterIcon className="size-4" />
+                      <FilterCircleIcon className="size-4" />
                       Add to advanced filter
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -332,7 +333,7 @@ export const Filter = ({
                 >
                   <div className="flex items-center w-full min-h-7">
                     <div className="flex items-center justify-center ml-2.5 mr-1">
-                      <Trash2Icon className="size-4 text-[#9A9A97] group-hover:text-[#eb5757]" />
+                      <TrashIcon className="size-4 text-[#9A9A97] group-hover:text-[#eb5757]" />
                     </div>
                     <div className="ml-1.5 mr-3 min-w-0">
                       <p className="text-[#37352fa6] text-sm whitespace-pre-wrap overflow-hidden text-ellipsis group-hover:text-[#eb5757]">

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "./icons";
+import { ChevronRightIcon } from "@/components/icons";
 
 interface IconWrapperProps {
   children: React.ReactNode;
@@ -49,7 +49,7 @@ export const IconWrapper = ({
                 onClick={handleOnClick}
                 className="transition relative hidden items-center justify-center size-6 rounded-sm group-hover/workspace:flex bg-[#37352f0f] dark:bg-[#ffffff0e]"
               >
-                <ChevronRight className={cn(
+                <ChevronRightIcon className={cn(
                   "size-[18px] transition text-[#91918e]",
                   isOpen ? "rotate-90" : "rotate-0",
                 )} />

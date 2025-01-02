@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 
 import { useMedia } from "react-use";
-import { ChevronsLeft } from "lucide-react";
 import { ElementRef, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +14,7 @@ import { Favorite } from "@/components/favorite";
 import { Workspace } from "@/components/workspace";
 import { Navigation } from "@/components/navigation";
 import { InboxSidebar } from "@/components/inbox-sidebar";
+import { ChevronsLeftIcon } from "@/components/icons";
 
 import { useSidebar } from "@/stores/use-sidebar";
 
@@ -117,9 +117,9 @@ export const Sidebar = () => {
           size="icon"
           variant="ghost"
           onClick={collapse}
-          className="hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] text-[#91918e] dark:text-[#9b9b9b] group-hover:opacity-100 transition opacity-0 ml-2.5 absolute top-0.5 right-1 z-[100]"
+          className="hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] group-hover:opacity-100 transition opacity-0 ml-2.5 absolute top-1 right-1 z-[100] size-6"
         >
-          <ChevronsLeft className="size-5"/>
+          <ChevronsLeftIcon className="size-4 text-[#91918e] dark:text-[#9b9b9b]" />
         </Button>
         <div className="text-[#5f5e5b] dark:text-[#9b9b9b] font-medium h-full">
           <div className="flex flex-col h-full relative w-full">

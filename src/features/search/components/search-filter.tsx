@@ -1,14 +1,22 @@
 import { startOfToday, subDays } from "date-fns";
-import { ArrowUpDownIcon, FileIcon } from "lucide-react";
 
-import { Filter } from "@/components/filter";
-import { useSort } from "@/features/search/hooks/use-sort";
-import { Separator } from "@/components/ui/separator";
-import { FaUser } from "react-icons/fa6";
 import { Category } from "@/types";
-import { HiMiniBuildingLibrary, HiMiniCalendarDays, HiMiniCircleStack } from "react-icons/hi2";
-import { useDate } from "../hooks/use-date";
-import { useFilter } from "../stores/use-filter";
+
+import { Separator } from "@/components/ui/separator";
+
+import { 
+  ArrowUpDownIcon, 
+  CalendarDaysIcon, 
+  File1Icon, 
+  FolderLibraryIcon, 
+  Notebook1Icon, 
+  UserIcon 
+} from "@/components/icons";
+import { Filter } from "@/components/filter";
+
+import { useSort } from "@/features/search/hooks/use-sort";
+import { useDate } from "@/features/search/hooks/use-date";
+import { useFilter } from "@/features/search/stores/use-filter";
 
 interface SearchFilterProps {
   createdBy: {
@@ -48,6 +56,7 @@ export const SearchFilter = ({
       <div className="flex items-center py-2.5 px-3 overflow-x-auto overflow-y-hidden space-x-1.5">
         <Filter 
           icon={ArrowUpDownIcon}
+          iconVariant="STROKE"
           variant="dropdown"
           label="Sort"
           isSelected={false}
@@ -62,7 +71,8 @@ export const SearchFilter = ({
         />
         <Separator orientation="vertical" className="h-4 rounded-md bg-[#37352f29]" />
         <Filter 
-          icon={FaUser}
+          icon={UserIcon}
+          iconVariant="SOLID"
           variant="command"
           label={isPeopleSelected
             ? `Created by: ${peoples.join(", ")}`
@@ -73,7 +83,8 @@ export const SearchFilter = ({
           data={createdBy}
         />
         <Filter 
-          icon={FileIcon}
+          icon={File1Icon}
+          iconVariant="STROKE"
           variant="command"
           label={isCategorySelected
             ? `In: ${categories.join(", ")}`
@@ -82,14 +93,15 @@ export const SearchFilter = ({
           isSelected={isCategorySelected}
           onSelect={onCategories}
           data={[
-            { name: Category.COMPETENCY, icon: HiMiniBuildingLibrary },
-            { name: Category.GROUP, icon: HiMiniCircleStack },
+            { name: Category.COMPETENCY, icon: Notebook1Icon },
+            { name: Category.GROUP, icon: FolderLibraryIcon },
           ]}
         />
         <Filter 
-          icon={HiMiniCalendarDays}
+          icon={CalendarDaysIcon}
           variant="calendar"
           label="Date"
+          iconVariant="STROKE"
           isSelected={date !== undefined}
           onDate={onDate}
           onClear={onClear}

@@ -1,6 +1,3 @@
-import { LucideIcon } from "lucide-react";
-import { IconType as ReactIconType } from "react-icons/lib";
-
 export enum Category {
   GROUP = "Group",
   COMPETENCY = "Competency",
@@ -16,7 +13,8 @@ export type KeyboardType = {
 
 export interface SettingSidebarItem {
   label: string;
-  icon: ReactIconType | LucideIcon;
+  icon: IconType;
+  variant: IconVariant;
   child: SettingChild; 
 }
 
@@ -41,3 +39,4 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
 }
 
 export type IconDefinition = Record<IconVariant, JSX.Element>;
+export type IconType = (props: IconBaseProps) => JSX.Element;

@@ -5,18 +5,18 @@ import DocsImage from "../public/Docs-V2.png";
 import CalendarImage from "../public/calendar.png";
 import ProjectImage from "../public/Projects-V2.png";
 
-import { 
-  BookOpenTextIcon, 
-  SparklesIcon, 
-  GlobeIcon, 
-  CalendarDaysIcon, 
-  TargetIcon, 
-  FileTextIcon, 
-} from "lucide-react";
-import { VscSettings } from "react-icons/vsc";
-import { HiOutlineGlobeAlt, HiUserCircle } from "react-icons/hi2";
-
 import { SettingSidebarItem } from "@/types";
+
+import { 
+  BookOpenIcon,
+  CalendarDayIcon,
+  File1Icon,
+  GlobeIcon, 
+  Settings2Icon, 
+  SparklesIcon, 
+  TargetIcon, 
+  UserCircle1Icon 
+} from "@/components/icons";
 
 export const images = [
   {
@@ -67,11 +67,11 @@ export const logoTicker = [
 export const buttons = [
   {
     label: "Wiki",
-    icon: BookOpenTextIcon,
+    icon: BookOpenIcon,
   },
   {
     label: "Docs",
-    icon: FileTextIcon,
+    icon: File1Icon,
   },
   {
     label: "Projects",
@@ -83,7 +83,7 @@ export const buttons = [
   },
   {
     label: "Calendar",
-    icon: CalendarDaysIcon,
+    icon: CalendarDayIcon,
   },
   {
     label: "Sites",
@@ -129,17 +129,20 @@ export const comfirmDeleteTrash = {
 export const settingsSidebars: SettingSidebarItem[] = [
   {
     label: "Account",
-    icon: HiUserCircle,
+    icon: UserCircle1Icon,
     child: "account",
+    variant: "SOLID",
   },
   {
     label: "Settings",
-    icon: VscSettings,
+    icon: Settings2Icon,
     child: "setting",
+    variant: "STROKE",
   },
   {
     label: "Language & Region",
-    icon: HiOutlineGlobeAlt,
+    icon: GlobeIcon,
     child: "language",
+    variant: "STROKE",
   },
 ]

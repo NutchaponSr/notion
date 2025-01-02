@@ -1,10 +1,12 @@
-import { ChevronsLeftIcon, ListFilterIcon } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { useInboxSidebar } from "@/hooks/use-inbox-sidebar";
 
 import { Button } from "@/components/ui/button";
 
+import {
+  FilterIcon,
+  ChevronsLeftIcon
+} from "@/components/icons";
 import { Hint } from "@/components/hint";
 
 interface InboxSidebarProps {
@@ -44,7 +46,7 @@ export const InboxSidebar = ({
           </Hint>
           <Hint label="Filter notifications" align="start">
             <Button variant="ghost" size="icon" className="h-7 w-7 rounded-sm">
-              <ListFilterIcon className="size-4 text-[#37352f80] dark:text-[#9b9b9b]" />
+              <FilterIcon className="size-4 text-[#37352f80] dark:text-[#9b9b9b]" />
             </Button>
           </Hint>
         </div>

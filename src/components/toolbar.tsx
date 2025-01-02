@@ -1,21 +1,15 @@
-import { 
-  ArrowDownUpIcon, 
-  EyeIcon, 
-  ListFilterIcon, 
-  SearchIcon, 
-  TableIcon 
-} from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 
+import { cn } from "@/lib/utils";
+import { useSort } from "@/stores/use-sort";
+import { useFilter } from "@/stores/use-filter";
+import { useToolbar } from "@/stores/use-toolbar";
+
+import { ArrowUpDownIcon, EyeIcon, FilterIcon, SearchIcon, TableIcon } from "@/components/icons"
 import { SortPopover } from "@/components/sort-popover";
 import { FiltersPopover } from "@/components/filters-popover";
 import { ToolbarFilters } from "@/components/toolbar-filters";
 
-import { useSort } from "@/stores/use-sort";
-import { useFilter } from "@/stores/use-filter";
-import { useToolbar } from "@/stores/use-toolbar";
-import { cn } from "@/lib/utils";
 
 export const Toolbar = () => {
   const { 
@@ -33,7 +27,7 @@ export const Toolbar = () => {
       <div className="flex items-center h-10 w-full shadow-[inset_0_-1px_0_rgb(233,233,231)]">
         <div className="flex items-center h-full grow space-x-1">
           <Button variant="ghost" size="sm">
-            <TableIcon className="size-4" />
+            <TableIcon className="size-4 text-[#37352f]" />
             2024
           </Button>
           <Button variant="ghost" size="icon">
@@ -55,7 +49,7 @@ export const Toolbar = () => {
                 }
               }}
             >
-              <ListFilterIcon className="size-4 text-[#A4A4A2]" />
+              <FilterIcon className="size-4 text-[#A4A4A2]" />
             </Button>
           </FiltersPopover>
           <SortPopover>
@@ -72,7 +66,7 @@ export const Toolbar = () => {
                 }
               }}
             >
-              <ArrowDownUpIcon className={cn("size-4 text-[#A4A4A2]", isActiveSort && "text-[#2383e2]")} />
+              <ArrowUpDownIcon className={cn("size-4 text-[#A4A4A2]", isActiveSort && "text-[#2383e2]")} />
             </Button>
           </SortPopover>
           <Button variant="ghost" size="icon">

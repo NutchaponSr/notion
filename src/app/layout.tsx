@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { auth } from "@/auth";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { EdgeStoreProvider } from "@/lib/edgestore";
@@ -16,7 +16,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 
 import "./globals.css";
 
-const font = Inter({ subsets: ["latin"] });
+const font = Nunito({ subsets: ["latin"] });
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",

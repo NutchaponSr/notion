@@ -18,7 +18,6 @@ interface CategoryProps {
   className: string[];
   isChild: boolean;
   data: CompetencyInstant[];
-  fill: string;
   onChild: () => void;
   onClick: () => void;
 }
@@ -29,7 +28,6 @@ export const Category = ({
   className,
   isChild,
   data,
-  fill,
   onChild,
   onClick
 }: CategoryProps) => {
@@ -56,7 +54,7 @@ export const Category = ({
           onClick={onChild}
           className={className[0]}
         >
-          <Notebook2Icon className={cn(className[1], "size-4")} variant="SOLID" fill={fill} />
+          <Notebook2Icon className={cn(className[1], "size-4")} variant="BULK" />
         </IconWrapper>
       </WorkspaceItem>
       {isChild && (
