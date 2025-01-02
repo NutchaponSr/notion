@@ -85,8 +85,8 @@ export const Filter = ({
   presets,
   variant,
 }: FilterProps) => {
-  const { onRemove } = useSort();
   const { onDelete } = useFilter();
+  const { onRemove, onDirection } = useSort();
   const { type, onReset, onCreate, onEdit } = useDate();
 
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
@@ -315,14 +315,25 @@ export const Filter = ({
                   <div className="flex-auto mx-3">
                     <div className="flex items-center whitespace-nowrap space-x-2">
                       <Button variant="outline" size="md" className="text-sm text-[#37352f]">
-                        {/* <icon className="size-4 text-[#a4a4a2]" /> */}
                         {label}
                         <ChevronDownIcon className="size-3 text-[#a4a4a2]" />
                       </Button>
-                      <Button variant="outline" size="md" className="text-sm text-[#37352f]">
-                        Ascending
-                        <ChevronDownIcon className="size-3 text-[#a4a4a2]" />
-                      </Button>
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="outline" size="md" className="text-sm text-[#37352f]">
+                            Ascending
+                            <ChevronDownIcon className="size-3 text-[#a4a4a2]" />
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                          <DropdownMenuItem onClick={() => onDirection("asc")}>
+                            Ascending
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => onDirection("desc")}>
+                            Descending
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
                     </div>
                   </div>
                 </div>
